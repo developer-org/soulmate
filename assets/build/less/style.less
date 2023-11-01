@@ -1,0 +1,174 @@
+@import 'normalize.less';
+@import 'fonts.less';
+@import 'main.less';
+@import 'header.less';
+@import 'footer.less';
+@import 'home.less';
+@import '_courses-catalog.less';
+@import '_courses-single.less';
+
+
+// Основные цвета
+@background-primary: #FCFCFC;
+@background-secondary: #F7F7FC;
+@background-tertiary: #EFF0F6;
+
+@action-primary: #45167A;
+@action-outline: #D6D8E7;
+
+@text-main: #161616;
+@text-secondary: #4E4B66;
+@text-tertiary: #6E7191;
+@text-gray: #D8D8D8;
+@text-additional: #A0A3BD;
+
+@black: #000000;
+@white: #FFFFFF;
+
+@badge-default-bg: #EFEBFF;
+@badge-default: #6236FF;
+
+@nav-dots: #E2D8EF;
+
+// Кнопки
+.btn-primary{
+    position: relative;
+    height: 54px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: @white;
+    background-color: @action-primary !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+    cursor: pointer;
+    padding: 0px 16px;
+    border-radius: 40px;
+    border: none !important;
+    box-shadow: none !important;
+    &:hover{
+        color: @action-primary !important;
+        background-color: @white !important;
+    }
+}
+.btn-white{
+    position: relative;
+    height: 54px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: @action-primary;
+    background-color: @background-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+    cursor: pointer;
+    padding: 0px 16px;
+    border-radius: 40px;
+    border: none !important;
+    box-shadow: none !important;
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 0 8px;
+    }
+    &:hover{
+        color: @white;
+        background-color: @action-primary;
+        span{
+            svg{
+                path{
+                    fill: @white;
+                }
+            }
+        }
+    }
+
+}
+.btn-tp{
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: @action-primary;
+    background-color: @white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: 2px solid @action-outline;
+    border-radius: 40px;
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 0 8px;
+    }
+    &:hover{
+        background-color: @action-primary;
+        border-color: @action-primary;
+        color: @white;
+        span{
+            svg{
+                path{
+                    fill: @white;
+                }
+            }
+        }
+    }
+} 
+
+// Лейблы
+.badge{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 8px 16px;
+    border-radius: 24px;
+    width: max-content;
+    &.default{
+        background: @badge-default-bg;
+        color: @badge-default;
+    }
+    &.neutral{
+        background: @background-primary;
+        color: @text-main;
+    }
+  }
+
+// Элементы слайдера
+.owl-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .owl-dot{
+        outline: none !important;
+        &.active span{
+            width: 12px !important;
+            height: 12px !important;
+        }
+        &.active span, span:hover{
+            background: @action-primary !important;
+        }
+        span{
+            width: 6px !important;
+            height: 6px !important;
+            border-radius: 50%;
+            background: @nav-dots !important;
+            margin: 0 4px !important;
+        }
+    }
+}

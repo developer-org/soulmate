@@ -1,0 +1,249 @@
+/*
+@media screen and (max-width: 1369px){
+
+}
+@media screen and (max-width: 1200px){
+
+}
+// mobile
+@media screen and (max-width: 991px){ 
+
+}
+@media screen and (max-width: 767px){ 
+
+}
+@media screen and (max-width: 375.9px){ 
+
+}
+@media screen and (max-width: 374.9px){ 
+
+}
+*/
+
+.content-page{
+  display: flex;
+  flex-direction: column;
+  main{
+    flex: 1 1 auto;
+    margin-top: 50px;
+    @media screen and (max-width: 767px){ 
+      margin-top: 150px;
+    }
+  }
+}
+.content-list{
+  padding: 0px 0 160px 0 !important;
+  margin-top: -20px !important;
+  li{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: @text-main;
+    margin-bottom: 10px;
+    &::before{
+      display: none;
+    }
+    &.content-title{
+      font-weight: 400;
+      line-height: 27px;
+      color: @text-main;
+      font-size: 30px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+    a{
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 24px;
+      color: @text-main;
+      text-decoration: none;
+      &:hover{
+        color: @action-primary;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 815px;
+  }
+}
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1155px;
+  }
+}
+@media (min-width: 1370px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1430px;
+  }
+}
+
+
+
+body{
+  font-family: "Montserrat", sans-serif;
+  background: @background-secondary;
+}
+
+h1, .h1-title{
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 68px;
+  color: @white;
+  margin: 0;
+  @media screen and (max-width: 375.9px){ 
+    font-size: 50px;
+    line-height: 62px;
+  }
+}
+
+h2, .h2-title{
+  font-family: "Actay", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: @black;
+  @media screen and (max-width: 375.9px){ 
+    font-size: 28px;
+  }
+}
+
+.mobile{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 7px 15px 30px 15px;
+  transform: translateX(-100%);
+  transition: .6s;
+  z-index: 20;
+  overflow: auto;
+  background: url(../images/gradient-mobile-menu.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  &__logo{
+    display: block;
+    width: 212px;
+    height: 67px;
+  }
+  &__close{
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    z-index: 15;
+    padding: 0 10px;
+    background: transparent;
+    border-radius: 8px;
+    span{
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: calc(~'100% - 26px');
+      background: @white;
+      opacity: 1;
+      left: 13px;
+      transform: rotate(0);
+      transition: all 0.25s ease-in-out;
+      &:nth-child(1){
+        top: 21px;
+        transform: rotate(135deg);
+      }
+      &:nth-child(2){
+        opacity: 0;
+      }
+      &:nth-child(3){
+        top: 21px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+.nav-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(~'100% - 80px');
+  padding-top: 40%;
+}
+.menu-nav-mobile{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    &__item{
+        text-align: center;
+    }
+    &__link{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        color: @white;
+    }
+}
+
+.visible{
+  transform: translateY(0)!important;
+  transform: translateX(0)!important;
+}
+
+////////////////////////////////menu
+.menu{
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  flex-direction: column;
+  z-index: 15;
+  padding: 0 10px;
+  background: @action-primary;
+  border-radius: 8px;
+  @media screen and (max-width: 991px){
+    display: flex;
+  }
+  span{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: calc(~'100% - 26px');
+    background: @white;
+    opacity: 1;
+    left: 13px;
+    transform: rotate(0);
+    transition: all 0.25s ease-in-out;
+    &:nth-child(1){
+      top: 14px;
+    }
+    &:nth-child(2){
+      top: 21px;
+    }
+    &:nth-child(3){
+      top: 28px;
+    }
+  }
+}
+.menu.open{
+  span:nth-child(1){
+    top: 21px;
+    transform: rotate(135deg);
+  }
+  span:nth-child(2){
+    opacity: 0;
+  }
+  span:nth-child(3){
+    top: 21px;
+    transform: rotate(-135deg);
+  }
+}
+
+

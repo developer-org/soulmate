@@ -1,0 +1,87 @@
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    &__logo{
+        display: block;
+        width: 212px;
+        height: 67px;
+    }
+    &__wrapper{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+}
+.nav-header{
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 991px){ 
+        display: none;
+    }
+    &__auth{
+        margin-left: 65px;
+        @media screen and (max-width: 1369px){
+            margin-left: 60px;
+        }
+        @media screen and (max-width: 1200px){
+            margin-left: 20px;
+        }
+    }
+    &__auth-link{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        color: @text-main;
+        @media screen and (max-width: 1369px){
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @media screen and (max-width: 1200px){
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &:hover{
+            color: @text-main; 
+            text-decoration: underline !important;
+        }
+        &.active{
+            text-decoration: underline !important;
+        }
+    }
+}
+.menu-nav-header{
+   &__list{
+        display: flex;
+        gap: 88px;
+        @media screen and (max-width: 1369px){
+            gap: 60px;
+        }
+        @media screen and (max-width: 1200px){
+            gap: 20px;
+        }
+   }
+   &__link{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        color: @text-main;
+        @media screen and (max-width: 1369px){
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @media screen and (max-width: 1200px){
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &:hover{
+            color: @text-main; 
+            text-decoration: underline !important;
+        }
+        &.active{
+            text-decoration: underline !important;
+        }
+   }
+}
