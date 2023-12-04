@@ -1,0 +1,137 @@
+.achievements{
+    .h2-title{
+        margin-bottom: 32px;
+    }
+    .wrapper{
+        //gap: 32px 30px;
+        // @media screen and (max-width: 991px){ 
+        //     gap: 32px 0px;
+        //     justify-content: space-between;
+        // }
+        gap: 0 30px;
+        &__box{
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            @media screen and (max-width: 1369px){
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media screen and (max-width: 1200px){
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media screen and (max-width: 991px){ 
+                grid-template-columns: inherit;
+            }
+        }
+    }
+    &__subtitle{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        color: @text-main;
+        margin-top: -16px;
+        margin-bottom: 30px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        // width: calc(~'20% - 24px');
+        // @media screen and (max-width: 1369px){
+        //     width: calc(~'25% - 23px');
+        // }
+        // @media screen and (max-width: 1200px){
+        //     width: calc(~'33% - 17.6px');
+        // }
+        @media screen and (max-width: 991px){ 
+            width: calc(~'50% - 15px');
+        }
+        @media screen and (max-width: 375.9px){ 
+            width: 100%;
+        }
+        &.lock{
+            pointer-events: none;
+        }
+        &.more{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            height: 288px;
+            border-radius: 16px;
+            padding: 20px;
+            background: @white;
+            border: 2px solid @action-outline;
+            text-align: center;
+            @media screen and (max-width: 767px){ 
+                height: 160px;
+                border-radius: 24px;
+                padding: 32px;
+                width: 100%;
+            }
+            span{
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 29px;
+                text-align: center;
+                color: @badge-default;
+            }
+        }
+    }
+    &__image{
+        position: relative;
+        height: 288px;
+        width: 100%;
+        padding: 44px 32px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+        background-color: @background-tertiary;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @media screen and (max-width: 767px){ 
+            height: 160px;
+            border-radius: 24px;
+            padding: 32px;
+        }
+        img{
+            object-fit: contain;
+        }
+        .badge-lock{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(../images/lock.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    &__title{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        color: @text-main;
+        @media screen and (max-width: 767px){ 
+            word-wrap: break-word;
+        }
+    }
+    &__link{
+        width: 100%;
+        margin-top: 30px;
+        a{
+            width: max-content;
+            @media screen and (max-width: 767px){ 
+                width: 100%;
+                padding: 10px 20px;
+            }
+            @media screen and (max-width: 375.9px){ 
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+.sidebar{
+    padding: 16px 0px;
+    border-radius: 40px;
+    background: @background-primary;
+    overflow: hidden;
+    box-shadow: 0px 4px 16px 0px rgba(17, 17, 17, 0.04);
+    @media screen and (max-width: 991px){ 
+        margin-bottom: 30px;
+    }
+    .btn-tp{
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 32px;
+        width: calc(~'100% - 32px');
+        margin: 0 auto;
+        background: transparent;
+        @media screen and (max-width: 1200px){
+            padding: 10px 12px;
+            width: calc(~'100% - 24px');
+        }
+        &.small-size{
+            padding: 10px 8px;
+            @media screen and (max-width: 1369px){
+                font-size: 15px;
+            }
+        }
+        span{
+            padding: 0 8px 0 0;
+            @media screen and (max-width: 767px){ 
+                padding: 0 5px 0 0;
+            }
+        }
+    }
+    &__title{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: @text-secondary;
+        margin: 32px 16px 16px 16px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        color: @text-main;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px; 
+        padding: 16px;
+        background: @background-primary;
+        &.active, &:hover{
+            color: @white;
+            background: @action-primary;
+        }
+        &.glossary{
+            border-top: 1px solid @action-outline;
+        }
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+        &.active, &:hover{
+            span{
+                svg{
+                    path{
+                        fill: @white;
+                    }
+                }
+            }
+        }
+        &.checked{
+            span{
+                svg{
+                    g{
+                        opacity: 1;
+                    }
+                    path{
+                        fill: @badge-default;
+                    }
+                }
+            }
+        }
+        &.checked:hover{
+            span{
+                svg{
+                    g{
+                        opacity: 1;
+                    }
+                    path{
+                        fill: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.progress-sidebar{
+    margin: 16px 0 0 0;
+    padding: 0 16px;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+        border-radius: 20px;
+        background: @background-secondary;
+        @media screen and (max-width: 1200px){
+            padding: 24px 12px;
+        }
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: @text-main;
+        text-align: center;
+    }
+    &__count{
+        @property --progress-value {
+            syntax: '<integer>';
+            inherits: false;
+            initial-value: 0;
+        }
+        // @keyframes html-progress {
+        //     to { --progress-value: 69; }
+        // }
+        .progress-bar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background: 
+                radial-gradient(closest-side, #f7f7fc 82%, transparent 85% 100%),
+                conic-gradient(#45167A calc(var(--progress-value) * 1%), #D6D8E7 0);
+            animation: html-progress 2s 1 forwards;
+
+            &::before {
+                counter-reset: percentage var(--progress-value);
+                content: counter(percentage) '%';
+                animation: html-progress 2s 1 forwards;
+
+                color: var(--text-main, #161616);
+                text-align: center;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 26px;
+                color: @text-main;
+            }
+        }
+        // progress{
+        //     visibility: hidden;
+        //     width: 0;
+        //     height: 0;
+        // }
+    }
+    .btn-primary{
+        width: 100%;  
+        height: 40px;
+        font-size: 16px;
+        padding: 0 14px;
+        &:hover{
+            border: 2px solid @action-outline !important;
+            background: transparent !important;
+        }
+        @media screen and (max-width: 1369px){
+            font-size: 15px;
+        }
+    }
+    .btn-tp{
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        padding: 0 14px;
+        background: transparent;
+        @media screen and (max-width: 1369px){
+            font-size: 15px;
+        }
+        @media screen and (max-width: 1200px){
+            height: 56px;
+        }
+    }
+}

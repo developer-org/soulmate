@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soulmate</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../build/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../build/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../build/images/favicon-16x16.png">
+    <link rel="mask-icon" href="../build/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../build/css/app.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo.svg"></a>
+          <div class="header__nav nav-header">
+            <nav class="nav-header__menu menu-nav-header">
+              <ul class="menu-nav-header__list">
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Мои достижения</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Истории успехов</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Каталог курсов</a></li>
+              </ul>
+            </nav>
+            <div class="nav-header__auth auth-nav-header">
+              <div class="auth-nav-header__wrap"> 
+                <div class="auth-nav-header__name">Татьяна</div>
+                <div class="auth-nav-header__status">Ученик</div>
+              </div>
+              <div class="auth-nav-header__user"><img src="../build/images/user.svg">
+                <div class="auth-nav-header__count">2</div>
+              </div>
+              <div class="auth-nav-header__dropdown">
+                <ul class="auth-nav-header__list">
+                  <li class="auth-nav-header__item"> <a href="../../index.html"> <span>
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#161616"/>
+</svg></span>
+                      <p>Профиль</p></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 5C3 3.89543 3.89543 3 5 3H9C10.1046 3 11 3.89543 11 5V9C11 10.1046 10.1046 11 9 11H5C3.89543 11 3 10.1046 3 9V5ZM9 5H5V9H9V5ZM13 5C13 3.89543 13.8954 3 15 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5ZM19 5H15V9H19V5ZM3 15C3 13.8954 3.89543 13 5 13H9C10.1046 13 11 13.8954 11 15V19C11 20.1046 10.1046 21 9 21H5C3.89543 21 3 20.1046 3 19V15ZM9 15H5V19H9V15ZM13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15ZM19 15H15V19H19V15Z" fill="#161616"/>
+</svg></span>
+                      <p>Мои курсы</p></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V17C22 18.1046 21.1046 19 20 19H15.4142L12.7071 21.7071C12.3166 22.0976 11.6834 22.0976 11.2929 21.7071L8.58579 19H4C2.89543 19 2 18.1046 2 17V6ZM20 6H4V17H9C9.26522 17 9.51957 17.1054 9.70711 17.2929L12 19.5858L14.2929 17.2929C14.4804 17.1054 14.7348 17 15 17H20V6ZM6 9.5C6 8.94772 6.44772 8.5 7 8.5H17C17.5523 8.5 18 8.94772 18 9.5C18 10.0523 17.5523 10.5 17 10.5H7C6.44772 10.5 6 10.0523 6 9.5ZM6 13.5C6 12.9477 6.44772 12.5 7 12.5H13C13.5523 12.5 14 12.9477 14 13.5C14 14.0523 13.5523 14.5 13 14.5H7C6.44772 14.5 6 14.0523 6 13.5Z" fill="#161616"/>
+</svg></span>
+                      <p>Чат с поддержкой</p></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.1461 3.24812C10.4433 2.51616 11.1614 2 12 2C12.8386 2 13.5567 2.51616 13.8539 3.24812C16.8202 4.06072 19 6.77579 19 10V14.6972L20.8321 17.4453C21.0366 17.7522 21.0557 18.1467 20.8817 18.4719C20.7077 18.797 20.3688 19 20 19H15.4646C15.2219 20.6961 13.7632 22 12 22C10.2368 22 8.77806 20.6961 8.53545 19H4C3.63121 19 3.29235 18.797 3.11833 18.4719C2.94431 18.1467 2.96338 17.7522 3.16795 17.4453L5 14.6972V10C5 6.77579 7.17983 4.06072 10.1461 3.24812ZM10.5854 19C10.7913 19.5826 11.3469 20 12 20C12.6531 20 13.2087 19.5826 13.4146 19H10.5854ZM12 5C9.23858 5 7 7.23858 7 10V15C7 15.1974 6.94156 15.3904 6.83205 15.5547L5.86852 17H18.1315L17.168 15.5547C17.0584 15.3904 17 15.1974 17 15V10C17 7.23858 14.7614 5 12 5Z" fill="#161616"/>
+</svg></span>
+                      <p>Уведомления</p>
+                      <label>2</label></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span>
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4L4 4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H12" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 16L22 12L18 8" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 12H9" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                      <p>Выход</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menu"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="user-info">
+        <div class="container">
+          <div class="user-info__wrapper">
+            <div class="user-info__avatar"> <img src="../build/images/user.svg"></div>
+            <div class="user-info__content">
+              <div class="user-info__head"> 
+                <p>Татьяна Иванова</p><a href="">Редактировать</a>
+              </div>
+              <div class="user-info__id"> <span>ID</span>
+                <p>123568952</p>
+              </div>
+              <ul class="user-info__data">
+                <li><span>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.2" d="M3 11L22 2L13 21L11 13L3 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                  <p> <a href="">t.me/ivanov_vv</a></p>
+                </li>
+                <li><span>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></span>
+                  <p>Мои курсы: DeFi (45%), Криптотрейдинг(0%), Presale(0%), GameFi. Metaverse(12%)</p>
+                </li>
+                <li><span>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.2" d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.2" d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                  <p>Пройденные курсы: DeFi, Криптотрейдинг</p>
+                </li>
+                <li><span>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.2" d="M14.4099 11.8884C16.1819 13.5058 16.747 15.471 16.1052 17.784C15.1547 21.2045 11.2643 22.6631 8.03502 21.7177C3.21755 20.3069 1.62938 14.6452 4.26649 10.6282C5.75125 8.36625 8.48808 7.37059 9.68352 4.80367C10.0586 3.99865 10.3721 3.16872 10.6241 2.3139C10.6364 2.27226 10.6602 2.23838 10.6955 2.21225C11.0796 1.92935 11.923 1.85832 12.1076 2.44861C12.6087 4.05784 13.1603 5.47356 14.1489 6.50964C15.055 7.45754 16.2578 8.39197 17.0322 9.09004C20.0153 11.7807 20.9682 16.1234 18.8789 19.6467C18.4616 20.3509 16.9793 19.3528 17.3548 18.8017C18.8395 16.6193 18.3471 13.543 16.93 11.4929C15.2877 9.11575 12.4364 8.09437 11.529 5.12086C11.5159 5.07922 11.49 5.04942 11.4514 5.03146C11.3025 4.96287 11.1892 5.04738 11.1473 5.19679C10.3016 8.185 7.05257 9.36069 5.55673 11.7819C3.54627 15.0371 5.10367 19.4937 9.00393 20.3411C10.8445 20.7416 12.85 20.0889 13.9704 18.5813C15.401 16.6561 14.8642 13.4462 12.477 12.5253C11.9025 12.3032 11.3644 12.2464 10.863 12.355C8.79463 12.8057 8.05595 15.4731 10.2659 16.3769C10.9688 16.6647 11.4207 16.481 11.3431 17.5489C11.3049 18.0755 11.0181 18.1722 10.5429 18.0975C8.62104 17.7938 7.35912 16.5777 7.34558 14.6182C7.31726 10.9136 11.8737 9.57378 14.4099 11.8884Z" fill="white"/>
+</svg></span>
+                  <p>Ваши банусы: 54 бонуса</p>
+                </li>
+                <li><span>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.2" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.2" d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.2" d="M9 9H9.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.2" d="M15 9H15.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                  <p>Ваш куратор: Оченьдлиннаяфамилия Иван, <a href=''>t.me/dlinnii_vv</a>, <a href='mailto:game@gmai.com'>game@gmai.com</a></p>
+                </li>
+                <li><span>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.2" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                  <p>Вас пригласил: Котиков Кирилл, <a href=''>t.me/dlinnii_vv</a></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="courses">
+        <div class="container">
+          <div class="wrapper">
+            <h2 class="h2-title">Мои курсы</h2>
+            <div class="wrapper__box">
+              <div class="courses__item item-courses">
+                <div class="item-courses__head"> 
+                  <p>Базовый</p>
+                  <div class="item-courses__count">1</div><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292893 14.2071C-0.0976311 13.8166 -0.0976312 13.1834 0.292893 12.7929L5.58579 7.5L0.292893 2.20711C-0.0976317 1.81658 -0.0976317 1.18342 0.292893 0.792893C0.683417 0.402369 1.31658 0.402368 1.70711 0.792893L7.70711 6.79289C8.09763 7.18342 8.09763 7.81658 7.70711 8.20711L1.70711 14.2071C1.31658 14.5976 0.683418 14.5976 0.292893 14.2071Z" fill="#161616"/>
+</svg>
+                </div>
+                <div class="item-courses__lessons">19 уроков 15 часов</div>
+                <div class="item-courses__progress"><span style="width:45%;"></span></div>
+                <div class="item-courses__info"> 
+                  <p>45% материалов пройдено</p>
+                  <p>0 баллов получено</p>
+                </div><a class="item-courses__link btn-primary" href="">Продолжить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="courses-catalog">
+        <div class="container">
+          <div class="wrapper"> 
+            <h2 class="h2-title">Каталог курсов</h2>
+            <div class="row">
+              <div class="col-md-6 col-xl-4">
+                <div class="courses-catalog__item item-courses-catalog">
+                  <div class="item-courses-catalog__image"><img src="../build/images/courses-catalog-image2.png"></div>
+                  <div class="item-courses-catalog__content"> 
+                    <div class="item-courses-catalog__title">Академия</div>
+                    <div class="item-courses-catalog__price"> <span>55 000 ₽</span><a href="">Оплатить бонусами</a></div>
+                    <div class="item-courses-catalog__subtitle">Срок обучения: 12 месяцев</div>
+                    <div class="item-courses-catalog__text">
+                      <p>Все способы инвестированияв проекты на разных стадияхна базе технологии блокчейн</p>
+                    </div>
+                  </div><a class="item-courses-catalog__link btn-tp" href="">Подробнее<span>
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bonus">
+        <div class="container">
+          <div class="wrapper">
+            <h2 class="h2-title">
+              Бонусная система<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.5 21L17.5 14L10.5 7" stroke="#161616" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </h2>
+            <div class="row"> 
+              <div class="col-xl-5">
+                <div class="bonus__wrap">
+                  <div class="bonus__tariff"> <img src="../build/images/logo-white-dop.svg">
+                    <p>1 бонус = 1 ₽</p>
+                  </div>
+                  <div class="bonus__count"> 
+                    <p>Ваши бонусы</p><span>54</span>
+                  </div>
+                </div><a class="referral" href=""> <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 13C9 10.7909 10.7909 9 13 9H18C20.2091 9 22 10.7909 22 13V18C22 20.2091 20.2091 22 18 22H13C10.7909 22 9 20.2091 9 18V13ZM13 11C11.8954 11 11 11.8954 11 13V18C11 19.1046 11.8954 20 13 20H18C19.1046 20 20 19.1046 20 18V13C20 11.8954 19.1046 11 18 11H13Z" fill="#45167A"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 3.79086 3.79086 2 6 2H11C13.2091 2 15 3.79086 15 6V6.20833C15 6.76062 14.5523 7.20833 14 7.20833C13.4477 7.20833 13 6.76062 13 6.20833V6C13 4.89543 12.1046 4 11 4H6C4.89543 4 4 4.89543 4 6V11C4 12.1046 4.89543 13 6 13H6.20833C6.76062 13 7.20833 13.4477 7.20833 14C7.20833 14.5523 6.76062 15 6.20833 15H6C3.79086 15 2 13.2091 2 11V6Z" fill="#45167A"/>
+</svg></span>Реферальная ссылка</a>
+              </div>
+              <div class="col-xl-7">
+                <div class="program">
+                  <div class="program__item item-program">
+                    <div class="item-program__title">Способы накопления</div>
+                    <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                    </div>
+                    <div class="item-program__body body-item-program">
+                      <div class="body-item-program__text">Чтобы списать баллы, необходимо заполнить форму в разделе Бонусная система. Минимальное количество баллов, которое можно потратить на заказ — 50. Баллами можно оплатить до 25% от стоимости.</div>
+                    </div>
+                  </div>
+                  <div class="program__item item-program">
+                    <div class="item-program__title">Механика списания</div>
+                    <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                    </div>
+                    <div class="item-program__body body-item-program">
+                      <div class="body-item-program__text">Чтобы списать баллы, необходимо заполнить форму в разделе Бонусная система. Минимальное количество баллов, которое можно потратить на заказ — 50. Баллами можно оплатить до 25% от стоимости.</div>
+                    </div>
+                  </div>
+                  <div class="program__item item-program">
+                    <div class="item-program__title">Срок действия бонусов</div>
+                    <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                    </div>
+                    <div class="item-program__body body-item-program">
+                      <div class="body-item-program__text">Чтобы списать баллы, необходимо заполнить форму в разделе Бонусная система. Минимальное количество баллов, которое можно потратить на заказ — 50. Баллами можно оплатить до 25% от стоимости.</div>
+                    </div>
+                  </div>
+                  <div class="program__item item-program">
+                    <div class="item-program__title">Пригласить друзей</div>
+                    <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                    </div>
+                    <div class="item-program__body body-item-program">
+                      <div class="body-item-program__text">Чтобы списать баллы, необходимо заполнить форму в разделе Бонусная система. Минимальное количество баллов, которое можно потратить на заказ — 50. Баллами можно оплатить до 25% от стоимости.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="review">
+        <div class="container">
+          <div class="wrapper">
+            <h2 class="h2-title">
+              Мои отзывы<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.5 21L17.5 14L10.5 7" stroke="#161616" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </h2>
+            <div class="wrapper__box">
+              <div class="review__item item-review">
+                <div class="item-review__title">CEO сециалист</div>
+                <div class="item-review__text text">Я очень доволен курсом «Криптотрейдинг» на платформе Soulmate. Курс предоставляет полное и понятное руководство по торговле криптовалютами. Преподаватель был очень компетентным и умело объяснял сложные понятия. Я получил много ценных знаний и навыков, которые помогли мне начать зарабатывать на торговле криптовалютами. Я настоятельно рекомендую этот курс всем, кто интересуется криптовалютами и хочет овладеть навыками торговли.</div>
+                <div class="item-review__more more-text">Развернуть</div>
+              </div>
+              <div class="review__item item-review">
+                <div class="item-review__title">CEO сециалист</div>
+                <div class="item-review__text text">Я очень доволен курсом «Криптотрейдинг» на платформе Soulmate. Курс предоставляет полное и понятное руководство по торговле криптовалютами. Преподаватель был очень компетентным и умело объяснял сложные понятия. Я получил много ценных знаний и навыков, которые помогли мне начать зарабатывать на торговле криптовалютами. Я настоятельно рекомендую этот курс всем, кто интересуется криптовалютами и хочет овладеть навыками торговли.</div>
+                <div class="item-review__more more-text">Развернуть</div>
+              </div>
+              <div class="review__item item-review">
+                <div class="item-review__title">CEO сециалист</div>
+                <div class="item-review__text text">Я очень доволен курсом «Криптотрейдинг» на платформе Soulmate. Курс предоставляет полное и понятное руководство по торговле криптовалютами. Преподаватель был очень компетентным и умело объяснял сложные понятия. Я получил много ценных знаний и навыков, которые помогли мне начать зарабатывать на торговле криптовалютами. Я настоятельно рекомендую этот курс всем, кто интересуется криптовалютами и хочет овладеть навыками торговли.</div>
+                <div class="item-review__more more-text">Развернуть</div>
+              </div>
+              <div class="review__item item-review">
+                <div class="item-review__title">CEO сециалист</div>
+                <div class="item-review__text text">Я очень доволен курсом «Криптотрейдинг» на платформе Soulmate. Курс предоставляет полное и понятное руководство по торговле криптовалютами. Преподаватель был очень компетентным и умело объяснял сложные понятия. Я получил много ценных знаний и навыков, которые помогли мне начать зарабатывать на торговле криптовалютами. Я настоятельно рекомендую этот курс всем, кто интересуется криптовалютами и хочет овладеть навыками торговли.</div>
+                <div class="item-review__more more-text">Развернуть</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="subscription">
+            <div class="row"> 
+              <div class="col-xl-5 col-lg-7">
+                <h2 class="h2-title">Подписка</h2>
+                <div class="subscription__wrap">
+                  <div class="subscription__item"> 
+                    <p>Подписка SoulTeam</p>
+                    <div class="subscription__status active">Активна</div>
+                  </div>
+                  <div class="subscription__item"> 
+                    <p>Подписка закончится 24.01.2024</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-5">
+                <div class="subscription__text">Подписка даст вам доступ к материалам от преподавателей Soulmate, на примере которых вы узнаете, как можно заработать.</div>
+              </div><a class="subscription__link btn-white" href="">Продлить за 2 500 ₽/мес</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="achievements">
+        <div class="container">
+          <div class="wrapper">
+            <h2 class="h2-title">Мои достижения</h2>
+            <div class="achievements__subtitle">Зарабатывай очки! Очки даются за успехи на курсах и активность в сообществе. Учись, оставляй свои комментарии и кейсы и меняй очки на подарки и призы от Soulteam</div>
+            <div class="wrapper__box"><a class="achievements__item" href="#" data-toggle="modal" data-target=".modal-bag">
+                <div class="achievements__image" style="background-image: url(../build/images/achievements-bg.png);"><img src="../build/images/achievements-active.png"></div>
+                <div class="achievements__title">Накопление портфеля</div></a><a class="achievements__item lock" href="">
+                <div class="achievements__image">
+                  <div class="badge-lock"></div><img src="../build/images/achievements-disabled.png">
+                </div>
+                <div class="achievements__title">Успешные торговые операции</div></a><a class="achievements__item lock" href="">
+                <div class="achievements__image">
+                  <div class="badge-lock"></div><img src="../build/images/achievements-disabled.png">
+                </div>
+                <div class="achievements__title">Прогнозирование рыночной динамики</div></a><a class="achievements__item lock" href="">
+                <div class="achievements__image">
+                  <div class="badge-lock"></div><img src="../build/images/achievements-disabled.png">
+                </div>
+                <div class="achievements__title">Знание и обучение других</div></a><a class="achievements__item more" href="">
+                <div class="achievements__title">Заработанные очки</div><span>34</span></a></div>
+            <div class="achievements__link"><a class="btn-tp" href="achievements.html">Перейти к достижениям<span>
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#45167A"/>
+</svg></span></a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-xl-2"><a class="footer__logo" href="../../index.html"><img src="../build/images/logo-white.svg"></a></div>
+          <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-0">
+            <div class="footer__nav nav-footer">
+              <ul class="nav-footer__menu">
+                <li class="nav-footer__item">Информация</li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Правила пользования платформой</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Политика конфиденциальности</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Пользовательское соглашение</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3"> 
+            <div class="footer__nav nav-footer">
+              <ul class="nav-footer__menu">
+                <li class="nav-footer__item">Меню</li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Мои курсы</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Каталог курсов</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Бонусная система</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3">
+            <div class="footer__action"><a class="footer__phone" href="tel:+13322371807">+1 (332) 237–18–07</a><a class="footer__link" href="https://t.me/Podderzka_SoulMate">@Podderzka_SoulMate</a></div>
+          </div>
+        </div>
+        <div class="footer__bottom"> 
+          <div class="footer__copyright">SoulTeam (c) 2023</div>
+          <div class="footer__dev"> <span>разработка дизайна сайта</span><a href=""><img src="../build/images/starta.svg"></a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="mobile" data-scroll-lock-scrollable>
+      <div class="mobile__close"><span></span><span></span><span></span></div><a class="mobile__logo" href="/index.html"><img src="../build/images/logo-white.svg"></a>
+      <div class="mobile__nav nav-mobile">
+        <nav class="nav-mobile__menu menu-nav-mobile">
+          <ul class="menu-nav-mobile__list">
+            <li class="menu-nav-mobile__item">
+              <div class="menu-nav-mobile__link" href="">Войти</div>
+            </li>
+            <li class="menu-nav-mobile__item"><a class="menu-nav-mobile__link" href="">Каталог курсов</a></li>
+            <li class="menu-nav-mobile__item"><a class="menu-nav-mobile__link" href="">Истории успехов</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="modal-bag modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Накопление портфеля</div>
+            <div class="modal__subtitle">Увеличьте свой портфель до 156 значения или достигните суммы вложений в размере 15 000 ₽.</div>
+            <div class="modal__info"><span>
+                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_84_421)">
+<path d="M11.9999 23.409C18.0248 23.409 22.909 18.5248 22.909 12.4999C22.909 6.47499 18.0248 1.59082 11.9999 1.59082C5.97499 1.59082 1.09082 6.47499 1.09082 12.4999C1.09082 18.5248 5.97499 23.409 11.9999 23.409Z" stroke="#6E7191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 8.13672V12.5004" stroke="#6E7191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 16.8633H12.0109" stroke="#6E7191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_84_421">
+<rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg></span>Это позволит вам показать свои навыки в&nbsp;управлении и&nbsp;стратегическом инвестировании.</div><a class="btn-primary" href="">Вперёд!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-thanks modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Спасибо за заявку</div>
+            <div class="modal__subtitle">Ваша заявка успешно сформирована. <br>В течение 1–3 рабочих дней в личном кабинете появится договор-оферта.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-error modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Ошибка оформления заявки</div>
+            <div class="modal__subtitle">При создании заявки произошла ошибка. <br>Попробуйте оформить ещё раз.</div><a class="btn-primary" href="">Вернуться на Главную</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-request modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <form class="modal__form">
+              <div class="modal__title">Заявка на обучение</div>
+              <input class="modal__input" type="text" name="name" placeholder="Имя">
+              <input class="modal__input" type="text" name="phone" placeholder="Телефон">
+              <div class="modal__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="modal__input btn-primary" type="submit" value="Хочу учиться">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-bonuses modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <form class="modal__form">
+              <div class="modal__title">Списать бонусы</div>
+              <input class="modal__input" type="text" name="name" placeholder="Имя">
+              <input class="modal__input" type="text" name="phone" placeholder="Телефон">
+              <input class="modal__input" type="text" name="bonus" placeholder="Укажите кол-во бонусов для списания">
+              <div class="modal__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="modal__input btn-primary" type="submit" value="Списать">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-push modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__head">
+               <svg width="99" height="37" viewBox="0 0 99 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5861 18.433C16.4888 20.1816 17.0955 22.3063 16.4064 24.807C15.3858 28.5051 11.2086 30.082 7.74121 29.0598C2.56856 27.5345 0.863284 21.4134 3.69483 17.0705C5.28906 14.625 8.22768 13.5486 9.51126 10.7734C9.914 9.90301 10.2506 9.00575 10.5212 8.08156C10.5344 8.03654 10.56 7.99991 10.5979 7.97166C11.0103 7.66581 11.9158 7.58901 12.1141 8.2272C12.6521 9.96701 13.2443 11.4976 14.3058 12.6178C15.2788 13.6426 16.5703 14.6528 17.4018 15.4075C20.6048 18.3165 21.6279 23.0116 19.3846 26.8209C18.9365 27.5822 17.3449 26.5031 17.7481 25.9073C19.3423 23.5478 18.8136 20.2218 17.2921 18.0053C15.5286 15.4353 12.4671 14.3311 11.4928 11.1163C11.4787 11.0713 11.4509 11.039 11.4095 11.0196C11.2496 10.9455 11.128 11.0368 11.083 11.1984C10.1749 14.4291 6.68632 15.7002 5.08019 18.3178C2.92151 21.8371 4.59373 26.6554 8.78156 27.5716C10.7578 28.0046 12.9112 27.2989 14.1142 25.6689C15.6502 23.5875 15.0739 20.1172 12.5107 19.1215C11.8938 18.8814 11.3161 18.8201 10.7777 18.9375C8.55683 19.4247 7.76368 22.3085 10.1365 23.2856C10.8913 23.5968 11.3765 23.3982 11.2932 24.5528C11.2522 25.1221 10.9442 25.2267 10.434 25.1459C8.37044 24.8176 7.01548 23.5028 7.00094 21.3843C6.97053 17.3791 11.8629 15.9305 14.5861 18.433Z" fill="#45167A"/>
+<path d="M30.8492 20.1754C31.2101 19.9993 31.4863 19.2698 31.1889 18.8739C30.8664 18.4449 30.1948 18.3324 29.6647 18.2529C27.7995 17.9709 25.1927 17.9894 24.8913 15.5518C24.4339 11.8471 32.2332 11.5175 32.9695 15.2328C32.9738 15.254 32.9733 15.2759 32.9681 15.2969C32.9628 15.318 32.953 15.3376 32.9392 15.3544C32.9254 15.3713 32.9081 15.3849 32.8884 15.3943C32.8688 15.4037 32.8473 15.4087 32.8254 15.4088H31.2167C31.162 15.4088 31.1228 15.3841 31.099 15.3347C30.5319 14.1298 28.9549 13.9868 27.8141 14.253C27.3302 14.3655 26.8107 14.6343 26.7103 15.1493C26.3005 17.2678 33.4838 15.1891 33.1308 19.614C33.0876 20.1595 32.8545 20.6419 32.4315 21.0612C30.5002 22.9758 25.428 22.4078 24.7604 19.3347C24.7555 19.3125 24.7556 19.2894 24.7608 19.2672C24.7661 19.2451 24.7762 19.2243 24.7905 19.2066C24.8049 19.1888 24.823 19.1744 24.8437 19.1645C24.8643 19.1546 24.8869 19.1494 24.9098 19.1493H26.5768C26.6199 19.1493 26.6495 19.1696 26.6653 19.2102C27.284 20.8083 29.5445 20.8097 30.8492 20.1754Z" fill="#45167A"/>
+<path d="M54.643 12.8008H53.2338C53.1214 12.8008 53.0303 12.8921 53.0303 13.0047V21.7567C53.0303 21.8693 53.1214 21.9606 53.2338 21.9606H54.643C54.7554 21.9606 54.8466 21.8693 54.8466 21.7567V13.0047C54.8466 12.8921 54.7554 12.8008 54.643 12.8008Z" fill="#45167A"/>
+<path d="M61.3581 14.6953V21.7565C61.3581 21.8112 61.3364 21.8638 61.2977 21.9025C61.259 21.9412 61.2066 21.963 61.1519 21.963L59.7136 21.9617C59.6589 21.9617 59.6065 21.9399 59.5678 21.9012C59.5291 21.8624 59.5074 21.8099 59.5074 21.7551V14.6887C59.5074 14.6339 59.4857 14.5813 59.447 14.5426C59.4083 14.5039 59.3559 14.4821 59.3012 14.4821H56.508C56.4533 14.4821 56.4008 14.4604 56.3622 14.4216C56.3235 14.3829 56.3018 14.3303 56.3018 14.2756V13.0005C56.3018 12.9457 56.3235 12.8932 56.3622 12.8544C56.4008 12.8157 56.4533 12.7939 56.508 12.7939L64.3575 12.7979C64.4122 12.7979 64.4647 12.8197 64.5033 12.8584C64.542 12.8972 64.5637 12.9497 64.5637 13.0045V14.2729C64.5637 14.3275 64.5422 14.3798 64.5038 14.4185C64.4654 14.4572 64.4133 14.4791 64.3588 14.4795L61.563 14.4887C61.5085 14.4891 61.4564 14.511 61.418 14.5497C61.3796 14.5884 61.3581 14.6407 61.3581 14.6953Z" fill="#45167A"/>
+<path d="M35.1429 16.6578C36.675 14.7525 40.149 14.7551 41.6797 16.6167C43.0453 18.2784 42.4055 20.8603 40.4292 21.7223C38.6988 22.4757 36.3683 22.2439 35.123 20.7239C34.162 19.5521 34.2056 17.8229 35.1429 16.6578ZM40.5984 18.6874C40.5988 18.4535 40.5427 18.2219 40.4333 18.0056C40.3238 17.7893 40.1632 17.5927 39.9606 17.427C39.758 17.2613 39.5173 17.1297 39.2524 17.0397C38.9874 16.9498 38.7033 16.9032 38.4164 16.9027C38.1294 16.9022 37.8452 16.9478 37.5799 17.0368C37.3147 17.1258 37.0736 17.2566 36.8704 17.4216C36.6672 17.5866 36.5059 17.7827 36.3957 17.9985C36.2855 18.2144 36.2286 18.4459 36.2282 18.6797C36.2277 18.9136 36.2839 19.1453 36.3933 19.3615C36.5027 19.5778 36.6633 19.7744 36.866 19.9401C37.0686 20.1058 37.3092 20.2374 37.5742 20.3274C37.8392 20.4174 38.1232 20.4639 38.4102 20.4644C38.6971 20.4649 38.9814 20.4194 39.2466 20.3303C39.5119 20.2413 39.753 20.1105 39.9562 19.9455C40.1594 19.7805 40.3207 19.5845 40.4309 19.3686C40.5411 19.1527 40.598 18.9213 40.5984 18.6874Z" fill="#45167A"/>
+<path d="M66.1832 19.2456C66.1832 19.2606 66.1783 19.2729 66.1686 19.2827C66.1536 19.2968 66.1492 19.314 66.1554 19.3343C66.7199 21.0132 68.8204 21.0476 69.9704 19.9937C70.0075 19.9601 70.0506 19.9434 70.1 19.9434L71.5581 19.9447C71.5947 19.9446 71.6299 19.9583 71.6569 19.983C71.6839 20.0078 71.7005 20.0419 71.7035 20.0784C71.7114 20.1729 71.6859 20.2686 71.6268 20.3657C70.3895 22.3889 67.3742 22.6643 65.5539 21.331C64.2862 20.4028 63.8685 18.6683 64.5479 17.2516C66.1329 13.9467 72.334 14.7796 72.0234 19.0059C72.021 19.0447 72.0038 19.0811 71.9753 19.1077C71.9468 19.1343 71.9092 19.149 71.87 19.1489H66.2823C66.2565 19.1489 66.2316 19.159 66.2131 19.1771C66.1946 19.1951 66.1838 19.2197 66.1832 19.2456ZM66.1898 18.2247L70.0788 18.2168C70.083 18.2168 70.0871 18.2151 70.0901 18.2121C70.093 18.2092 70.0947 18.2051 70.0947 18.2009V18.1943C70.0938 17.8007 69.8882 17.4237 69.5231 17.1461C69.1579 16.8685 68.6631 16.7131 68.1475 16.714H68.1158C67.8604 16.7144 67.6075 16.7533 67.3717 16.8283C67.1359 16.9034 66.9217 17.0131 66.7413 17.1513C66.561 17.2895 66.4181 17.4535 66.3207 17.6338C66.2234 17.8141 66.1735 18.0073 66.1739 18.2022V18.2088C66.1739 18.2131 66.1756 18.2171 66.1785 18.2201C66.1815 18.2231 66.1856 18.2247 66.1898 18.2247Z" fill="#45167A"/>
+<path d="M79.8697 16.0903C79.9719 15.957 80.0243 15.803 80.027 15.6282C80.0273 15.5712 80.0503 15.5167 80.0909 15.4765C80.1316 15.4363 80.1865 15.4137 80.2438 15.4137H81.4864C81.6168 15.4137 81.682 15.4791 81.682 15.6097V21.7784C81.682 21.8266 81.6631 21.8727 81.6294 21.9067C81.5957 21.9407 81.5499 21.9598 81.5022 21.9598H80.1962C80.1275 21.9598 80.0851 21.9259 80.0693 21.8579L79.9609 21.3971C79.9546 21.3701 79.9419 21.3451 79.9237 21.3242C79.9055 21.3033 79.8825 21.2871 79.8567 21.2772C79.8309 21.2673 79.803 21.2638 79.7755 21.2672C79.7481 21.2706 79.7218 21.2806 79.6991 21.2965C77.9873 22.4908 75.6633 22.4617 74.233 20.9231C72.6652 19.2376 73.3434 16.4531 75.4756 15.5806C76.965 14.9706 78.3905 15.1467 79.752 16.1089C79.797 16.1398 79.8362 16.1336 79.8697 16.0903ZM79.8961 18.6924C79.8978 18.1986 79.6517 17.7243 79.2119 17.3736C78.7721 17.0229 78.1746 16.8247 77.5509 16.8225C77.2421 16.8215 76.9361 16.8685 76.6505 16.9611C76.3648 17.0537 76.1051 17.1899 75.8861 17.362C75.6672 17.5341 75.4932 17.7387 75.3742 17.9641C75.2553 18.1896 75.1936 18.4314 75.1928 18.6759C75.191 19.1696 75.4371 19.644 75.877 19.9947C76.3168 20.3453 76.9142 20.5436 77.5379 20.5457C77.8468 20.5468 78.1527 20.4997 78.4384 20.4072C78.724 20.3146 78.9837 20.1784 79.2027 20.0063C79.4217 19.8342 79.5956 19.6296 79.7146 19.4041C79.8336 19.1787 79.8953 18.9368 79.8961 18.6924Z" fill="#45167A"/>
+<path d="M90.3488 16.8304C90.3588 16.8477 90.3728 16.8622 90.3896 16.8728C90.4065 16.8834 90.4256 16.8897 90.4455 16.8911C90.4653 16.8926 90.4852 16.8891 90.5033 16.8811C90.5215 16.873 90.5375 16.8606 90.5498 16.845C90.6643 16.7002 90.7807 16.5497 90.8988 16.3935C92.5022 14.2697 95.5836 15.2323 96.2168 17.6831C96.5129 18.8271 96.3636 20.5378 96.353 21.7837C96.3527 21.8284 96.3349 21.8713 96.3036 21.9032C96.2723 21.9351 96.2298 21.9535 96.1851 21.9545C95.7039 21.9678 95.2346 21.9678 94.7773 21.9545C94.6001 21.9501 94.5129 21.8424 94.5155 21.6314C94.5287 20.6159 94.7363 18.8907 94.3582 18.0035C93.5836 16.1883 90.8776 16.7603 90.8485 18.7635C90.8336 19.7734 90.8309 20.7712 90.8406 21.7572C90.8408 21.7839 90.8357 21.8104 90.8256 21.8352C90.8155 21.8599 90.8006 21.8824 90.7818 21.9013C90.763 21.9203 90.7407 21.9353 90.7161 21.9456C90.6914 21.9558 90.665 21.9611 90.6383 21.9611H89.2146C89.1628 21.9611 89.113 21.9405 89.0763 21.9037C89.0396 21.867 89.019 21.8171 89.019 21.7652C89.0199 20.8119 89.0186 19.8409 89.015 18.8523C89.0097 16.8635 86.3395 16.1168 85.5239 17.9307C85.1286 18.8072 85.3137 20.5947 85.3176 21.6314C85.3185 21.8274 85.2388 21.9294 85.0784 21.9373C84.6095 21.9611 84.1367 21.9686 83.66 21.9598C83.6173 21.9591 83.5766 21.9416 83.5467 21.9112C83.5168 21.8807 83.5 21.8397 83.5 21.7969V15.5593C83.5 15.5207 83.5155 15.4837 83.543 15.4564C83.5705 15.429 83.6078 15.4137 83.6467 15.4137L85.0123 15.4163C85.0731 15.4163 85.1092 15.4464 85.1207 15.5064L85.2291 16.0704C85.2351 16.1015 85.2494 16.1303 85.2705 16.1537C85.2917 16.1772 85.3188 16.1944 85.3491 16.2035C85.3793 16.2127 85.4114 16.2134 85.442 16.2055C85.4725 16.1977 85.5004 16.1817 85.5225 16.1591C87.0189 14.6563 89.3111 15.0496 90.3488 16.8304Z" fill="#45167A"/>
+<path d="M49.334 21.1216C49.2618 21.1322 49.1877 21.1742 49.112 21.2474C48.1932 22.1504 46.9612 22.3663 45.7675 21.9108C43.1937 20.927 43.6643 17.7162 43.6802 15.5831C43.6804 15.5604 43.685 15.5378 43.6939 15.5169C43.7028 15.4959 43.7157 15.4769 43.7319 15.4609C43.7481 15.4449 43.7673 15.4323 43.7883 15.4237C43.8094 15.4152 43.832 15.4108 43.8547 15.411L45.3524 15.4163C45.3901 15.4167 45.426 15.4319 45.4525 15.4587C45.479 15.4854 45.4939 15.5216 45.4939 15.5593C45.4948 16.5303 45.4974 17.5061 45.5018 18.4868C45.5111 20.5695 48.3823 21.2143 49.2283 19.411C49.6116 18.5954 49.4438 16.3577 49.4266 15.7381C49.4213 15.5439 49.5015 15.4423 49.6672 15.4335C50.1237 15.4088 50.5907 15.4022 51.0684 15.4137C51.1125 15.4147 51.1544 15.4326 51.1855 15.4637C51.2166 15.4948 51.2343 15.5367 51.235 15.5805C51.2632 17.4209 51.2786 19.2834 51.2812 21.168C51.2812 21.4522 51.2662 21.6848 51.2363 21.8658C51.2257 21.9267 51.1896 21.9571 51.1279 21.9571H49.7306C49.6707 21.9571 49.6346 21.9276 49.6222 21.8684L49.4953 21.2355C49.4882 21.1994 49.4675 21.1674 49.4375 21.1462C49.4074 21.125 49.3704 21.1162 49.334 21.1216Z" fill="#45167A"/>
+</svg>
+              <p>Сейчас</p>
+            </div>
+            <div class="modal__info"> 
+              <div class="modal__image"> <img src="../assets/build/images/flag.png"></div>
+              <div class="modal__desc"> 
+                <div class="modal__title">Играй и&nbsp;выигрывай!</div>
+                <div class="modal__subtitle">Начните Игру и&nbsp;применяйте свои знания о&nbsp;криптовалюте и&nbsp;криптовалютных инвестициях, полученные в&nbsp;ходе обучения на&nbsp;курсе.</div><a class="modal__link" href="" target="_blank">https://cryptoforum.soulmate.partners/partners</a>
+              </div>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" checked id="acquainted" name="acquainted">
+              <label for="acquainted">Ознакомлен(на)</label>
+            </div><a class="btn-primary" href="">В профиль</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-buy modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__image"> <img src="../assets/build/images/heart.png"></div>
+            <div class="modal__title">Поздравляю тебя, родственная душа!</div><a class="btn-primary" href="">Спасибо 😊</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-instructions modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Инструкция</div>
+            <div class="modal__subtitle">Оформление самозанятости</div>
+            <ul> 
+              <li>Скачать мобильное приложение «Мой налог» для Android или iOS.</li>
+              <li>Выбрать способ регистрации по паспорту.</li>
+              <li>Подтвердить кодом из СМС свой номер телефона.</li>
+              <li>Сканировать главный разворот паспорта камерой своего телефона и подтвердить данные.</li>
+              <li>Сделать селфи, чтобы приложение сопоставило ваше лицо и фото в паспорте.</li>
+              <li>Подтвердить, что ИНН определён правильно, и завершить процедуру регистрации.</li>
+              <li>Получить СМС с подтверждением постановки на учёт в качестве плательщика налога на профессиональный доход (НПД), то есть самозанятого.</li>
+            </ul><a class="btn-primary" href="">Ознакомлен</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-create-post modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Создать пост</div>
+            <div class="edit-panel"> 
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 4C6.44772 4 6 4.44772 6 5V12V19C6 19.5523 6.44772 20 7 20H13.5C15.9853 20 18 17.9853 18 15.5C18 13.5575 16.7692 11.9025 15.0449 11.2722C15.6433 10.5081 16 9.54573 16 8.5C16 6.01472 13.9853 4 11.5 4H7ZM11.5 11H8V6H11.5C12.8807 6 14 7.11929 14 8.5C14 9.88071 12.8807 11 11.5 11ZM8 13H11.5H13.5C14.8807 13 16 14.1193 16 15.5C16 16.8807 14.8807 18 13.5 18H8V13Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.0215 4.00024H19C19.5523 4.00024 20 4.44796 20 5.00024C20 5.55253 19.5523 6.00024 19 6.00024H14.7543L11.3257 18.0002H15C15.5523 18.0002 16 18.448 16 19.0002C16 19.5525 15.5523 20.0002 15 20.0002H10.0237C10.0083 20.0006 9.99281 20.0006 9.9773 20.0002H5C4.44772 20.0002 4 19.5525 4 19.0002C4 18.448 4.44772 18.0002 5 18.0002H9.2457L12.6743 6.00024H9C8.44772 6.00024 8 5.55253 8 5.00024C8 4.44796 8.44772 4.00024 9 4.00024H13.9775C13.9921 3.99992 14.0068 3.99992 14.0215 4.00024Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 4C18 3.44772 17.5523 3 17 3C16.4477 3 16 3.44772 16 4V11C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11L8 4C8 3.44772 7.55229 3 7 3C6.44772 3 6 3.44772 6 4V11C6 14.3137 8.68629 17 12 17C15.3137 17 18 14.3137 18 11V4ZM7 19C6.44772 19 6 19.4477 6 20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20C18 19.4477 17.5523 19 17 19H7Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <div class="spacer"></div>
+              <button class="edit-panel-fonts" type="button">Arial</button>
+              <div class="spacer"></div>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7C4 6.44772 4.44772 6 5 6H6C6.55228 6 7 6.44772 7 7C7 7.55228 6.55228 8 6 8H5C4.44772 8 4 7.55228 4 7ZM9 7C9 6.44772 9.44772 6 10 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H10C9.44772 8 9 7.55228 9 7ZM4 12C4 11.4477 4.44772 11 5 11H6C6.55228 11 7 11.4477 7 12C7 12.5523 6.55228 13 6 13H5C4.44772 13 4 12.5523 4 12ZM9 12C9 11.4477 9.44772 11 10 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H10C9.44772 13 9 12.5523 9 12ZM4 17C4 16.4477 4.44772 16 5 16H6C6.55228 16 7 16.4477 7 17C7 17.5523 6.55228 18 6 18H5C4.44772 18 4 17.5523 4 17ZM9 17C9 16.4477 9.44772 16 10 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H10C9.44772 18 9 17.5523 9 17Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 9H9.01" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 9H15.01" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.2 6C16.2 5.44772 16.6477 5 17.2 5C17.8367 5 18.4624 5.12794 19.0714 5.37152C19.7341 5.63661 20.2442 6.03001 20.7071 6.49289C21.17 6.95578 21.5634 7.4659 21.8285 8.12861C22.0721 8.73756 22.2 9.36326 22.2 10C22.2 10.6367 22.0721 11.2624 21.8285 11.8714C21.5667 12.5258 21.1798 13.0314 20.7245 13.4897L19.7399 14.5727C19.7293 14.5844 19.7183 14.5959 19.7071 14.6071L16.5071 17.8071C16.0442 18.27 15.5341 18.6634 14.8714 18.9285C14.2624 19.1721 13.6367 19.3 13 19.3C12.3633 19.3 11.7376 19.1721 11.1286 18.9285C10.4659 18.6634 9.95578 18.27 9.49289 17.8071C9.03 17.3442 8.63661 16.8341 8.37152 16.1714C8.12326 15.5507 8 14.9244 8 14.2C8 13.5633 8.12794 12.9376 8.37152 12.3286C8.63661 11.6659 9.03 11.1558 9.49289 10.6929L10.5929 9.59289C10.9834 9.20237 11.6166 9.20237 12.0071 9.59289C12.3976 9.98342 12.3976 10.6166 12.0071 11.0071L10.9071 12.1071C10.57 12.4442 10.3634 12.7341 10.2285 13.0714C10.0721 13.4624 10 13.8367 10 14.2C10 14.6756 10.0767 15.0493 10.2285 15.4286C10.3634 15.7659 10.57 16.0558 10.9071 16.3929C11.2442 16.73 11.5341 16.9366 11.8714 17.0715C12.2624 17.2279 12.6367 17.3 13 17.3C13.3633 17.3 13.7376 17.2279 14.1286 17.0715C14.4659 16.9366 14.7558 16.73 15.0929 16.3929L18.2761 13.2097L19.2601 12.1273C19.2707 12.1156 19.2817 12.1041 19.2929 12.0929C19.63 11.7558 19.8366 11.4659 19.9715 11.1286C20.1279 10.7376 20.2 10.3633 20.2 10C20.2 9.63674 20.1279 9.26244 19.9715 8.87139C19.8366 8.5341 19.63 8.24422 19.2929 7.90711C18.9558 7.56999 18.6659 7.36339 18.3286 7.22848C17.9376 7.07206 17.5633 7 17.2 7C16.6477 7 16.2 6.55228 16.2 6ZM11.3 7.5C10.9367 7.5 10.5624 7.57206 10.1714 7.72848C9.8341 7.86339 9.54422 8.07 9.20711 8.40711L5.92393 11.6903L4.93994 12.7727C4.92927 12.7844 4.91832 12.7959 4.90711 12.8071C4.56999 13.1442 4.36339 13.4341 4.22848 13.7714C4.07206 14.1624 4 14.5367 4 14.9C4 15.2633 4.07206 15.6376 4.22848 16.0286C4.36339 16.3659 4.57 16.6558 4.90711 16.9929C5.24422 17.33 5.5341 17.5366 5.87139 17.6715C6.26244 17.8279 6.63674 17.9 7 17.9C7.55228 17.9 8 18.3477 8 18.9C8 19.4523 7.55228 19.9 7 19.9C6.36326 19.9 5.73756 19.7721 5.12861 19.5285C4.4659 19.2634 3.95578 18.87 3.49289 18.4071C3.03 17.9442 2.63661 17.4341 2.37152 16.7714C2.12794 16.1624 2 15.5367 2 14.9C2 14.2633 2.12794 13.6376 2.37152 13.0286C2.63328 12.3742 3.02016 11.8686 3.47551 11.4103L4.46006 10.3273C4.47073 10.3156 4.48168 10.3041 4.49289 10.2929L7.79289 6.99289C8.25578 6.53 8.7659 6.13661 9.42861 5.87152C10.0376 5.62794 10.6633 5.5 11.3 5.5C11.9367 5.5 12.5624 5.62794 13.1714 5.87152C13.8341 6.13661 14.3442 6.53 14.8071 6.99289C15.27 7.45578 15.6634 7.9659 15.9285 8.62861C16.1721 9.23756 16.3 9.86326 16.3 10.5C16.3 11.1367 16.1721 11.7624 15.9285 12.3714C15.6664 13.0265 15.279 13.5325 14.823 13.9912L13.7372 15.1757C13.364 15.5828 12.7314 15.6103 12.3243 15.2372C11.9172 14.864 11.8897 14.2314 12.2628 13.8243L13.3628 12.6243C13.3726 12.6136 13.3827 12.6031 13.3929 12.5929C13.73 12.2558 13.9366 11.9659 14.0715 11.6286C14.2279 11.2376 14.3 10.8633 14.3 10.5C14.3 10.1367 14.2279 9.76244 14.0715 9.37139C13.9366 9.0341 13.73 8.74422 13.3929 8.40711C13.0558 8.07 12.7659 7.86339 12.4286 7.72848C12.0376 7.57206 11.6633 7.5 11.3 7.5Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 10C16.3284 10 17 9.32843 17 8.5C17 7.67157 16.3284 7 15.5 7C14.6716 7 14 7.67157 14 8.5C14 9.32843 14.6716 10 15.5 10Z" fill="#0D0D0D"/>
+<path d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM19 5H5V12.9194L8.37534 10.2191C8.74056 9.92696 9.25951 9.92696 9.62473 10.2191L13.9258 13.66L15.2929 12.2929C15.6835 11.9024 16.3166 11.9024 16.7071 12.2929L19 14.5857V5ZM5 19H19V17.4142L16 14.4142L14.7071 15.7071C14.3468 16.0674 13.7732 16.0992 13.3753 15.7809L9.00004 12.2806L5 15.4807V19Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.463 5.57573C18.7758 4.82597 17.5346 4.77977 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.6929C16.3836 7.30238 17.0168 7.30238 17.4073 7.6929C17.7978 8.08342 17.7978 8.71659 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.1929C16.8606 2.62537 19.408 2.57436 20.9225 4.20821C22.4748 5.77662 22.5205 8.31157 20.8931 9.82133L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.3929C12.0836 3.00238 12.7168 3.00238 13.1073 3.3929C13.4978 3.78342 13.4978 4.41659 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.3929C19.5033 8.38266 19.5138 8.37264 19.5245 8.36285C20.2742 7.67557 20.3204 6.43446 19.4931 5.60711C19.4828 5.59687 19.4728 5.58641 19.463 5.57573Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+            </div><textarea placeholder="Введите текст"></textarea>
+            <div class="modal__wrap"><a class="btn-primary" href="">Сохранить</a><a class="btn-white" href="">Отменить</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-create-project modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Создать проект</div>
+            <form class="modal__form">
+              <div class="modal__label">Название</div>
+              <input class="modal__input" type="text" name="title" placeholder="Введите заголовок">
+              <div class="modal__label">Описание</div><textarea placeholder="Введите описание, не более 1 000 символов"></textarea>
+              <div class="modal__textarea-count">0/1000</div>
+              <div class="modal__label">Обложка проекта</div>
+              <div class="modal__file form-file">
+                <label>
+                  <input type="file"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 8L12 3L7 8" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 3V15" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  <p>Перетащите файлы сюда или нажмите, чтобы загрузить</p>
+                </label>
+                <div class="form-file-remove"></div>
+              </div>
+              <div class="modal__label">Команда проекта</div>
+              <div class="modal__team">
+                <select class="modal__select js-select" id="team_select">
+                  <option value="Выберите членов команды" disabled selected>Выберите членов команды</option>
+                  <option value="Иванов И.">Иванов И.</option>
+                  <option value="Сидоров В.">Сидоров В.</option>
+                </select>
+              </div>
+              <div class="modal__label">Ссыка на чат потока</div>
+              <input class="modal__input" type="text" name="chat" placeholder="Укажите ссылку">
+              <div class="modal__wrap"><a class="btn-primary" href="">Сохранить</a><a class="btn-white" href="">Отменить</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--objects--><!-- Yandex maps -->
+    <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")-->
+    <script src="../build/js/app.min.js"></script>
+  </body>
+</html>

@@ -26,19 +26,89 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on("click", function(e) {
+        let user_icon = $( ".auth-nav-header__user" );
+        let user__dropdown = $( ".auth-nav-header__dropdown" );
+        if (!user_icon.is(e.target) && user_icon.has(e.target).length === 0){
+            user__dropdown.removeClass("active");
+        }else{
+            user__dropdown.addClass("active");
+        }
+    });
+
     $(document).on('click', '.item-program .item-program__arrow', function () {
         $(this).closest('.item-program').toggleClass('active')
         $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
     });
 
-    $('.reviews-student-slider__more').on('click',function(){
-        $(this).closest('.reviews-student-slider__item').find('.reviews-student-slider__text').toggleClass('active');
+    $('.more-text').on('click',function(){
+        $(this).parent().find('.text').toggleClass('active');
         if($(this).hasClass('active')){
             $(this).removeClass('active');
             $(this).html('Развернуть');
         }else{
             $(this).addClass('active');
             $(this).html('Свернуть');
+        }
+    });
+
+    $(".form-file input[type=file]").change(function(){
+        let filename = $(this).val().replace(/.*\\/, "");
+        $(this).closest('.form-file').addClass('active').find('label').addClass('active');
+        $(this).closest('.form-file').find('label p').text(filename);
+    });
+
+    $(document).on('click', '.form-file-remove', function () {
+        $(this).parent().removeClass('active').find('label').removeClass('active');
+        $(this).parent().find('label p').text('Перетащите файлы сюда или нажмите, чтобы загрузить');
+    });
+
+    $(document).on('click', '.password-visible', function () {
+        let input = $(this).parent().find('.password');
+        if (input.attr('type') === 'password') {
+            input.attr('type','text');
+        } else {
+            input.attr('type','password');
+        }
+    });
+
+    $('.js-select').select2();
+            
+    $(window).on('resize', function() {
+        $('.js-select').select2();
+    });
+
+    $('#participation').change(function(){
+        var selectval= $(this).val(); // Получим значение из select со значением #participation
+        if( selectval== 'musician' ) {
+            $('.musician_input_div').show();
+        } else {
+            $('.musician_input_div').hide();
+        }
+    });
+
+    $('select#team_select').on('change', function() {
+        let selectval= $(this).val();
+
+        var parent = $('<div>').addClass('modal__team-item') 
+        var text = $('<p>').html(selectval)
+        var button = $('<div>').addClass('modal__team-item-del').html(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`)
+
+        parent.append(text, button);
+        $(this).parent().append(parent);
+    });
+
+    $(document).on('click', '.modal__team-item-del', function () {
+        $(this).parent().remove();
+    });
+
+    $('select#module_select').on('change', function() {
+        if ($(window).width() < 991) {
+            $('.module__tab .tab-module.tab-pane').removeClass('active');
+            $(this.value).tab().addClass('show active');
         }
     });
 
@@ -142,4 +212,52 @@ $(document).ready(function () {
         }
     })
    
+    if($('#timer').length > 0){
+        const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        initializeClock('timer', deadline);
+    }
+
 });
+
+function getTimeRemaining(endtime) {
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    //const seconds = Math.floor((total / 1000) % 60);
+    //const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+    
+    return {
+      total,
+      days,
+      hours,
+      //minutes,
+      //seconds
+    };
+  }
+  
+  function initializeClock(id, endtime) {
+    const clock = document.getElementById(id);
+    const daysSpan = clock.querySelector('.days');
+    const hoursSpan = clock.querySelector('.hours');
+    //const minutesSpan = clock.querySelector('.minutes');
+    //const secondsSpan = clock.querySelector('.seconds');
+  
+    function updateClock() {
+      const t = getTimeRemaining(endtime);
+  
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      //minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      //secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+  
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
+    }
+  
+    updateClock();
+    const timeinterval = setInterval(updateClock, 1000);
+  }
+  
+
+  
