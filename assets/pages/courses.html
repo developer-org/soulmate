@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soulmate</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../build/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../build/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../build/images/favicon-16x16.png">
+    <link rel="mask-icon" href="../build/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../build/css/app.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo.svg"></a>
+          <div class="header__nav nav-header">
+            <nav class="nav-header__menu menu-nav-header">
+              <ul class="menu-nav-header__list">
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Мои достижения</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Истории успехов</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Каталог курсов</a></li>
+              </ul>
+            </nav>
+            <div class="nav-header__auth auth-nav-header">
+              <div class="auth-nav-header__wrap"> 
+                <div class="auth-nav-header__name">Татьяна</div>
+                <div class="auth-nav-header__status">Ученик</div>
+              </div>
+              <div class="auth-nav-header__user"><img src="../build/images/user.svg">
+                <div class="auth-nav-header__count">2</div>
+              </div>
+              <div class="auth-nav-header__dropdown">
+                <ul class="auth-nav-header__list">
+                  <li class="auth-nav-header__item"> <a href="../../index.html"> <span>
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8C18 11.3137 15.3137 14 12 14C8.68629 14 6 11.3137 6 8ZM8 18C6.34315 18 5 19.3431 5 21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21C3 18.2386 5.23858 16 8 16H16C18.7614 16 21 18.2386 21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 19.3431 17.6569 18 16 18H8Z" fill="#161616"/>
+</svg></span>
+                      <p>Профиль</p></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 5C3 3.89543 3.89543 3 5 3H9C10.1046 3 11 3.89543 11 5V9C11 10.1046 10.1046 11 9 11H5C3.89543 11 3 10.1046 3 9V5ZM9 5H5V9H9V5ZM13 5C13 3.89543 13.8954 3 15 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5ZM19 5H15V9H19V5ZM3 15C3 13.8954 3.89543 13 5 13H9C10.1046 13 11 13.8954 11 15V19C11 20.1046 10.1046 21 9 21H5C3.89543 21 3 20.1046 3 19V15ZM9 15H5V19H9V15ZM13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15ZM19 15H15V19H19V15Z" fill="#161616"/>
+</svg></span>
+                      <p>Мои курсы</p></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V17C22 18.1046 21.1046 19 20 19H15.4142L12.7071 21.7071C12.3166 22.0976 11.6834 22.0976 11.2929 21.7071L8.58579 19H4C2.89543 19 2 18.1046 2 17V6ZM20 6H4V17H9C9.26522 17 9.51957 17.1054 9.70711 17.2929L12 19.5858L14.2929 17.2929C14.4804 17.1054 14.7348 17 15 17H20V6ZM6 9.5C6 8.94772 6.44772 8.5 7 8.5H17C17.5523 8.5 18 8.94772 18 9.5C18 10.0523 17.5523 10.5 17 10.5H7C6.44772 10.5 6 10.0523 6 9.5ZM6 13.5C6 12.9477 6.44772 12.5 7 12.5H13C13.5523 12.5 14 12.9477 14 13.5C14 14.0523 13.5523 14.5 13 14.5H7C6.44772 14.5 6 14.0523 6 13.5Z" fill="#161616"/>
+</svg></span>
+                      <p>Чат с поддержкой</p></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.1461 3.24812C10.4433 2.51616 11.1614 2 12 2C12.8386 2 13.5567 2.51616 13.8539 3.24812C16.8202 4.06072 19 6.77579 19 10V14.6972L20.8321 17.4453C21.0366 17.7522 21.0557 18.1467 20.8817 18.4719C20.7077 18.797 20.3688 19 20 19H15.4646C15.2219 20.6961 13.7632 22 12 22C10.2368 22 8.77806 20.6961 8.53545 19H4C3.63121 19 3.29235 18.797 3.11833 18.4719C2.94431 18.1467 2.96338 17.7522 3.16795 17.4453L5 14.6972V10C5 6.77579 7.17983 4.06072 10.1461 3.24812ZM10.5854 19C10.7913 19.5826 11.3469 20 12 20C12.6531 20 13.2087 19.5826 13.4146 19H10.5854ZM12 5C9.23858 5 7 7.23858 7 10V15C7 15.1974 6.94156 15.3904 6.83205 15.5547L5.86852 17H18.1315L17.168 15.5547C17.0584 15.3904 17 15.1974 17 15V10C17 7.23858 14.7614 5 12 5Z" fill="#161616"/>
+</svg></span>
+                      <p>Уведомления</p>
+                      <label>2</label></a></li>
+                  <li class="auth-nav-header__item"> <a href=""><span>
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4L4 4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H12" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 16L22 12L18 8" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 12H9" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                      <p>Выход</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="menu"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="courses-main">
+        <div class="container"> 
+          <div class="wrapper">
+            <div class="courses-main__head"> 
+              <div class="courses-main__head-title">
+                <h2 class="h2-title">Академия <span>45%</span></h2>
+                <p>12 поток</p>
+                <div class="courses-main__head-arrow">
+                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 25L20 15L10 25" stroke="#6236FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div>
+                <div class="courses-main__head-dropdown"> 
+                  <p>Мои курсы</p><span>Базовый (0%)</span>
+                </div>
+              </div>
+              <div class="courses-main__start">Начало обучения: 12.01.2023</div>
+            </div>
+            <h3 class="h3-title">Программа курса</h3>
+            <div class="courses-main__item item-courses-main">
+              <div class="item-courses-main__title">Базовый</div>
+              <div class="badge neutral">5 модулей</div>
+              <div class="item-courses-main__progress"><span style="width: 57%;"></span></div>
+              <div class="item-courses-main__image"> <img src="../build/images/courses-image2.png"></div>
+            </div>
+            <div class="courses-main__info info-courses-main">
+              <div class="info-courses-main__circle circle-info-courses-main">
+                <div class="circle-info-courses-main__title">Модуль 1</div>
+                <div class="circle-info-courses-main__text">Рынок онлайн-образования и<br> место методолога в нём</div>
+                <div class="badge default">0/10 уроков</div>
+                <div class="circle-info-courses-main__item deg0 check">
+                  <div class="circle-info-courses-main__icon"></div>
+                </div>
+                <div class="circle-info-courses-main__item deg1 lock">
+                  <div class="circle-info-courses-main__icon"><svg xmlns="http://www.w3.org/2000/svg" width="85" height="82" viewBox="0 0 85 82" fill="none">
+<g filter="url(#filter0_ddif_233_28328)">
+<path d="M42.5001 22C43.2576 22 43.9501 22.428 44.2889 23.1056L49.4467 33.4212L60.7879 35.0708C61.5412 35.1804 62.167 35.708 62.4022 36.432C62.6374 37.1559 62.4413 37.9506 61.8963 38.482L53.642 46.5299L55.4988 57.877C55.6215 58.6269 55.3086 59.3816 54.6913 59.8248C54.074 60.2679 53.2589 60.3229 52.5876 59.9667L42.5001 54.6141L32.4125 59.9667C31.7412 60.3229 30.9261 60.2679 30.3088 59.8248C29.6915 59.3816 29.3786 58.6269 29.5013 57.877L31.3581 46.5299L23.1039 38.482C22.5588 37.9506 22.3627 37.1559 22.5979 36.432C22.8332 35.708 23.4589 35.1804 24.2122 35.0708L35.5534 33.4212L40.7112 23.1056C41.05 22.428 41.7425 22 42.5001 22ZM42.5001 28.4721L38.6639 36.1444C38.3712 36.7298 37.8106 37.135 37.1629 37.2292L28.7968 38.4461L34.8963 44.393C35.3636 44.8487 35.5792 45.5038 35.4738 46.148L34.1001 54.543L41.5626 50.5833C42.1489 50.2722 42.8512 50.2722 43.4375 50.5833L50.9 54.543L49.5263 46.148C49.4209 45.5038 49.6365 44.8487 50.1039 44.393L56.2033 38.4461L47.8372 37.2292C47.1895 37.135 46.6289 36.7298 46.3362 36.1444L42.5001 28.4721Z" fill="url(#paint0_linear_233_28328)"/>
+<path d="M42.5001 22C43.2576 22 43.9501 22.428 44.2889 23.1056L49.4467 33.4212L60.7879 35.0708C61.5412 35.1804 62.167 35.708 62.4022 36.432C62.6374 37.1559 62.4413 37.9506 61.8963 38.482L53.642 46.5299L55.4988 57.877C55.6215 58.6269 55.3086 59.3816 54.6913 59.8248C54.074 60.2679 53.2589 60.3229 52.5876 59.9667L42.5001 54.6141L32.4125 59.9667C31.7412 60.3229 30.9261 60.2679 30.3088 59.8248C29.6915 59.3816 29.3786 58.6269 29.5013 57.877L31.3581 46.5299L23.1039 38.482C22.5588 37.9506 22.3627 37.1559 22.5979 36.432C22.8332 35.708 23.4589 35.1804 24.2122 35.0708L35.5534 33.4212L40.7112 23.1056C41.05 22.428 41.7425 22 42.5001 22ZM42.5001 28.4721L38.6639 36.1444C38.3712 36.7298 37.8106 37.135 37.1629 37.2292L28.7968 38.4461L34.8963 44.393C35.3636 44.8487 35.5792 45.5038 35.4738 46.148L34.1001 54.543L41.5626 50.5833C42.1489 50.2722 42.8512 50.2722 43.4375 50.5833L50.9 54.543L49.5263 46.148C49.4209 45.5038 49.6365 44.8487 50.1039 44.393L56.2033 38.4461L47.8372 37.2292C47.1895 37.135 46.6289 36.7298 46.3362 36.1444L42.5001 28.4721Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28328" x="0.786894" y="0.286894" width="83.4262" height="81.6264" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28328"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28328" result="effect2_dropShadow_233_28328"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28328" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28328"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28328"/>
+</filter>
+<linearGradient id="paint0_linear_233_28328" x1="42.5001" y1="22" x2="42.5001" y2="60.2" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg2">
+                  <div class="circle-info-courses-main__icon"><svg width="84" height="80" viewBox="0 0 84 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28334)">
+<path d="M42 25.0553C37.2884 20.8338 30.0425 20.9869 25.5147 25.5147C20.8284 30.201 20.8284 37.799 25.5147 42.4853L39.1716 56.1421C40.7337 57.7042 43.2663 57.7042 44.8284 56.1421L58.4853 42.4853C63.1716 37.799 63.1716 30.201 58.4853 25.5147C53.9575 20.9869 46.7117 20.8338 42 25.0553ZM39.6569 28.3431L40.5858 29.2721C41.3668 30.0531 42.6332 30.0531 43.4142 29.2721L44.3431 28.3431C47.4673 25.219 52.5327 25.219 55.6569 28.3431C58.7811 31.4673 58.7811 36.5327 55.6569 39.6569L42 53.3137L28.3431 39.6569C25.219 36.5327 25.219 31.4673 28.3431 28.3431C31.4673 25.219 36.5327 25.219 39.6569 28.3431Z" fill="url(#paint0_linear_233_28334)"/>
+<path d="M42 25.0553C37.2884 20.8338 30.0425 20.9869 25.5147 25.5147C20.8284 30.201 20.8284 37.799 25.5147 42.4853L39.1716 56.1421C40.7337 57.7042 43.2663 57.7042 44.8284 56.1421L58.4853 42.4853C63.1716 37.799 63.1716 30.201 58.4853 25.5147C53.9575 20.9869 46.7117 20.8338 42 25.0553ZM39.6569 28.3431L40.5858 29.2721C41.3668 30.0531 42.6332 30.0531 43.4142 29.2721L44.3431 28.3431C47.4673 25.219 52.5327 25.219 55.6569 28.3431C58.7811 31.4673 58.7811 36.5327 55.6569 39.6569L42 53.3137L28.3431 39.6569C25.219 36.5327 25.219 31.4673 28.3431 28.3431C31.4673 25.219 36.5327 25.219 39.6569 28.3431Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28334" x="0.286894" y="0.286894" width="83.4262" height="78.7397" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28334"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28334" result="effect2_dropShadow_233_28334"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28334" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28334"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28334"/>
+</filter>
+<linearGradient id="paint0_linear_233_28334" x1="42" y1="22" x2="42" y2="57.3137" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg3">
+                  <div class="circle-info-courses-main__icon"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28313)">
+<path d="M41 20C42.1046 20 43 20.8954 43 22V24C43 25.1046 42.1046 26 41 26C39.8954 26 39 25.1046 39 24V22C39 20.8954 39.8954 20 41 20ZM55.1422 25.8579C55.9233 26.6389 55.9233 27.9052 55.1422 28.6863L53.728 30.1005C52.947 30.8815 51.6806 30.8815 50.8996 30.1005C50.1186 29.3194 50.1186 28.0531 50.8996 27.2721L52.3138 25.8579C53.0949 25.0768 54.3612 25.0768 55.1422 25.8579ZM26.8579 25.8579C27.6389 25.0768 28.9052 25.0768 29.6863 25.8579L31.1005 27.2721C31.8815 28.0531 31.8815 29.3194 31.1005 30.1005C30.3194 30.8815 29.0531 30.8815 28.2721 30.1005L26.8579 28.6863C26.0768 27.9052 26.0768 26.6389 26.8579 25.8579ZM41 32C36.5817 32 33 35.5817 33 40C33 44.4183 36.5817 48 41 48C45.4183 48 49 44.4183 49 40C49 35.5817 45.4183 32 41 32ZM29 40C29 33.3726 34.3726 28 41 28C47.6274 28 53 33.3726 53 40C53 46.6274 47.6274 52 41 52C34.3726 52 29 46.6274 29 40ZM21 40C21 38.8954 21.8954 38 23 38H25C26.1046 38 27 38.8954 27 40C27 41.1046 26.1046 42 25 42H23C21.8954 42 21 41.1046 21 40ZM55 40C55 38.8954 55.8954 38 57 38H59C60.1046 38 61 38.8954 61 40C61 41.1046 60.1046 42 59 42H57C55.8954 42 55 41.1046 55 40ZM28.2721 49.8995C29.0531 49.1184 30.3194 49.1184 31.1005 49.8995C31.8815 50.6805 31.8815 51.9469 31.1005 52.7279L29.6863 54.1421C28.9052 54.9232 27.6389 54.9232 26.8579 54.1421C26.0768 53.3611 26.0768 52.0947 26.8579 51.3137L28.2721 49.8995ZM50.8996 52.7279C50.1186 51.9469 50.1186 50.6805 50.8996 49.8995C51.6806 49.1184 52.947 49.1184 53.728 49.8995L55.1422 51.3137C55.9233 52.0947 55.9233 53.3611 55.1422 54.1421C54.3612 54.9232 53.0949 54.9232 52.3138 54.1421L50.8996 52.7279ZM41 54C42.1046 54 43 54.8954 43 56V58C43 59.1046 42.1046 60 41 60C39.8954 60 39 59.1046 39 58V56C39 54.8954 39.8954 54 41 54Z" fill="url(#paint0_linear_233_28313)"/>
+<path d="M41 20C42.1046 20 43 20.8954 43 22V24C43 25.1046 42.1046 26 41 26C39.8954 26 39 25.1046 39 24V22C39 20.8954 39.8954 20 41 20ZM55.1422 25.8579C55.9233 26.6389 55.9233 27.9052 55.1422 28.6863L53.728 30.1005C52.947 30.8815 51.6806 30.8815 50.8996 30.1005C50.1186 29.3194 50.1186 28.0531 50.8996 27.2721L52.3138 25.8579C53.0949 25.0768 54.3612 25.0768 55.1422 25.8579ZM26.8579 25.8579C27.6389 25.0768 28.9052 25.0768 29.6863 25.8579L31.1005 27.2721C31.8815 28.0531 31.8815 29.3194 31.1005 30.1005C30.3194 30.8815 29.0531 30.8815 28.2721 30.1005L26.8579 28.6863C26.0768 27.9052 26.0768 26.6389 26.8579 25.8579ZM41 32C36.5817 32 33 35.5817 33 40C33 44.4183 36.5817 48 41 48C45.4183 48 49 44.4183 49 40C49 35.5817 45.4183 32 41 32ZM29 40C29 33.3726 34.3726 28 41 28C47.6274 28 53 33.3726 53 40C53 46.6274 47.6274 52 41 52C34.3726 52 29 46.6274 29 40ZM21 40C21 38.8954 21.8954 38 23 38H25C26.1046 38 27 38.8954 27 40C27 41.1046 26.1046 42 25 42H23C21.8954 42 21 41.1046 21 40ZM55 40C55 38.8954 55.8954 38 57 38H59C60.1046 38 61 38.8954 61 40C61 41.1046 60.1046 42 59 42H57C55.8954 42 55 41.1046 55 40ZM28.2721 49.8995C29.0531 49.1184 30.3194 49.1184 31.1005 49.8995C31.8815 50.6805 31.8815 51.9469 31.1005 52.7279L29.6863 54.1421C28.9052 54.9232 27.6389 54.9232 26.8579 54.1421C26.0768 53.3611 26.0768 52.0947 26.8579 51.3137L28.2721 49.8995ZM50.8996 52.7279C50.1186 51.9469 50.1186 50.6805 50.8996 49.8995C51.6806 49.1184 52.947 49.1184 53.728 49.8995L55.1422 51.3137C55.9233 52.0947 55.9233 53.3611 55.1422 54.1421C54.3612 54.9232 53.0949 54.9232 52.3138 54.1421L50.8996 52.7279ZM41 54C42.1046 54 43 54.8954 43 56V58C43 59.1046 42.1046 60 41 60C39.8954 60 39 59.1046 39 58V56C39 54.8954 39.8954 54 41 54Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28313" x="-0.713106" y="-1.71311" width="83.4262" height="83.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28313"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28313" result="effect2_dropShadow_233_28313"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28313" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28313"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28313"/>
+</filter>
+<linearGradient id="paint0_linear_233_28313" x1="41" y1="20" x2="41" y2="60" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg4">
+                  <div class="circle-info-courses-main__icon"><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28340)">
+<path d="M34.7215 22.5858C35.3318 23.1961 35.4818 24.1289 35.0936 24.8997C34.0814 26.9094 33.5104 29.1807 33.5104 31.5912C33.5104 39.8194 40.1807 46.4896 48.4089 46.4896C50.8193 46.4896 53.0906 45.9187 55.1003 44.9065C55.8711 44.5183 56.804 44.6683 57.4142 45.2785C58.0245 45.8888 58.1744 46.8216 57.7862 47.5924C54.6792 53.7613 48.2856 58.0001 40.8985 58.0001C30.4611 58.0001 22 49.5389 22 39.1016C22 31.7144 26.2388 25.3208 32.4077 22.2138C33.1785 21.8256 34.1113 21.9756 34.7215 22.5858ZM29.6434 29.3392C27.3727 31.9549 26 35.3687 26 39.1016C26 47.3298 32.6703 54.0001 40.8985 54.0001C44.6314 54.0001 48.0452 52.6273 50.6608 50.3567C49.9221 50.4445 49.1706 50.4896 48.4089 50.4896C37.9716 50.4896 29.5104 42.0285 29.5104 31.5912C29.5104 30.8295 29.5556 30.078 29.6434 29.3392Z" fill="url(#paint0_linear_233_28340)"/>
+<path d="M34.7215 22.5858C35.3318 23.1961 35.4818 24.1289 35.0936 24.8997C34.0814 26.9094 33.5104 29.1807 33.5104 31.5912C33.5104 39.8194 40.1807 46.4896 48.4089 46.4896C50.8193 46.4896 53.0906 45.9187 55.1003 44.9065C55.8711 44.5183 56.804 44.6683 57.4142 45.2785C58.0245 45.8888 58.1744 46.8216 57.7862 47.5924C54.6792 53.7613 48.2856 58.0001 40.8985 58.0001C30.4611 58.0001 22 49.5389 22 39.1016C22 31.7144 26.2388 25.3208 32.4077 22.2138C33.1785 21.8256 34.1113 21.9756 34.7215 22.5858ZM29.6434 29.3392C27.3727 31.9549 26 35.3687 26 39.1016C26 47.3298 32.6703 54.0001 40.8985 54.0001C44.6314 54.0001 48.0452 52.6273 50.6608 50.3567C49.9221 50.4445 49.1706 50.4896 48.4089 50.4896C37.9716 50.4896 29.5104 42.0285 29.5104 31.5912C29.5104 30.8295 29.5556 30.078 29.6434 29.3392Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28340" x="0.286894" y="0.286894" width="79.4262" height="79.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28340"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28340" result="effect2_dropShadow_233_28340"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28340" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28340"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28340"/>
+</filter>
+<linearGradient id="paint0_linear_233_28340" x1="40" y1="22" x2="40" y2="58.0001" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg5">
+                  <div class="circle-info-courses-main__icon"><svg width="85" height="76" viewBox="0 0 85 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28344)">
+<path d="M28.5 34C28.5 27.3726 33.8726 22 40.5 22C45.754 22 50.216 25.3749 51.8425 30.0743C57.838 30.7417 62.5 35.8264 62.5 42C62.5 48.6274 57.1274 54 50.5 54H32.5C26.9772 54 22.5 49.5228 22.5 44C22.5 39.8871 24.9815 36.3574 28.5277 34.8207C28.5093 34.5493 28.5 34.2756 28.5 34ZM40.5 26C36.0817 26 32.5 29.5817 32.5 34C32.5 34.6058 32.567 35.1935 32.6931 35.757C32.9343 36.8346 32.2566 37.9037 31.1792 38.1454C28.5003 38.7463 26.5 41.1419 26.5 44C26.5 47.3137 29.1863 50 32.5 50H50.5C54.9183 50 58.5 46.4183 58.5 42C58.5 37.5817 54.9183 34 50.5 34C50.4464 34 50.3929 34.0005 50.3395 34.0016C49.3736 34.0205 48.5322 33.3462 48.3403 32.3994C47.5998 28.7479 44.3686 26 40.5 26Z" fill="url(#paint0_linear_233_28344)"/>
+<path d="M28.5 34C28.5 27.3726 33.8726 22 40.5 22C45.754 22 50.216 25.3749 51.8425 30.0743C57.838 30.7417 62.5 35.8264 62.5 42C62.5 48.6274 57.1274 54 50.5 54H32.5C26.9772 54 22.5 49.5228 22.5 44C22.5 39.8871 24.9815 36.3574 28.5277 34.8207C28.5093 34.5493 28.5 34.2756 28.5 34ZM40.5 26C36.0817 26 32.5 29.5817 32.5 34C32.5 34.6058 32.567 35.1935 32.6931 35.757C32.9343 36.8346 32.2566 37.9037 31.1792 38.1454C28.5003 38.7463 26.5 41.1419 26.5 44C26.5 47.3137 29.1863 50 32.5 50H50.5C54.9183 50 58.5 46.4183 58.5 42C58.5 37.5817 54.9183 34 50.5 34C50.4464 34 50.3929 34.0005 50.3395 34.0016C49.3736 34.0205 48.5322 33.3462 48.3403 32.3994C47.5998 28.7479 44.3686 26 40.5 26Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28344" x="0.786894" y="0.286894" width="83.4262" height="75.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28344"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28344" result="effect2_dropShadow_233_28344"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28344" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28344"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28344"/>
+</filter>
+<linearGradient id="paint0_linear_233_28344" x1="42.5" y1="22" x2="42.5" y2="54" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg6">
+                  <div class="circle-info-courses-main__icon"><svg width="85" height="84" viewBox="0 0 85 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28323)">
+<path d="M44.5 24C44.5 22.8954 43.6046 22 42.5 22C41.3954 22 40.5 22.8954 40.5 24V29.1716L36.6005 25.2721C35.8194 24.491 34.5531 24.491 33.772 25.2721C32.991 26.0531 32.991 27.3195 33.772 28.1005L40.5 34.8285V40H35.3284L28.6005 33.2721C27.8194 32.491 26.5531 32.491 25.772 33.2721C24.991 34.0531 24.991 35.3195 25.772 36.1005L29.6715 40H24.5C23.3954 40 22.5 40.8954 22.5 42C22.5 43.1046 23.3954 44 24.5 44H29.6715L25.7721 47.8994C24.991 48.6805 24.991 49.9468 25.7721 50.7279C26.5531 51.5089 27.8194 51.5089 28.6005 50.7279L35.3284 44H40.5V49.1715L33.7721 55.8994C32.991 56.6805 32.991 57.9468 33.7721 58.7279C34.5531 59.5089 35.8194 59.5089 36.6005 58.7279L40.5 54.8284V60C40.5 61.1046 41.3954 62 42.5 62C43.6046 62 44.5 61.1046 44.5 60V54.8282L48.3994 58.7277C49.1805 59.5087 50.4468 59.5087 51.2279 58.7277C52.0089 57.9466 52.0089 56.6803 51.2279 55.8993L44.5 49.1714V44H49.6718L56.3994 50.7277C57.1805 51.5087 58.4468 51.5087 59.2279 50.7277C60.0089 49.9466 60.0089 48.6803 59.2279 47.8993L55.3286 44H60.5C61.6046 44 62.5 43.1046 62.5 42C62.5 40.8954 61.6046 40 60.5 40H55.3286L59.2279 36.1007C60.0089 35.3197 60.0089 34.0534 59.2279 33.2723C58.4468 32.4913 57.1805 32.4913 56.3995 33.2723L49.6718 40H44.5V34.8286L51.2279 28.1007C52.009 27.3197 52.009 26.0533 51.2279 25.2723C50.4469 24.4912 49.1805 24.4912 48.3995 25.2723L44.5 29.1718V24Z" fill="url(#paint0_linear_233_28323)"/>
+<path d="M44.5 24C44.5 22.8954 43.6046 22 42.5 22C41.3954 22 40.5 22.8954 40.5 24V29.1716L36.6005 25.2721C35.8194 24.491 34.5531 24.491 33.772 25.2721C32.991 26.0531 32.991 27.3195 33.772 28.1005L40.5 34.8285V40H35.3284L28.6005 33.2721C27.8194 32.491 26.5531 32.491 25.772 33.2721C24.991 34.0531 24.991 35.3195 25.772 36.1005L29.6715 40H24.5C23.3954 40 22.5 40.8954 22.5 42C22.5 43.1046 23.3954 44 24.5 44H29.6715L25.7721 47.8994C24.991 48.6805 24.991 49.9468 25.7721 50.7279C26.5531 51.5089 27.8194 51.5089 28.6005 50.7279L35.3284 44H40.5V49.1715L33.7721 55.8994C32.991 56.6805 32.991 57.9468 33.7721 58.7279C34.5531 59.5089 35.8194 59.5089 36.6005 58.7279L40.5 54.8284V60C40.5 61.1046 41.3954 62 42.5 62C43.6046 62 44.5 61.1046 44.5 60V54.8282L48.3994 58.7277C49.1805 59.5087 50.4468 59.5087 51.2279 58.7277C52.0089 57.9466 52.0089 56.6803 51.2279 55.8993L44.5 49.1714V44H49.6718L56.3994 50.7277C57.1805 51.5087 58.4468 51.5087 59.2279 50.7277C60.0089 49.9466 60.0089 48.6803 59.2279 47.8993L55.3286 44H60.5C61.6046 44 62.5 43.1046 62.5 42C62.5 40.8954 61.6046 40 60.5 40H55.3286L59.2279 36.1007C60.0089 35.3197 60.0089 34.0534 59.2279 33.2723C58.4468 32.4913 57.1805 32.4913 56.3995 33.2723L49.6718 40H44.5V34.8286L51.2279 28.1007C52.009 27.3197 52.009 26.0533 51.2279 25.2723C50.4469 24.4912 49.1805 24.4912 48.3995 25.2723L44.5 29.1718V24Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28323" x="0.786894" y="0.286894" width="83.4262" height="83.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28323"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28323" result="effect2_dropShadow_233_28323"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28323" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28323"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28323"/>
+</filter>
+<linearGradient id="paint0_linear_233_28323" x1="42.5" y1="22" x2="42.5" y2="62" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg7">
+                  <div class="circle-info-courses-main__icon"><svg width="84" height="72" viewBox="0 0 84 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28350)">
+<path d="M40 24C40 22.8954 40.8954 22 42 22H60C61.1046 22 62 22.8954 62 24C62 25.1046 61.1046 26 60 26H42C40.8954 26 40 25.1046 40 24ZM22 32C22 30.8954 22.8954 30 24 30H46C47.1046 30 48 30.8954 48 32C48 33.1046 47.1046 34 46 34H24C22.8954 34 22 33.1046 22 32ZM28 38C26.8954 38 26 38.8954 26 40C26 41.1046 26.8954 42 28 42H46C47.1046 42 48 41.1046 48 40C48 38.8954 47.1046 38 46 38H28ZM52 38C50.8954 38 50 38.8954 50 40C50 41.1046 50.8954 42 52 42H60C61.1046 42 62 41.1046 62 40C62 38.8954 61.1046 38 60 38H52ZM52 30C50.8954 30 50 30.8954 50 32C50 33.1046 50.8954 34 52 34H56C57.1046 34 58 33.1046 58 32C58 30.8954 57.1046 30 56 30H52ZM32 48C32 46.8954 32.8954 46 34 46H56C57.1046 46 58 46.8954 58 48C58 49.1046 57.1046 50 56 50H34C32.8954 50 32 49.1046 32 48ZM24 46C22.8954 46 22 46.8954 22 48C22 49.1046 22.8954 50 24 50H28C29.1046 50 30 49.1046 30 48C30 46.8954 29.1046 46 28 46H24ZM28 22C26.8954 22 26 22.8954 26 24C26 25.1046 26.8954 26 28 26H36C37.1046 26 38 25.1046 38 24C38 22.8954 37.1046 22 36 22H28Z" fill="url(#paint0_linear_233_28350)"/>
+<path d="M40 24C40 22.8954 40.8954 22 42 22H60C61.1046 22 62 22.8954 62 24C62 25.1046 61.1046 26 60 26H42C40.8954 26 40 25.1046 40 24ZM22 32C22 30.8954 22.8954 30 24 30H46C47.1046 30 48 30.8954 48 32C48 33.1046 47.1046 34 46 34H24C22.8954 34 22 33.1046 22 32ZM28 38C26.8954 38 26 38.8954 26 40C26 41.1046 26.8954 42 28 42H46C47.1046 42 48 41.1046 48 40C48 38.8954 47.1046 38 46 38H28ZM52 38C50.8954 38 50 38.8954 50 40C50 41.1046 50.8954 42 52 42H60C61.1046 42 62 41.1046 62 40C62 38.8954 61.1046 38 60 38H52ZM52 30C50.8954 30 50 30.8954 50 32C50 33.1046 50.8954 34 52 34H56C57.1046 34 58 33.1046 58 32C58 30.8954 57.1046 30 56 30H52ZM32 48C32 46.8954 32.8954 46 34 46H56C57.1046 46 58 46.8954 58 48C58 49.1046 57.1046 50 56 50H34C32.8954 50 32 49.1046 32 48ZM24 46C22.8954 46 22 46.8954 22 48C22 49.1046 22.8954 50 24 50H28C29.1046 50 30 49.1046 30 48C30 46.8954 29.1046 46 28 46H24ZM28 22C26.8954 22 26 22.8954 26 24C26 25.1046 26.8954 26 28 26H36C37.1046 26 38 25.1046 38 24C38 22.8954 37.1046 22 36 22H28Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28350" x="0.286894" y="0.286894" width="83.4262" height="71.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28350"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28350" result="effect2_dropShadow_233_28350"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28350" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28350"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28350"/>
+</filter>
+<linearGradient id="paint0_linear_233_28350" x1="42" y1="22" x2="42" y2="50" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg8">
+                  <div class="circle-info-courses-main__icon"><svg width="76" height="84" viewBox="0 0 76 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28356)">
+<path d="M39.3016 22.4812C38.5526 21.8392 37.4466 21.8398 36.6976 22.4818L36.5207 22.6362C36.411 22.7328 36.2531 22.8733 36.0538 23.0543C35.6554 23.4161 35.0909 23.9404 34.4154 24.5998C33.067 25.9161 31.2644 27.7826 29.4561 29.9783C27.6528 32.168 25.8109 34.725 24.412 37.4228C23.0221 40.1033 22 43.0554 22 45.9997C22 54.8362 29.1634 61.9997 38 61.9997C46.8366 61.9997 54 54.8362 54 45.9997C54 43.0554 52.9779 40.1033 51.588 37.4228C50.1891 34.725 48.3472 32.168 46.5439 29.9783C44.7356 27.7826 42.933 25.9161 41.5846 24.5998C40.9091 23.9404 40.3446 23.4161 39.9462 23.0543L39.3016 22.4812ZM26 45.9997C26 43.9439 26.7279 41.6461 27.963 39.2641C29.1891 36.8994 30.8472 34.5813 32.5439 32.5211C34.2356 30.4668 35.933 28.7082 37.2096 27.4621C37.4966 27.1819 37.7617 26.9282 38 26.7035C38.2383 26.9282 38.5034 27.1819 38.7904 27.4621C40.067 28.7082 41.7644 30.4668 43.4561 32.5211C45.1528 34.5813 46.8109 36.8994 48.037 39.2641C49.2721 41.6461 50 43.9439 50 45.9997C50 52.6271 44.6274 57.9997 38 57.9997C31.3726 57.9997 26 52.6271 26 45.9997Z" fill="url(#paint0_linear_233_28356)"/>
+<path d="M39.3016 22.4812C38.5526 21.8392 37.4466 21.8398 36.6976 22.4818L36.5207 22.6362C36.411 22.7328 36.2531 22.8733 36.0538 23.0543C35.6554 23.4161 35.0909 23.9404 34.4154 24.5998C33.067 25.9161 31.2644 27.7826 29.4561 29.9783C27.6528 32.168 25.8109 34.725 24.412 37.4228C23.0221 40.1033 22 43.0554 22 45.9997C22 54.8362 29.1634 61.9997 38 61.9997C46.8366 61.9997 54 54.8362 54 45.9997C54 43.0554 52.9779 40.1033 51.588 37.4228C50.1891 34.725 48.3472 32.168 46.5439 29.9783C44.7356 27.7826 42.933 25.9161 41.5846 24.5998C40.9091 23.9404 40.3446 23.4161 39.9462 23.0543L39.3016 22.4812ZM26 45.9997C26 43.9439 26.7279 41.6461 27.963 39.2641C29.1891 36.8994 30.8472 34.5813 32.5439 32.5211C34.2356 30.4668 35.933 28.7082 37.2096 27.4621C37.4966 27.1819 37.7617 26.9282 38 26.7035C38.2383 26.9282 38.5034 27.1819 38.7904 27.4621C40.067 28.7082 41.7644 30.4668 43.4561 32.5211C45.1528 34.5813 46.8109 36.8994 48.037 39.2641C49.2721 41.6461 50 43.9439 50 45.9997C50 52.6271 44.6274 57.9997 38 57.9997C31.3726 57.9997 26 52.6271 26 45.9997Z" fill="#6236FF"/>
+<path d="M30.7193 46.0828C29.6606 46.3979 29.0578 47.5115 29.3729 48.5702C30.2375 51.4753 32.5243 53.7621 35.4294 54.6267C36.4881 54.9418 37.6017 54.339 37.9168 53.2803C38.2319 52.2216 37.6291 51.108 36.5704 50.7929C34.96 50.3136 33.686 49.0396 33.2067 47.4292C32.8916 46.3705 31.7779 45.7677 30.7193 46.0828Z" fill="url(#paint1_linear_233_28356)"/>
+<path d="M30.7193 46.0828C29.6606 46.3979 29.0578 47.5115 29.3729 48.5702C30.2375 51.4753 32.5243 53.7621 35.4294 54.6267C36.4881 54.9418 37.6017 54.339 37.9168 53.2803C38.2319 52.2216 37.6291 51.108 36.5704 50.7929C34.96 50.3136 33.686 49.0396 33.2067 47.4292C32.8916 46.3705 31.7779 45.7677 30.7193 46.0828Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28356" x="0.286894" y="0.286894" width="75.4262" height="83.4257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28356"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28356" result="effect2_dropShadow_233_28356"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28356" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28356"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28356"/>
+</filter>
+<linearGradient id="paint0_linear_233_28356" x1="38" y1="22" x2="38" y2="61.9997" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_233_28356" x1="38" y1="22" x2="38" y2="61.9997" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg9">
+                  <div class="circle-info-courses-main__icon"><svg width="84" height="72" viewBox="0 0 84 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28362)">
+<path d="M55.6123 37.8375C56.255 37.7059 56.8697 37.4973 57.4462 37.2217C60.1395 35.9342 62.0001 33.1844 62.0001 30C62.0001 25.5817 58.4183 22 54 22C51.6305 22 49.4996 23.0327 48.0376 24.6662C47.3009 25.4892 47.371 26.7536 48.194 27.4903C49.0171 28.2269 50.2815 28.1569 51.0181 27.3338C51.7534 26.5123 52.8155 26 54 26C54.1381 26 54.2745 26.007 54.409 26.0207C54.9468 26.0753 55.4532 26.2365 55.9066 26.4828C57.1535 27.1601 58 28.4812 58 30C58 31.6569 56.9926 33.0784 55.557 33.6857C55.0785 33.8881 54.5523 34 54.0001 34H54H24C22.8954 34 22 34.8954 22 36C22 37.1046 22.8954 38 24 38H54H54.0001C54.5523 38 55.0915 37.944 55.6123 37.8375ZM28 32H39H39L39.0323 31.9999C39.1939 31.9989 39.3536 31.9902 39.5112 31.9742C42.0325 31.7182 44 29.5888 44 27C44 24.2386 41.7615 22 39 22C37.519 22 36.1863 22.6465 35.2737 23.6662C34.537 24.4892 34.6071 25.7536 35.4301 26.4903C36.2532 27.2269 37.5176 27.1569 38.2542 26.3338C38.4402 26.1261 38.704 26 39 26C39.5523 26 40 26.4477 40 27C40 27.5523 39.5523 28 39 28H39H28C26.8954 28 26 28.8954 26 30C26 31.1046 26.8954 32 28 32ZM51 40L34 40C32.8954 40 32 40.8954 32 42C32 43.1046 32.8954 44 34 44L51 44C51.5523 44 52 44.4477 52 45C52 45.5523 51.5523 46 51 46C50.704 46 50.4402 45.8739 50.2542 45.6662C49.5176 44.8431 48.2532 44.7731 47.4301 45.5097C46.6071 46.2464 46.537 47.5108 47.2737 48.3338C48.1863 49.3535 49.519 50 51 50C53.7615 50 56 47.7614 56 45C56 42.4111 54.0325 40.2818 51.5112 40.0258C51.3536 40.0098 51.1939 40.0011 51.0323 40.0001L51 40Z" fill="url(#paint0_linear_233_28362)"/>
+<path d="M55.6123 37.8375C56.255 37.7059 56.8697 37.4973 57.4462 37.2217C60.1395 35.9342 62.0001 33.1844 62.0001 30C62.0001 25.5817 58.4183 22 54 22C51.6305 22 49.4996 23.0327 48.0376 24.6662C47.3009 25.4892 47.371 26.7536 48.194 27.4903C49.0171 28.2269 50.2815 28.1569 51.0181 27.3338C51.7534 26.5123 52.8155 26 54 26C54.1381 26 54.2745 26.007 54.409 26.0207C54.9468 26.0753 55.4532 26.2365 55.9066 26.4828C57.1535 27.1601 58 28.4812 58 30C58 31.6569 56.9926 33.0784 55.557 33.6857C55.0785 33.8881 54.5523 34 54.0001 34H54H24C22.8954 34 22 34.8954 22 36C22 37.1046 22.8954 38 24 38H54H54.0001C54.5523 38 55.0915 37.944 55.6123 37.8375ZM28 32H39H39L39.0323 31.9999C39.1939 31.9989 39.3536 31.9902 39.5112 31.9742C42.0325 31.7182 44 29.5888 44 27C44 24.2386 41.7615 22 39 22C37.519 22 36.1863 22.6465 35.2737 23.6662C34.537 24.4892 34.6071 25.7536 35.4301 26.4903C36.2532 27.2269 37.5176 27.1569 38.2542 26.3338C38.4402 26.1261 38.704 26 39 26C39.5523 26 40 26.4477 40 27C40 27.5523 39.5523 28 39 28H39H28C26.8954 28 26 28.8954 26 30C26 31.1046 26.8954 32 28 32ZM51 40L34 40C32.8954 40 32 40.8954 32 42C32 43.1046 32.8954 44 34 44L51 44C51.5523 44 52 44.4477 52 45C52 45.5523 51.5523 46 51 46C50.704 46 50.4402 45.8739 50.2542 45.6662C49.5176 44.8431 48.2532 44.7731 47.4301 45.5097C46.6071 46.2464 46.537 47.5108 47.2737 48.3338C48.1863 49.3535 49.519 50 51 50C53.7615 50 56 47.7614 56 45C56 42.4111 54.0325 40.2818 51.5112 40.0258C51.3536 40.0098 51.1939 40.0011 51.0323 40.0001L51 40Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28362" x="0.286894" y="0.286894" width="83.4262" height="71.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28362"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28362" result="effect2_dropShadow_233_28362"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28362" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28362"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28362"/>
+</filter>
+<linearGradient id="paint0_linear_233_28362" x1="42" y1="22" x2="42" y2="50" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg10">
+                  <div class="circle-info-courses-main__icon"><svg width="65" height="84" viewBox="0 0 65 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28366)">
+<path d="M26.5 28C26.5 24.6863 29.1863 22 32.5 22C35.8137 22 38.5 24.6863 38.5 28V43.9996C40.926 45.8218 42.5 48.7261 42.5 52C42.5 57.5228 38.0228 62 32.5 62C26.9772 62 22.5 57.5228 22.5 52C22.5 48.7261 24.074 45.8218 26.5 43.9995V28ZM32.5 26C31.3954 26 30.5 26.8954 30.5 28V45.0703C30.5 45.7842 30.1194 46.444 29.5015 46.8015C27.7028 47.8419 26.5 49.7817 26.5 52C26.5 55.3137 29.1863 58 32.5 58C35.8137 58 38.5 55.3137 38.5 52C38.5 49.7817 37.2972 47.8419 35.4985 46.8015C34.8806 46.444 34.5 45.7842 34.5 45.0703V28C34.5 26.8954 33.6046 26 32.5 26Z" fill="url(#paint0_linear_233_28366)"/>
+<path d="M26.5 28C26.5 24.6863 29.1863 22 32.5 22C35.8137 22 38.5 24.6863 38.5 28V43.9996C40.926 45.8218 42.5 48.7261 42.5 52C42.5 57.5228 38.0228 62 32.5 62C26.9772 62 22.5 57.5228 22.5 52C22.5 48.7261 24.074 45.8218 26.5 43.9995V28ZM32.5 26C31.3954 26 30.5 26.8954 30.5 28V45.0703C30.5 45.7842 30.1194 46.444 29.5015 46.8015C27.7028 47.8419 26.5 49.7817 26.5 52C26.5 55.3137 29.1863 58 32.5 58C35.8137 58 38.5 55.3137 38.5 52C38.5 49.7817 37.2972 47.8419 35.4985 46.8015C34.8806 46.444 34.5 45.7842 34.5 45.0703V28C34.5 26.8954 33.6046 26 32.5 26Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28366" x="0.786894" y="0.286894" width="63.4262" height="83.4262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28366"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28366" result="effect2_dropShadow_233_28366"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28366" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28366"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28366"/>
+</filter>
+<linearGradient id="paint0_linear_233_28366" x1="32.5" y1="22" x2="32.5" y2="62" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+                <div class="circle-info-courses-main__item deg11">
+                  <div class="circle-info-courses-main__icon"><svg width="85" height="84" viewBox="0 0 85 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddif_233_28373)">
+<path d="M40.5 22C33.8726 22 28.5 27.3726 28.5 34C28.5 34.2756 28.5093 34.5493 28.5277 34.8207C24.9815 36.3574 22.5 39.8871 22.5 44C22.5 48.6623 25.6888 52.5748 30.0015 53.6848C31.0712 53.9602 32.1616 53.3162 32.4369 52.2465C32.7122 51.1768 32.0682 50.0864 30.9985 49.8111C28.4102 49.1449 26.5 46.793 26.5 44C26.5 41.1419 28.5003 38.7463 31.1792 38.1454C32.2566 37.9037 32.9343 36.8346 32.6931 35.757C32.567 35.1935 32.5 34.6058 32.5 34C32.5 29.5817 36.0817 26 40.5 26C44.3686 26 47.5998 28.7479 48.3403 32.3994C48.5322 33.3462 49.3736 34.0205 50.3395 34.0016C50.3929 34.0005 50.4464 34 50.5 34C54.9183 34 58.5 37.5817 58.5 42C58.5 45.2774 56.5289 48.0989 53.6993 49.3352C52.6871 49.7774 52.2251 50.9565 52.6673 51.9687C53.1095 52.9808 54.2886 53.4429 55.3007 53.0006C59.5347 51.1507 62.5 46.9239 62.5 42C62.5 35.8264 57.838 30.7417 51.8425 30.0743C50.216 25.3749 45.754 22 40.5 22ZM44.2889 44.8944C44.7828 43.9065 44.3824 42.7051 43.3944 42.2111C42.4065 41.7172 41.2051 42.1176 40.7111 43.1056L36.7111 51.1056C36.4012 51.7255 36.4343 52.4618 36.7987 53.0515C37.1631 53.6411 37.8068 54 38.5 54H43.2639L40.7111 59.1056C40.2172 60.0935 40.6176 61.2949 41.6056 61.7889C42.5935 62.2828 43.7949 61.8824 44.2889 60.8944L48.2889 52.8944C48.5988 52.2745 48.5657 51.5382 48.2013 50.9485C47.8369 50.3589 47.1932 50 46.5 50H41.7361L44.2889 44.8944Z" fill="url(#paint0_linear_233_28373)"/>
+<path d="M40.5 22C33.8726 22 28.5 27.3726 28.5 34C28.5 34.2756 28.5093 34.5493 28.5277 34.8207C24.9815 36.3574 22.5 39.8871 22.5 44C22.5 48.6623 25.6888 52.5748 30.0015 53.6848C31.0712 53.9602 32.1616 53.3162 32.4369 52.2465C32.7122 51.1768 32.0682 50.0864 30.9985 49.8111C28.4102 49.1449 26.5 46.793 26.5 44C26.5 41.1419 28.5003 38.7463 31.1792 38.1454C32.2566 37.9037 32.9343 36.8346 32.6931 35.757C32.567 35.1935 32.5 34.6058 32.5 34C32.5 29.5817 36.0817 26 40.5 26C44.3686 26 47.5998 28.7479 48.3403 32.3994C48.5322 33.3462 49.3736 34.0205 50.3395 34.0016C50.3929 34.0005 50.4464 34 50.5 34C54.9183 34 58.5 37.5817 58.5 42C58.5 45.2774 56.5289 48.0989 53.6993 49.3352C52.6871 49.7774 52.2251 50.9565 52.6673 51.9687C53.1095 52.9808 54.2886 53.4429 55.3007 53.0006C59.5347 51.1507 62.5 46.9239 62.5 42C62.5 35.8264 57.838 30.7417 51.8425 30.0743C50.216 25.3749 45.754 22 40.5 22ZM44.2889 44.8944C44.7828 43.9065 44.3824 42.7051 43.3944 42.2111C42.4065 41.7172 41.2051 42.1176 40.7111 43.1056L36.7111 51.1056C36.4012 51.7255 36.4343 52.4618 36.7987 53.0515C37.1631 53.6411 37.8068 54 38.5 54H43.2639L40.7111 59.1056C40.2172 60.0935 40.6176 61.2949 41.6056 61.7889C42.5935 62.2828 43.7949 61.8824 44.2889 60.8944L48.2889 52.8944C48.5988 52.2745 48.5657 51.5382 48.2013 50.9485C47.8369 50.3589 47.1932 50 46.5 50H41.7361L44.2889 44.8944Z" fill="#6236FF"/>
+</g>
+<defs>
+<filter id="filter0_ddif_233_28373" x="0.786894" y="0.286894" width="83.4262" height="83.4267" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="10.8566"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_233_28373"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.805"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_233_28373" result="effect2_dropShadow_233_28373"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_233_28373" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.08566"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.384314 0 0 0 0 0.211765 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_233_28373"/>
+<feGaussianBlur stdDeviation="0.200311" result="effect4_foregroundBlur_233_28373"/>
+</filter>
+<linearGradient id="paint0_linear_233_28373" x1="42.5" y1="22" x2="42.5" y2="62.0004" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="courses-main__faculty faculty-courses-main">
+              <div class="faculty-courses-main__item lock"> 
+                <div class="faculty-courses-main__title">Presale</div>
+                <div class="badge neutral">0/10 уроков</div>
+                <div class="faculty-courses-main__info">Cмена данных доступна только через обращение в техническую поддержку</div>
+              </div>
+              <div class="faculty-courses-main__item lock">
+                <div class="faculty-courses-main__title">DeFi</div>
+                <div class="badge neutral">0/19 уроков</div>
+                <div class="faculty-courses-main__info">Cмена данных доступна только через обращение в техническую поддержку</div>
+              </div>
+              <div class="faculty-courses-main__item lock">
+                <div class="faculty-courses-main__title">Криптотрейдинг</div>
+                <div class="badge neutral">0/17 уроков</div>
+                <div class="faculty-courses-main__info">Cмена данных доступна только через обращение в техническую поддержку</div>
+              </div>
+              <div class="faculty-courses-main__item lock">
+                <div class="faculty-courses-main__title">GameFi. Metaverse</div>
+                <div class="badge neutral">4/14 уроков</div>
+                <div class="faculty-courses-main__info">Cмена данных доступна только через обращение в техническую поддержку</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-xl-2"><a class="footer__logo" href="../../index.html"><img src="../build/images/logo-white.svg"></a></div>
+          <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1 offset-xl-0">
+            <div class="footer__nav nav-footer">
+              <ul class="nav-footer__menu">
+                <li class="nav-footer__item">Информация</li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Правила пользования платформой</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Политика конфиденциальности</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Пользовательское соглашение</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3"> 
+            <div class="footer__nav nav-footer">
+              <ul class="nav-footer__menu">
+                <li class="nav-footer__item">Меню</li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Мои курсы</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Каталог курсов</a></li>
+                <li class="nav-footer__item"><a class="nav-footer__link" href="">Бонусная система</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3">
+            <div class="footer__action"><a class="footer__phone" href="tel:+13322371807">+1 (332) 237–18–07</a><a class="footer__link" href="https://t.me/Podderzka_SoulMate">@Podderzka_SoulMate</a></div>
+          </div>
+        </div>
+        <div class="footer__bottom"> 
+          <div class="footer__copyright">SoulTeam (c) 2023</div>
+          <div class="footer__dev"> <span>разработка дизайна сайта</span><a href=""><img src="../build/images/starta.svg"></a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="mobile" data-scroll-lock-scrollable>
+      <div class="mobile__close"><span></span><span></span><span></span></div><a class="mobile__logo" href="/index.html"><img src="../build/images/logo-white.svg"></a>
+      <div class="mobile__nav nav-mobile">
+        <nav class="nav-mobile__menu menu-nav-mobile">
+          <ul class="menu-nav-mobile__list">
+            <li class="menu-nav-mobile__item">
+              <div class="menu-nav-mobile__link" href="">Войти</div>
+            </li>
+            <li class="menu-nav-mobile__item"><a class="menu-nav-mobile__link" href="">Каталог курсов</a></li>
+            <li class="menu-nav-mobile__item"><a class="menu-nav-mobile__link" href="">Истории успехов</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="modal-bag modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Накопление портфеля</div>
+            <div class="modal__subtitle">Увеличьте свой портфель до 156 значения или достигните суммы вложений в размере 15 000 ₽.</div>
+            <div class="modal__info"><span>
+                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_84_421)">
+<path d="M11.9999 23.409C18.0248 23.409 22.909 18.5248 22.909 12.4999C22.909 6.47499 18.0248 1.59082 11.9999 1.59082C5.97499 1.59082 1.09082 6.47499 1.09082 12.4999C1.09082 18.5248 5.97499 23.409 11.9999 23.409Z" stroke="#6E7191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 8.13672V12.5004" stroke="#6E7191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 16.8633H12.0109" stroke="#6E7191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_84_421">
+<rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg></span>Это позволит вам показать свои навыки в&nbsp;управлении и&nbsp;стратегическом инвестировании.</div><a class="btn-primary" href="">Вперёд!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-thanks modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Спасибо за заявку</div>
+            <div class="modal__subtitle">Ваша заявка успешно сформирована. <br>В течение 1–3 рабочих дней в личном кабинете появится договор-оферта.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-error modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Ошибка оформления заявки</div>
+            <div class="modal__subtitle">При создании заявки произошла ошибка. <br>Попробуйте оформить ещё раз.</div><a class="btn-primary" href="">Вернуться на Главную</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-request modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <form class="modal__form">
+              <div class="modal__title">Заявка на обучение</div>
+              <input class="modal__input" type="text" name="name" placeholder="Имя">
+              <input class="modal__input" type="text" name="phone" placeholder="Телефон">
+              <div class="modal__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="modal__input btn-primary" type="submit" value="Хочу учиться">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-bonuses modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <form class="modal__form">
+              <div class="modal__title">Списать бонусы</div>
+              <input class="modal__input" type="text" name="name" placeholder="Имя">
+              <input class="modal__input" type="text" name="phone" placeholder="Телефон">
+              <input class="modal__input" type="text" name="bonus" placeholder="Укажите кол-во бонусов для списания">
+              <div class="modal__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="modal__input btn-primary" type="submit" value="Списать">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-push modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__head">
+               <svg width="99" height="37" viewBox="0 0 99 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5861 18.433C16.4888 20.1816 17.0955 22.3063 16.4064 24.807C15.3858 28.5051 11.2086 30.082 7.74121 29.0598C2.56856 27.5345 0.863284 21.4134 3.69483 17.0705C5.28906 14.625 8.22768 13.5486 9.51126 10.7734C9.914 9.90301 10.2506 9.00575 10.5212 8.08156C10.5344 8.03654 10.56 7.99991 10.5979 7.97166C11.0103 7.66581 11.9158 7.58901 12.1141 8.2272C12.6521 9.96701 13.2443 11.4976 14.3058 12.6178C15.2788 13.6426 16.5703 14.6528 17.4018 15.4075C20.6048 18.3165 21.6279 23.0116 19.3846 26.8209C18.9365 27.5822 17.3449 26.5031 17.7481 25.9073C19.3423 23.5478 18.8136 20.2218 17.2921 18.0053C15.5286 15.4353 12.4671 14.3311 11.4928 11.1163C11.4787 11.0713 11.4509 11.039 11.4095 11.0196C11.2496 10.9455 11.128 11.0368 11.083 11.1984C10.1749 14.4291 6.68632 15.7002 5.08019 18.3178C2.92151 21.8371 4.59373 26.6554 8.78156 27.5716C10.7578 28.0046 12.9112 27.2989 14.1142 25.6689C15.6502 23.5875 15.0739 20.1172 12.5107 19.1215C11.8938 18.8814 11.3161 18.8201 10.7777 18.9375C8.55683 19.4247 7.76368 22.3085 10.1365 23.2856C10.8913 23.5968 11.3765 23.3982 11.2932 24.5528C11.2522 25.1221 10.9442 25.2267 10.434 25.1459C8.37044 24.8176 7.01548 23.5028 7.00094 21.3843C6.97053 17.3791 11.8629 15.9305 14.5861 18.433Z" fill="#45167A"/>
+<path d="M30.8492 20.1754C31.2101 19.9993 31.4863 19.2698 31.1889 18.8739C30.8664 18.4449 30.1948 18.3324 29.6647 18.2529C27.7995 17.9709 25.1927 17.9894 24.8913 15.5518C24.4339 11.8471 32.2332 11.5175 32.9695 15.2328C32.9738 15.254 32.9733 15.2759 32.9681 15.2969C32.9628 15.318 32.953 15.3376 32.9392 15.3544C32.9254 15.3713 32.9081 15.3849 32.8884 15.3943C32.8688 15.4037 32.8473 15.4087 32.8254 15.4088H31.2167C31.162 15.4088 31.1228 15.3841 31.099 15.3347C30.5319 14.1298 28.9549 13.9868 27.8141 14.253C27.3302 14.3655 26.8107 14.6343 26.7103 15.1493C26.3005 17.2678 33.4838 15.1891 33.1308 19.614C33.0876 20.1595 32.8545 20.6419 32.4315 21.0612C30.5002 22.9758 25.428 22.4078 24.7604 19.3347C24.7555 19.3125 24.7556 19.2894 24.7608 19.2672C24.7661 19.2451 24.7762 19.2243 24.7905 19.2066C24.8049 19.1888 24.823 19.1744 24.8437 19.1645C24.8643 19.1546 24.8869 19.1494 24.9098 19.1493H26.5768C26.6199 19.1493 26.6495 19.1696 26.6653 19.2102C27.284 20.8083 29.5445 20.8097 30.8492 20.1754Z" fill="#45167A"/>
+<path d="M54.643 12.8008H53.2338C53.1214 12.8008 53.0303 12.8921 53.0303 13.0047V21.7567C53.0303 21.8693 53.1214 21.9606 53.2338 21.9606H54.643C54.7554 21.9606 54.8466 21.8693 54.8466 21.7567V13.0047C54.8466 12.8921 54.7554 12.8008 54.643 12.8008Z" fill="#45167A"/>
+<path d="M61.3581 14.6953V21.7565C61.3581 21.8112 61.3364 21.8638 61.2977 21.9025C61.259 21.9412 61.2066 21.963 61.1519 21.963L59.7136 21.9617C59.6589 21.9617 59.6065 21.9399 59.5678 21.9012C59.5291 21.8624 59.5074 21.8099 59.5074 21.7551V14.6887C59.5074 14.6339 59.4857 14.5813 59.447 14.5426C59.4083 14.5039 59.3559 14.4821 59.3012 14.4821H56.508C56.4533 14.4821 56.4008 14.4604 56.3622 14.4216C56.3235 14.3829 56.3018 14.3303 56.3018 14.2756V13.0005C56.3018 12.9457 56.3235 12.8932 56.3622 12.8544C56.4008 12.8157 56.4533 12.7939 56.508 12.7939L64.3575 12.7979C64.4122 12.7979 64.4647 12.8197 64.5033 12.8584C64.542 12.8972 64.5637 12.9497 64.5637 13.0045V14.2729C64.5637 14.3275 64.5422 14.3798 64.5038 14.4185C64.4654 14.4572 64.4133 14.4791 64.3588 14.4795L61.563 14.4887C61.5085 14.4891 61.4564 14.511 61.418 14.5497C61.3796 14.5884 61.3581 14.6407 61.3581 14.6953Z" fill="#45167A"/>
+<path d="M35.1429 16.6578C36.675 14.7525 40.149 14.7551 41.6797 16.6167C43.0453 18.2784 42.4055 20.8603 40.4292 21.7223C38.6988 22.4757 36.3683 22.2439 35.123 20.7239C34.162 19.5521 34.2056 17.8229 35.1429 16.6578ZM40.5984 18.6874C40.5988 18.4535 40.5427 18.2219 40.4333 18.0056C40.3238 17.7893 40.1632 17.5927 39.9606 17.427C39.758 17.2613 39.5173 17.1297 39.2524 17.0397C38.9874 16.9498 38.7033 16.9032 38.4164 16.9027C38.1294 16.9022 37.8452 16.9478 37.5799 17.0368C37.3147 17.1258 37.0736 17.2566 36.8704 17.4216C36.6672 17.5866 36.5059 17.7827 36.3957 17.9985C36.2855 18.2144 36.2286 18.4459 36.2282 18.6797C36.2277 18.9136 36.2839 19.1453 36.3933 19.3615C36.5027 19.5778 36.6633 19.7744 36.866 19.9401C37.0686 20.1058 37.3092 20.2374 37.5742 20.3274C37.8392 20.4174 38.1232 20.4639 38.4102 20.4644C38.6971 20.4649 38.9814 20.4194 39.2466 20.3303C39.5119 20.2413 39.753 20.1105 39.9562 19.9455C40.1594 19.7805 40.3207 19.5845 40.4309 19.3686C40.5411 19.1527 40.598 18.9213 40.5984 18.6874Z" fill="#45167A"/>
+<path d="M66.1832 19.2456C66.1832 19.2606 66.1783 19.2729 66.1686 19.2827C66.1536 19.2968 66.1492 19.314 66.1554 19.3343C66.7199 21.0132 68.8204 21.0476 69.9704 19.9937C70.0075 19.9601 70.0506 19.9434 70.1 19.9434L71.5581 19.9447C71.5947 19.9446 71.6299 19.9583 71.6569 19.983C71.6839 20.0078 71.7005 20.0419 71.7035 20.0784C71.7114 20.1729 71.6859 20.2686 71.6268 20.3657C70.3895 22.3889 67.3742 22.6643 65.5539 21.331C64.2862 20.4028 63.8685 18.6683 64.5479 17.2516C66.1329 13.9467 72.334 14.7796 72.0234 19.0059C72.021 19.0447 72.0038 19.0811 71.9753 19.1077C71.9468 19.1343 71.9092 19.149 71.87 19.1489H66.2823C66.2565 19.1489 66.2316 19.159 66.2131 19.1771C66.1946 19.1951 66.1838 19.2197 66.1832 19.2456ZM66.1898 18.2247L70.0788 18.2168C70.083 18.2168 70.0871 18.2151 70.0901 18.2121C70.093 18.2092 70.0947 18.2051 70.0947 18.2009V18.1943C70.0938 17.8007 69.8882 17.4237 69.5231 17.1461C69.1579 16.8685 68.6631 16.7131 68.1475 16.714H68.1158C67.8604 16.7144 67.6075 16.7533 67.3717 16.8283C67.1359 16.9034 66.9217 17.0131 66.7413 17.1513C66.561 17.2895 66.4181 17.4535 66.3207 17.6338C66.2234 17.8141 66.1735 18.0073 66.1739 18.2022V18.2088C66.1739 18.2131 66.1756 18.2171 66.1785 18.2201C66.1815 18.2231 66.1856 18.2247 66.1898 18.2247Z" fill="#45167A"/>
+<path d="M79.8697 16.0903C79.9719 15.957 80.0243 15.803 80.027 15.6282C80.0273 15.5712 80.0503 15.5167 80.0909 15.4765C80.1316 15.4363 80.1865 15.4137 80.2438 15.4137H81.4864C81.6168 15.4137 81.682 15.4791 81.682 15.6097V21.7784C81.682 21.8266 81.6631 21.8727 81.6294 21.9067C81.5957 21.9407 81.5499 21.9598 81.5022 21.9598H80.1962C80.1275 21.9598 80.0851 21.9259 80.0693 21.8579L79.9609 21.3971C79.9546 21.3701 79.9419 21.3451 79.9237 21.3242C79.9055 21.3033 79.8825 21.2871 79.8567 21.2772C79.8309 21.2673 79.803 21.2638 79.7755 21.2672C79.7481 21.2706 79.7218 21.2806 79.6991 21.2965C77.9873 22.4908 75.6633 22.4617 74.233 20.9231C72.6652 19.2376 73.3434 16.4531 75.4756 15.5806C76.965 14.9706 78.3905 15.1467 79.752 16.1089C79.797 16.1398 79.8362 16.1336 79.8697 16.0903ZM79.8961 18.6924C79.8978 18.1986 79.6517 17.7243 79.2119 17.3736C78.7721 17.0229 78.1746 16.8247 77.5509 16.8225C77.2421 16.8215 76.9361 16.8685 76.6505 16.9611C76.3648 17.0537 76.1051 17.1899 75.8861 17.362C75.6672 17.5341 75.4932 17.7387 75.3742 17.9641C75.2553 18.1896 75.1936 18.4314 75.1928 18.6759C75.191 19.1696 75.4371 19.644 75.877 19.9947C76.3168 20.3453 76.9142 20.5436 77.5379 20.5457C77.8468 20.5468 78.1527 20.4997 78.4384 20.4072C78.724 20.3146 78.9837 20.1784 79.2027 20.0063C79.4217 19.8342 79.5956 19.6296 79.7146 19.4041C79.8336 19.1787 79.8953 18.9368 79.8961 18.6924Z" fill="#45167A"/>
+<path d="M90.3488 16.8304C90.3588 16.8477 90.3728 16.8622 90.3896 16.8728C90.4065 16.8834 90.4256 16.8897 90.4455 16.8911C90.4653 16.8926 90.4852 16.8891 90.5033 16.8811C90.5215 16.873 90.5375 16.8606 90.5498 16.845C90.6643 16.7002 90.7807 16.5497 90.8988 16.3935C92.5022 14.2697 95.5836 15.2323 96.2168 17.6831C96.5129 18.8271 96.3636 20.5378 96.353 21.7837C96.3527 21.8284 96.3349 21.8713 96.3036 21.9032C96.2723 21.9351 96.2298 21.9535 96.1851 21.9545C95.7039 21.9678 95.2346 21.9678 94.7773 21.9545C94.6001 21.9501 94.5129 21.8424 94.5155 21.6314C94.5287 20.6159 94.7363 18.8907 94.3582 18.0035C93.5836 16.1883 90.8776 16.7603 90.8485 18.7635C90.8336 19.7734 90.8309 20.7712 90.8406 21.7572C90.8408 21.7839 90.8357 21.8104 90.8256 21.8352C90.8155 21.8599 90.8006 21.8824 90.7818 21.9013C90.763 21.9203 90.7407 21.9353 90.7161 21.9456C90.6914 21.9558 90.665 21.9611 90.6383 21.9611H89.2146C89.1628 21.9611 89.113 21.9405 89.0763 21.9037C89.0396 21.867 89.019 21.8171 89.019 21.7652C89.0199 20.8119 89.0186 19.8409 89.015 18.8523C89.0097 16.8635 86.3395 16.1168 85.5239 17.9307C85.1286 18.8072 85.3137 20.5947 85.3176 21.6314C85.3185 21.8274 85.2388 21.9294 85.0784 21.9373C84.6095 21.9611 84.1367 21.9686 83.66 21.9598C83.6173 21.9591 83.5766 21.9416 83.5467 21.9112C83.5168 21.8807 83.5 21.8397 83.5 21.7969V15.5593C83.5 15.5207 83.5155 15.4837 83.543 15.4564C83.5705 15.429 83.6078 15.4137 83.6467 15.4137L85.0123 15.4163C85.0731 15.4163 85.1092 15.4464 85.1207 15.5064L85.2291 16.0704C85.2351 16.1015 85.2494 16.1303 85.2705 16.1537C85.2917 16.1772 85.3188 16.1944 85.3491 16.2035C85.3793 16.2127 85.4114 16.2134 85.442 16.2055C85.4725 16.1977 85.5004 16.1817 85.5225 16.1591C87.0189 14.6563 89.3111 15.0496 90.3488 16.8304Z" fill="#45167A"/>
+<path d="M49.334 21.1216C49.2618 21.1322 49.1877 21.1742 49.112 21.2474C48.1932 22.1504 46.9612 22.3663 45.7675 21.9108C43.1937 20.927 43.6643 17.7162 43.6802 15.5831C43.6804 15.5604 43.685 15.5378 43.6939 15.5169C43.7028 15.4959 43.7157 15.4769 43.7319 15.4609C43.7481 15.4449 43.7673 15.4323 43.7883 15.4237C43.8094 15.4152 43.832 15.4108 43.8547 15.411L45.3524 15.4163C45.3901 15.4167 45.426 15.4319 45.4525 15.4587C45.479 15.4854 45.4939 15.5216 45.4939 15.5593C45.4948 16.5303 45.4974 17.5061 45.5018 18.4868C45.5111 20.5695 48.3823 21.2143 49.2283 19.411C49.6116 18.5954 49.4438 16.3577 49.4266 15.7381C49.4213 15.5439 49.5015 15.4423 49.6672 15.4335C50.1237 15.4088 50.5907 15.4022 51.0684 15.4137C51.1125 15.4147 51.1544 15.4326 51.1855 15.4637C51.2166 15.4948 51.2343 15.5367 51.235 15.5805C51.2632 17.4209 51.2786 19.2834 51.2812 21.168C51.2812 21.4522 51.2662 21.6848 51.2363 21.8658C51.2257 21.9267 51.1896 21.9571 51.1279 21.9571H49.7306C49.6707 21.9571 49.6346 21.9276 49.6222 21.8684L49.4953 21.2355C49.4882 21.1994 49.4675 21.1674 49.4375 21.1462C49.4074 21.125 49.3704 21.1162 49.334 21.1216Z" fill="#45167A"/>
+</svg>
+              <p>Сейчас</p>
+            </div>
+            <div class="modal__info"> 
+              <div class="modal__image"> <img src="../assets/build/images/flag.png"></div>
+              <div class="modal__desc"> 
+                <div class="modal__title">Играй и&nbsp;выигрывай!</div>
+                <div class="modal__subtitle">Начните Игру и&nbsp;применяйте свои знания о&nbsp;криптовалюте и&nbsp;криптовалютных инвестициях, полученные в&nbsp;ходе обучения на&nbsp;курсе.</div><a class="modal__link" href="" target="_blank">https://cryptoforum.soulmate.partners/partners</a>
+              </div>
+            </div>
+            <div class="checkbox">
+              <input type="checkbox" checked id="acquainted" name="acquainted">
+              <label for="acquainted">Ознакомлен(на)</label>
+            </div><a class="btn-primary" href="">В профиль</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-buy modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__image"> <img src="../assets/build/images/heart.png"></div>
+            <div class="modal__title">Поздравляю тебя, родственная душа!</div><a class="btn-primary" href="">Спасибо 😊</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-instructions modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Инструкция</div>
+            <div class="modal__subtitle">Оформление самозанятости</div>
+            <ul> 
+              <li>Скачать мобильное приложение «Мой налог» для Android или iOS.</li>
+              <li>Выбрать способ регистрации по паспорту.</li>
+              <li>Подтвердить кодом из СМС свой номер телефона.</li>
+              <li>Сканировать главный разворот паспорта камерой своего телефона и подтвердить данные.</li>
+              <li>Сделать селфи, чтобы приложение сопоставило ваше лицо и фото в паспорте.</li>
+              <li>Подтвердить, что ИНН определён правильно, и завершить процедуру регистрации.</li>
+              <li>Получить СМС с подтверждением постановки на учёт в качестве плательщика налога на профессиональный доход (НПД), то есть самозанятого.</li>
+            </ul><a class="btn-primary" href="">Ознакомлен</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-create-post modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Создать пост</div>
+            <div class="edit-panel"> 
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 4C6.44772 4 6 4.44772 6 5V12V19C6 19.5523 6.44772 20 7 20H13.5C15.9853 20 18 17.9853 18 15.5C18 13.5575 16.7692 11.9025 15.0449 11.2722C15.6433 10.5081 16 9.54573 16 8.5C16 6.01472 13.9853 4 11.5 4H7ZM11.5 11H8V6H11.5C12.8807 6 14 7.11929 14 8.5C14 9.88071 12.8807 11 11.5 11ZM8 13H11.5H13.5C14.8807 13 16 14.1193 16 15.5C16 16.8807 14.8807 18 13.5 18H8V13Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.0215 4.00024H19C19.5523 4.00024 20 4.44796 20 5.00024C20 5.55253 19.5523 6.00024 19 6.00024H14.7543L11.3257 18.0002H15C15.5523 18.0002 16 18.448 16 19.0002C16 19.5525 15.5523 20.0002 15 20.0002H10.0237C10.0083 20.0006 9.99281 20.0006 9.9773 20.0002H5C4.44772 20.0002 4 19.5525 4 19.0002C4 18.448 4.44772 18.0002 5 18.0002H9.2457L12.6743 6.00024H9C8.44772 6.00024 8 5.55253 8 5.00024C8 4.44796 8.44772 4.00024 9 4.00024H13.9775C13.9921 3.99992 14.0068 3.99992 14.0215 4.00024Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 4C18 3.44772 17.5523 3 17 3C16.4477 3 16 3.44772 16 4V11C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11L8 4C8 3.44772 7.55229 3 7 3C6.44772 3 6 3.44772 6 4V11C6 14.3137 8.68629 17 12 17C15.3137 17 18 14.3137 18 11V4ZM7 19C6.44772 19 6 19.4477 6 20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20C18 19.4477 17.5523 19 17 19H7Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <div class="spacer"></div>
+              <button class="edit-panel-fonts" type="button">Arial</button>
+              <div class="spacer"></div>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7C4 6.44772 4.44772 6 5 6H6C6.55228 6 7 6.44772 7 7C7 7.55228 6.55228 8 6 8H5C4.44772 8 4 7.55228 4 7ZM9 7C9 6.44772 9.44772 6 10 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H10C9.44772 8 9 7.55228 9 7ZM4 12C4 11.4477 4.44772 11 5 11H6C6.55228 11 7 11.4477 7 12C7 12.5523 6.55228 13 6 13H5C4.44772 13 4 12.5523 4 12ZM9 12C9 11.4477 9.44772 11 10 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H10C9.44772 13 9 12.5523 9 12ZM4 17C4 16.4477 4.44772 16 5 16H6C6.55228 16 7 16.4477 7 17C7 17.5523 6.55228 18 6 18H5C4.44772 18 4 17.5523 4 17ZM9 17C9 16.4477 9.44772 16 10 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H10C9.44772 18 9 17.5523 9 17Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 9H9.01" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 9H15.01" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.2 6C16.2 5.44772 16.6477 5 17.2 5C17.8367 5 18.4624 5.12794 19.0714 5.37152C19.7341 5.63661 20.2442 6.03001 20.7071 6.49289C21.17 6.95578 21.5634 7.4659 21.8285 8.12861C22.0721 8.73756 22.2 9.36326 22.2 10C22.2 10.6367 22.0721 11.2624 21.8285 11.8714C21.5667 12.5258 21.1798 13.0314 20.7245 13.4897L19.7399 14.5727C19.7293 14.5844 19.7183 14.5959 19.7071 14.6071L16.5071 17.8071C16.0442 18.27 15.5341 18.6634 14.8714 18.9285C14.2624 19.1721 13.6367 19.3 13 19.3C12.3633 19.3 11.7376 19.1721 11.1286 18.9285C10.4659 18.6634 9.95578 18.27 9.49289 17.8071C9.03 17.3442 8.63661 16.8341 8.37152 16.1714C8.12326 15.5507 8 14.9244 8 14.2C8 13.5633 8.12794 12.9376 8.37152 12.3286C8.63661 11.6659 9.03 11.1558 9.49289 10.6929L10.5929 9.59289C10.9834 9.20237 11.6166 9.20237 12.0071 9.59289C12.3976 9.98342 12.3976 10.6166 12.0071 11.0071L10.9071 12.1071C10.57 12.4442 10.3634 12.7341 10.2285 13.0714C10.0721 13.4624 10 13.8367 10 14.2C10 14.6756 10.0767 15.0493 10.2285 15.4286C10.3634 15.7659 10.57 16.0558 10.9071 16.3929C11.2442 16.73 11.5341 16.9366 11.8714 17.0715C12.2624 17.2279 12.6367 17.3 13 17.3C13.3633 17.3 13.7376 17.2279 14.1286 17.0715C14.4659 16.9366 14.7558 16.73 15.0929 16.3929L18.2761 13.2097L19.2601 12.1273C19.2707 12.1156 19.2817 12.1041 19.2929 12.0929C19.63 11.7558 19.8366 11.4659 19.9715 11.1286C20.1279 10.7376 20.2 10.3633 20.2 10C20.2 9.63674 20.1279 9.26244 19.9715 8.87139C19.8366 8.5341 19.63 8.24422 19.2929 7.90711C18.9558 7.56999 18.6659 7.36339 18.3286 7.22848C17.9376 7.07206 17.5633 7 17.2 7C16.6477 7 16.2 6.55228 16.2 6ZM11.3 7.5C10.9367 7.5 10.5624 7.57206 10.1714 7.72848C9.8341 7.86339 9.54422 8.07 9.20711 8.40711L5.92393 11.6903L4.93994 12.7727C4.92927 12.7844 4.91832 12.7959 4.90711 12.8071C4.56999 13.1442 4.36339 13.4341 4.22848 13.7714C4.07206 14.1624 4 14.5367 4 14.9C4 15.2633 4.07206 15.6376 4.22848 16.0286C4.36339 16.3659 4.57 16.6558 4.90711 16.9929C5.24422 17.33 5.5341 17.5366 5.87139 17.6715C6.26244 17.8279 6.63674 17.9 7 17.9C7.55228 17.9 8 18.3477 8 18.9C8 19.4523 7.55228 19.9 7 19.9C6.36326 19.9 5.73756 19.7721 5.12861 19.5285C4.4659 19.2634 3.95578 18.87 3.49289 18.4071C3.03 17.9442 2.63661 17.4341 2.37152 16.7714C2.12794 16.1624 2 15.5367 2 14.9C2 14.2633 2.12794 13.6376 2.37152 13.0286C2.63328 12.3742 3.02016 11.8686 3.47551 11.4103L4.46006 10.3273C4.47073 10.3156 4.48168 10.3041 4.49289 10.2929L7.79289 6.99289C8.25578 6.53 8.7659 6.13661 9.42861 5.87152C10.0376 5.62794 10.6633 5.5 11.3 5.5C11.9367 5.5 12.5624 5.62794 13.1714 5.87152C13.8341 6.13661 14.3442 6.53 14.8071 6.99289C15.27 7.45578 15.6634 7.9659 15.9285 8.62861C16.1721 9.23756 16.3 9.86326 16.3 10.5C16.3 11.1367 16.1721 11.7624 15.9285 12.3714C15.6664 13.0265 15.279 13.5325 14.823 13.9912L13.7372 15.1757C13.364 15.5828 12.7314 15.6103 12.3243 15.2372C11.9172 14.864 11.8897 14.2314 12.2628 13.8243L13.3628 12.6243C13.3726 12.6136 13.3827 12.6031 13.3929 12.5929C13.73 12.2558 13.9366 11.9659 14.0715 11.6286C14.2279 11.2376 14.3 10.8633 14.3 10.5C14.3 10.1367 14.2279 9.76244 14.0715 9.37139C13.9366 9.0341 13.73 8.74422 13.3929 8.40711C13.0558 8.07 12.7659 7.86339 12.4286 7.72848C12.0376 7.57206 11.6633 7.5 11.3 7.5Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 10C16.3284 10 17 9.32843 17 8.5C17 7.67157 16.3284 7 15.5 7C14.6716 7 14 7.67157 14 8.5C14 9.32843 14.6716 10 15.5 10Z" fill="#0D0D0D"/>
+<path d="M3 5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5ZM19 5H5V12.9194L8.37534 10.2191C8.74056 9.92696 9.25951 9.92696 9.62473 10.2191L13.9258 13.66L15.2929 12.2929C15.6835 11.9024 16.3166 11.9024 16.7071 12.2929L19 14.5857V5ZM5 19H19V17.4142L16 14.4142L14.7071 15.7071C14.3468 16.0674 13.7732 16.0992 13.3753 15.7809L9.00004 12.2806L5 15.4807V19Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+              <button type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.463 5.57573C18.7758 4.82597 17.5346 4.77977 16.7073 5.60711L8.6073 13.7071C8.39783 13.9166 8.39783 14.1834 8.6073 14.3929C8.81678 14.6024 9.08361 14.6024 9.29309 14.3929L15.9931 7.6929C16.3836 7.30238 17.0168 7.30238 17.4073 7.6929C17.7978 8.08342 17.7978 8.71659 17.4073 9.10711L10.7073 15.8071C9.71678 16.7976 8.18361 16.7976 7.19309 15.8071C6.20256 14.8166 6.20256 13.2834 7.19309 12.2929L15.2931 4.1929C16.8606 2.62537 19.408 2.57436 20.9225 4.20821C22.4748 5.77662 22.5205 8.31157 20.8931 9.82133L11.4073 19.3071C9.21678 21.4976 5.78361 21.4976 3.59309 19.3071C1.40256 17.1166 1.40256 13.6834 3.59309 11.4929L11.6931 3.3929C12.0836 3.00238 12.7168 3.00238 13.1073 3.3929C13.4978 3.78342 13.4978 4.41659 13.1073 4.80711L5.0073 12.9071C3.59783 14.3166 3.59783 16.4834 5.0073 17.8929C6.41678 19.3024 8.58361 19.3024 9.99309 17.8929L19.4931 8.3929C19.5033 8.38266 19.5138 8.37264 19.5245 8.36285C20.2742 7.67557 20.3204 6.43446 19.4931 5.60711C19.4828 5.59687 19.4728 5.58641 19.463 5.57573Z" fill="#0D0D0D"/>
+</svg>
+              </button>
+            </div><textarea placeholder="Введите текст"></textarea>
+            <div class="modal__wrap"><a class="btn-primary" href="">Сохранить</a><a class="btn-white" href="">Отменить</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-create-project modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Создать проект</div>
+            <form class="modal__form">
+              <div class="modal__label">Название</div>
+              <input class="modal__input" type="text" name="title" placeholder="Введите заголовок">
+              <div class="modal__label">Описание</div><textarea placeholder="Введите описание, не более 1 000 символов"></textarea>
+              <div class="modal__textarea-count">0/1000</div>
+              <div class="modal__label">Обложка проекта</div>
+              <div class="modal__file form-file">
+                <label>
+                  <input type="file"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 8L12 3L7 8" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 3V15" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  <p>Перетащите файлы сюда или нажмите, чтобы загрузить</p>
+                </label>
+                <div class="form-file-remove"></div>
+              </div>
+              <div class="modal__label">Команда проекта</div>
+              <div class="modal__team">
+                <select class="modal__select js-select" id="team_select">
+                  <option value="Выберите членов команды" disabled selected>Выберите членов команды</option>
+                  <option value="Иванов И.">Иванов И.</option>
+                  <option value="Сидоров В.">Сидоров В.</option>
+                </select>
+              </div>
+              <div class="modal__label">Ссыка на чат потока</div>
+              <input class="modal__input" type="text" name="chat" placeholder="Укажите ссылку">
+              <div class="modal__wrap"><a class="btn-primary" href="">Сохранить</a><a class="btn-white" href="">Отменить</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--objects--><!-- Yandex maps -->
+    <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")-->
+    <script src="../build/js/app.min.js"></script>
+  </body>
+</html>

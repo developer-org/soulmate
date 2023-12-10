@@ -105,6 +105,11 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
+    $(document).on('click', '.courses-main__head-arrow', function () {
+        $('.courses-main__head-dropdown').toggleClass("active");
+        $(this).toggleClass("active");
+    });
+
     $('select#module_select').on('change', function() {
         if ($(window).width() < 991) {
             $('.module__tab .tab-module.tab-pane').removeClass('active');

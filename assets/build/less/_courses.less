@@ -1,0 +1,534 @@
+.courses-main{
+    .wrapper{
+        position: relative;
+        background-image: url(../images/courses-bg.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-color: @background-primary;
+        margin-bottom: 120px;
+        @media screen and (max-width: 1200px){
+            background-position: 100% 100%;
+        }
+        @media screen and (max-width: 375.9px){ 
+            padding: 32px 24px;
+        }
+    }
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 32px;
+        @media screen and (max-width: 991px){ 
+            flex-wrap: wrap;
+        }
+        .h2-title{
+            width: 80%;
+            margin: 0 !important;
+            @media screen and (max-width: 767px){ 
+                width: 100%;
+            }
+            span{
+                font-size: 32px;
+                font-weight: 700;
+                color: @badge-default;
+            }
+        }
+    }
+    .h3-title{
+        margin-bottom: 32px;
+    }
+    &__head-title{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        @media screen and (max-width: 767px){ 
+            flex-wrap: wrap;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px; 
+            color: @text-main;
+        }
+    }
+    &__head-arrow{
+        cursor: pointer;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 767px){ 
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        svg{
+            transform: rotate(180deg);
+        }
+        &.active{
+            svg{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &__head-dropdown{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 425px;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-top: 16px;
+        border-radius: 24px;
+        border: 1px solid @action-outline;
+        background: @background-primary;
+        box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.08);
+        z-index: 2;
+        @media screen and (max-width: 767px){ 
+            left: -32px;
+            width: calc(~'100% + 64px');
+        }
+        &.active{
+            display: flex;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            color: @text-tertiary;
+        }
+        span{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            color: @text-main;
+        }
+    }
+    &__start{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: @text-additional;
+        width: max-content;
+        @media screen and (max-width: 991px){ 
+            margin-top: 16px;
+        }
+    }
+}
+.item-courses-main{
+    position: relative;
+    height: 340px;
+    width: 100%;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    gap: 16px;
+    z-index: 1;
+    overflow: hidden;
+    .badge{
+        position: relative;
+    }
+    &__title{
+        font-family: "Actay", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: @text-main;
+    }
+    &__progress{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: calc(~'100% + 48px');
+        border-radius: 5px;
+        background: @action-outline;
+        span{
+            display: block;
+            height: 4px;
+            border-radius: 5px;
+            background: @action-primary;
+        }
+    }
+    &__image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        z-index: -1;
+    }
+}
+.info-courses-main{
+    padding: 170px 0 95px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-info-courses-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 670px;
+    width: 670px;
+    position: relative;
+    padding: 100px;
+    border-radius: 50%;
+    background: url(../images/circle-bg1.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    @media screen and (max-width: 767px){ 
+        height: 336px;
+        width: 336px;
+        padding: 55px;
+    }
+    @media screen and (max-width: 375.9px){ 
+        padding: 45px;
+        height: 297px;
+        width: 100%;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 446px;
+        height: 446px;
+        top: calc(~'50% - 223px');
+        left: 0;
+        right: 0;
+        background: url(../images/circle-bg2.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+        border-radius: 50%;
+        z-index: -2;
+        @media screen and (max-width: 767px){ 
+            width: 264px;
+            height: 264px;
+            top: calc(~'50% - 132px');
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: @background-primary;
+        border-radius: 50%;
+        z-index: -1;
+        @media screen and (max-width: 767px){ 
+            width: 215px;
+            height: 215px;
+        }
+    }
+    .badge{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 10px;
+        min-width: 185px;
+        min-height: 50px;
+        @media screen and (max-width: 767px){ 
+            min-width: 150px;
+            min-height: 40px;
+            font-size: 12px;
+        }
+    }
+    &__title{
+        text-align: center;
+        font-family: "Actay", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: @text-main;
+        @media screen and (max-width: 767px){ 
+            font-size: 20px;
+        }
+    }
+    &__text{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 37px;
+        color: @text-main;
+        @media screen and (max-width: 767px){ 
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    &__item{
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 0px rgba(98, 54, 255, 0.40) inset;
+        //box-shadow: 0px 0px 2.171px 0px rgba(98, 54, 255, 0.40) inset;
+        //filter: drop-shadow(0px 0px 21.713px rgba(98, 54, 255, 0.40)) drop-shadow(0px 0px 5.609px rgba(98, 54, 255, 0.50)) blur(0.20031102001667023px);
+        border: 3px solid @badge-default;
+        background: @background-primary;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: calc(~'-80px / 2');
+        @media screen and (max-width: 767px){ 
+            width: 44px;
+            height: 44px;
+            margin: calc(~'-44px / 2');
+            border: 2px solid @badge-default;
+        }
+        &.check{
+            background-color: @badge-default;
+            background-image: url(../images/check-circle.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            .circle-info-courses-main__icon{
+                svg{
+                    display: none;
+                }
+            }
+        }
+        &.lock{
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -20px;
+                margin: 0 auto;
+                width: 35px;
+                height: 35px;
+                background-color: @badge-default;
+                background-image: url(../images/locked3.svg);
+                background-position: 45% 50%;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                @media screen and (max-width: 767px){ 
+                    width: 18px;
+                    height: 18px;
+                    background-size: 68%;
+                    bottom: -10px;
+                }
+            }
+        }
+        &.deg0{
+            transform: rotate(270deg) translate(335px) rotate(-270deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(270deg) translate(168px) rotate(-270deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(270deg) translate(150px) rotate(-270deg);
+            }
+        }
+        &.deg1{
+            transform: rotate(300deg) translate(335px) rotate(-300deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(300deg) translate(164px) rotate(-300deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(300deg) translate(150px) rotate(-300deg);
+            }
+        }
+        &.deg2{
+            transform: rotate(330deg) translate(335px) rotate(-330deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(330deg) translate(160px) rotate(-330deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(330deg) translate(150px) rotate(-330deg);
+            }
+        }
+        &.deg3{
+            transform: rotate(360deg) translate(335px) rotate(-360deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(360deg) translate(160px) rotate(-360deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(360deg) translate(145px) rotate(-360deg);
+            }
+        }
+        &.deg4{
+            transform: rotate(390deg) translate(335px) rotate(-390deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(390deg) translate(160px) rotate(-390deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(390deg) translate(150px) rotate(-390deg);
+            }
+        }
+        &.deg5{
+            transform: rotate(420deg) translate(335px) rotate(-420deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(420deg) translate(164px) rotate(-420deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(420deg) translate(150px) rotate(-420deg);
+            }
+        }
+        &.deg6{
+            transform: rotate(450deg) translate(335px) rotate(-450deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(450deg) translate(168px) rotate(-450deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(450deg) translate(150px) rotate(-450deg);
+            }
+        }
+        &.deg7{
+            transform: rotate(480deg) translate(335px) rotate(-480deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(480deg) translate(164px) rotate(-480deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(480deg) translate(150px) rotate(-480deg);
+            }
+        }
+        &.deg8{
+            transform: rotate(510deg) translate(335px) rotate(-510deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(510deg) translate(160px) rotate(-510deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(510deg) translate(150px) rotate(-510deg);
+            }
+        }
+        &.deg9{
+            transform: rotate(540deg) translate(335px) rotate(-540deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(540deg) translate(160px) rotate(-540deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(540deg) translate(145px) rotate(-540deg);
+            }
+        }
+        &.deg10{
+            transform: rotate(570deg) translate(335px) rotate(-570deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(570deg) translate(160px) rotate(-570deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(570deg) translate(150px) rotate(-570deg);
+            }
+        }
+        &.deg11{
+            transform: rotate(600deg) translate(335px) rotate(-600deg);
+            @media screen and (max-width: 767px){ 
+                transform: rotate(600deg) translate(164px) rotate(-600deg);
+            }
+            @media screen and (max-width: 375.9px){ 
+                transform: rotate(600deg) translate(150px) rotate(-600deg);
+            }
+        }
+    }
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 767px){ 
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.faculty-courses-main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    padding: 32px 0 45px 0;
+    @media screen and (max-width: 1369px){
+        grid-template-columns: repeat(3, 1fr);
+        padding: 32px 0 0px 0;
+    }
+    @media screen and (max-width: 1200px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 991px){ 
+        grid-template-columns: repeat(1, 1fr);
+    }
+    &__item{
+        position: relative;
+        gap: 16px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        background: url(../images/faculty-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 24px;
+        @media screen and (max-width: 375.9px){ 
+            padding: 24px 16px;
+        }
+        &.lock{
+            .faculty-courses-main__title{
+                position: relative;
+            }
+            .faculty-courses-main__title::before{
+                content: '';
+                position: absolute;
+                top: 5px;
+                right: -28px;
+                width: 24px;
+                height: 24px;
+                background: url(../images/locked3.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .badge{
+                color: rgba(22, 22, 22, .4);
+            }
+        }
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 500;
+        color: @white;
+        width: max-content;
+    }
+    .badge{
+        position: relative;
+        &:hover{
+            cursor: help;
+        }
+    }
+    .badge:hover ~ .faculty-courses-main__info{
+        display: block;
+    }
+    &__info{
+        display: none;
+        position: absolute;
+        bottom: 50px;
+        left: 55px;
+        width: 260px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: @text-main;
+        background: @white;
+        padding: 12px;
+        border: 1px solid @action-outline;
+        border-radius: 16px 16px 16px 0;
+        box-shadow: 0px 32px 64px 0px #00000014;
+        z-index: 1;
+        @media screen and (max-width: 991px){ 
+            border-radius: 16px 16px 0 16px;
+            left: inherit;
+            right: 28px;
+        }
+    }
+}

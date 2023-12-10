@@ -6,6 +6,7 @@
 @import 'modals.less';
 @import 'home.less';
 @import '_form.less';
+@import '_courses.less';
 @import '_courses-catalog.less';
 @import '_courses-single.less';
 @import '_achievements.less';
@@ -338,6 +339,10 @@ input[type=checkbox]{
         background-image: url(../images/check-success.svg);
         background-repeat: no-repeat;
         background-position: 16px 50%;
+    }
+    &.neutral{
+        color: @text-main;
+        background: @background-primary;
     }
 }
 
