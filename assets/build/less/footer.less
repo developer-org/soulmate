@@ -77,6 +77,25 @@
             text-decoration: underline !important;
         }
     }
+    &__employ{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: @white !important;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        padding: 16px 24px;
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+
+    }
     &__bottom{
         display: flex;
         align-items: center;
@@ -113,6 +132,17 @@
         img{
             width: 103px;
             height: 23.93px;
+        }
+    }
+    &__agreement{
+        font-size: 14px;
+        font-weight: 400;
+        color: @white !important;
+        opacity: .6;
+        text-decoration: none !important;
+        &:hover{
+            opacity: 1;
+            text-decoration: underline !important;
         }
     }
 }
