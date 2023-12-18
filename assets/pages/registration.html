@@ -16,15 +16,21 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo.svg"></a>
+        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo-black.svg"></a>
           <div class="header__nav nav-header">
             <nav class="nav-header__menu menu-nav-header">
               <ul class="menu-nav-header__list">
                 <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Истории успехов</a></li>
-                <li class="menu-nav-header__item"><a class="menu-nav-header__link active" href="">Каталог курсов</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Каталог курсов</a></li>
               </ul>
             </nav>
-            <div class="nav-header__auth auth-nav-header"><a class="auth-nav-header__link" href="">Войти</a></div>
+          </div>
+          <div class="header__nav nav-header">
+            <div class="nav-header__auth auth-nav-header"><a class="auth-nav-header__link lang" href="">EN</a><a class="auth-nav-header__link" href="">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M20 21.5V19.5C20 18.4391 19.5786 17.4217 18.8284 16.6716C18.0783 15.9214 17.0609 15.5 16 15.5H8C6.93913 15.5 5.92172 15.9214 5.17157 16.6716C4.42143 17.4217 4 18.4391 4 19.5V21.5" stroke="#45167A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 11.5C14.2091 11.5 16 9.70914 16 7.5C16 5.29086 14.2091 3.5 12 3.5C9.79086 3.5 8 5.29086 8 7.5C8 9.70914 9.79086 11.5 12 11.5Z" stroke="#45167A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Войти</a></div>
           </div>
           <div class="menu"><span></span><span></span><span></span></div>
         </div>
@@ -41,6 +47,11 @@
               <input class="form__input" type="text" name="email" placeholder="Электронная почта*">
               <input class="form__input" type="text" name="phone" placeholder="Номер телефона*">
               <input class="form__input" type="text" name="country" placeholder="Страна">
+              <select class="js-select form-select">
+                <option value="">Выбрать язык</option>
+                <option value="ru">Russian</option>
+                <option value="eng">English</option>
+              </select>
               <input class="form__input" type="text" name="tg" placeholder="Имя пользователя в Telegram*">
               <input class="form__input" type="text" name="curator" placeholder="Номер куратора (из ссылки)*">
               <div class="form__group">

@@ -16,23 +16,467 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo.svg"></a>
+        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo-black.svg"></a>
           <div class="header__nav nav-header">
             <nav class="nav-header__menu menu-nav-header">
               <ul class="menu-nav-header__list">
                 <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Истории успехов</a></li>
-                <li class="menu-nav-header__item"><a class="menu-nav-header__link active" href="">Каталог курсов</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Каталог курсов</a></li>
               </ul>
             </nav>
-            <div class="nav-header__auth auth-nav-header"><a class="auth-nav-header__link" href="">Войти</a></div>
+          </div>
+          <div class="header__nav nav-header">
+            <div class="nav-header__auth auth-nav-header"><a class="auth-nav-header__link lang" href="">EN</a><a class="auth-nav-header__link" href="">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M20 21.5V19.5C20 18.4391 19.5786 17.4217 18.8284 16.6716C18.0783 15.9214 17.0609 15.5 16 15.5H8C6.93913 15.5 5.92172 15.9214 5.17157 16.6716C4.42143 17.4217 4 18.4391 4 19.5V21.5" stroke="#45167A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 11.5C14.2091 11.5 16 9.70914 16 7.5C16 5.29086 14.2091 3.5 12 3.5C9.79086 3.5 8 5.29086 8 7.5C8 9.70914 9.79086 11.5 12 11.5Z" stroke="#45167A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Войти</a></div>
           </div>
           <div class="menu"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
-    <main>
+    <main class="bg-pattern">
+      <section class="main-banner">
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-xl-6">
+              <h1 class="h1-title">Знания, <br>приносящие деньги</h1>
+              <p>Вы сможете узнать все тонкости работы на крипто-рынке, получить работающие стратегии и уверенно зарабатывать на инвестициях</p><a class="main-banner__link btn-primary" href="">Зарегистрироваться</a>
+            </div>
+            <div class="col-xl-6"> 
+              <div class="main-banner__image"> <img src="../build/images/main-banner-image.png"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-courses">
+        <div class="container"> 
+          <h2 class="h2-title">О курсах</h2>
+          <div class="about-courses__text">Мы предлагаем как базовые курсы для новичков, чтобы они могли освоить основы блокчейна и криптовалют, так и продвинутые курсы для тех, кто уже имеет представление о технологии блокчейн и желает углубить свои знания.</div>
+          <div class="about-courses__privilege privilege-about-courses">
+            <div class="privilege-about-courses__item"> 
+              <div class="privilege-about-courses__item-inner">
+                <p>24/7</p><span>Поддержка <br>наставников</span>
+              </div>
+            </div>
+            <div class="privilege-about-courses__item"> 
+              <div class="privilege-about-courses__item-inner">
+                <p>10+ лет</p><span>Эксперты с опытом <br>работы</span>
+              </div>
+            </div>
+            <div class="privilege-about-courses__item"> 
+              <div class="privilege-about-courses__item-inner">
+                <p>10 000+</p><span>Выпускников</span>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-lg-6"><a class="about-courses__item item-about-courses light" href="">
+                <div class="item-about-courses__title">Базовый</div>
+                <div class="item-about-courses__subtitle">Срок обучения: 2 недели</div>
+                <p>Все способы инвестирования в проекты на разных стадиях на базе технологии блокчейн</p>
+                <div class="item-about-courses__arrow">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+<path d="M20.488 8.82165C21.1389 8.17078 22.1941 8.17078 22.845 8.82165L32.845 18.8217C33.1576 19.1342 33.3332 19.5581 33.3332 20.0002C33.3332 20.4422 33.1576 20.8661 32.845 21.1787L22.845 31.1787C22.1941 31.8295 21.1389 31.8295 20.488 31.1787C19.8371 30.5278 19.8371 29.4725 20.488 28.8217L27.6428 21.6668L8.33317 21.6668C7.4127 21.6668 6.6665 20.9206 6.6665 20.0002C6.6665 19.0797 7.4127 18.3335 8.33317 18.3335L27.6428 18.3335L20.488 11.1787C19.8371 10.5278 19.8371 9.47253 20.488 8.82165Z" fill="#161616"/>
+</svg>
+                </div></a></div>
+            <div class="col-lg-6"><a class="about-courses__item item-about-courses dark" href="">
+                <div class="item-about-courses__title">Академия</div>
+                <div class="item-about-courses__subtitle">Срок обучения: 3 месяца</div>
+                <p>Все способы инвестирования в проекты на разных стадиях на базе технологии блокчейн</p>
+                <div class="item-about-courses__arrow">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+<path d="M20.488 8.82165C21.1389 8.17078 22.1941 8.17078 22.845 8.82165L32.845 18.8217C33.1576 19.1342 33.3332 19.5581 33.3332 20.0002C33.3332 20.4422 33.1576 20.8661 32.845 21.1787L22.845 31.1787C22.1941 31.8295 21.1389 31.8295 20.488 31.1787C19.8371 30.5278 19.8371 29.4725 20.488 28.8217L27.6428 21.6668L8.33317 21.6668C7.4127 21.6668 6.6665 20.9206 6.6665 20.0002C6.6665 19.0797 7.4127 18.3335 8.33317 18.3335L27.6428 18.3335L20.488 11.1787C19.8371 10.5278 19.8371 9.47253 20.488 8.82165Z" fill="white"/>
+</svg>
+                </div></a></div>
+          </div><a class="about-courses__link btn-primary" href="">Подробнее<span>
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#ffffff"/>
+</svg></span></a>
+        </div>
+      </section>
+      <section class="experts">
+        <div class="container"> 
+          <h2 class="h2-title">Основатели компании и эксперты</h2>
+          <div class="experts__slider slider-experts owl-carousel owl-theme">
+            <div class="slider-experts__item"> 
+              <div class="slider-experts__image"> <img src="../build/images/experts-image1.png"></div>
+            </div>
+            <div class="slider-experts__item"> 
+              <div class="slider-experts__image"> <img src="../build/images/experts-image2.png"></div>
+            </div>
+            <div class="slider-experts__item"> 
+              <div class="slider-experts__image"> <img src="../build/images/experts-image1.png"></div>
+            </div>
+            <div class="slider-experts__item"> 
+              <div class="slider-experts__image"> <img src="../build/images/experts-image3.png"></div>
+            </div>
+          </div>
+          <div class="experts__desc desc-experts">
+            <div class="desc-experts__item active">
+              <div class="desc-experts__title">Костюков Антон</div>
+              <div class="desc-experts__text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: сплочённость команды профессионалов однозначно фиксирует необходимость приоретизации разума над эмоциями. Но реализация намеченных плановых заданий обеспечивает актуальность благоприятных перспектив.</div>
+              <div class="desc-experts__experience">8+ лет опыта</div>
+            </div>
+            <div class="desc-experts__item"> 
+              <div class="desc-experts__title">Авдалян Хачатур</div>
+              <div class="desc-experts__text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: сплочённость команды профессионалов однозначно фиксирует необходимость приоретизации разума над эмоциями. </div>
+              <div class="desc-experts__experience">5+ лет опыта</div>
+            </div>
+            <div class="desc-experts__item"> 
+              <div class="desc-experts__title">Костюков Антон</div>
+              <div class="desc-experts__text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: сплочённость команды профессионалов однозначно фиксирует необходимость приоретизации разума над эмоциями. Но реализация намеченных плановых заданий обеспечивает актуальность благоприятных перспектив.</div>
+              <div class="desc-experts__experience">8+ лет опыта</div>
+            </div>
+            <div class="desc-experts__item"> 
+              <div class="desc-experts__title">Гринев Александр</div>
+              <div class="desc-experts__text">Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: сплочённость команды профессионалов однозначно фиксирует необходимость приоретизации разума над эмоциями. </div>
+              <div class="desc-experts__experience">3+ лет опыта</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-company">
+        <div class="container"> 
+          <h2 class="h2-title">О компании</h2>
+          <div class="row"> 
+            <div class="col-xl-6"> 
+              <div class="about-company__text"><strong>Крипто-академия Soulteam</strong> — это образовательная платформа, предоставляющая качественные и практические знания о криптовалютах, блокчейне и инвестировании. Наша миссия заключается в создании сильного сообщества профессионалов и энтузиастов, способных применять и расширять свои знания в сфере криптовалют. Если вы заинтересованы в обучении и приобретении знаний о криптовалютах и блокчейне, <br>SoulMate - идеальное место для вас.</div>
+            </div>
+            <div class="col-xl-6">
+              <div class="about-company__join">
+                <p>Присоединяйтесь к нашей академии и становитесь экспертом в области криптовалют</p>
+              </div>
+            </div>
+            <div class="col-xl-6"> 
+              <div class="about-company__purchase purchase-about-company">
+                <div class="purchase-about-company__title">Наши курсы купили</div>
+                <div class="purchase-about-company__item"> 
+                  <p>99</p><span>человек</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="about-company__courses courses-about-company">
+                <div class="courses-about-company__item"> 
+                  <div class="courses-about-company__title">Базовый курс</div>
+                  <div class="courses-about-company__item-inner light">
+                    <div>
+                      <p>99</p><span>человек</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="courses-about-company__item"> 
+                  <div class="courses-about-company__title">Академия</div>
+                  <div class="courses-about-company__item-inner dark">
+                    <div>
+                      <p>99</p><span>человек</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="education-license">
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-xl-6">
+              <h2 class="h2-title">Образовательная лицензия</h2>
+              <p>По окончанию курса «Цифровые финансовые активы. Криптовалюты и блокчейн — технологии»,  вы получите диплом о профессиональной переподготовке</p>
+              <p>Получите право на ведение нового вида профессиональной деятельности.</p><a class="education-license__link btn-primary" href="">Скачать реестровую выписку<span>
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#ffffff"/>
+</svg></span></a>
+            </div>
+            <div class="col-xl-6">
+              <div class="education-programm"> 
+                <div class="education-programm__title">Дополнительные общеобразовательные программы</div>
+                <div class="education-programm__text">По ссылкам ниже вы можете скачать и ознакомиться с программами обучения</div><a class="education-programm__link btn-white" href="">Консультант по рынку криптовалют</a><a class="education-programm__link btn-white" href="">Крипто-инвестор</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faculties">
+        <div class="container"> 
+          <h2 class="h2-title">Наши факультеты</h2>
+          <div class="row">
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">DeFi</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">DeFi</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">Trading</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner active">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">Trading</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">Presale</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">Presale</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">NFT</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">NFT</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">Nodes</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">Nodes</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties ambassador">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Клуб</div>
+                  <div class="item-faculties__title">Ambassador Club</div>
+                </div>
+                <div class="item-faculties__image"><img src="../build/images/ambassador-image.png"></div><a class="item-faculties__link btn-white" href="">Билет в новую жизнь</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section>
-        <div class="container"> </div>
+        <div class="container">
+          <div class="consult-form"> 
+            <div class="consult-form__content"> 
+              <h2 class="h2-title">Для тех, кто пока <br>не определился</h2>
+              <div class="consult-form__subtitle">Запишитесь на бесплатную консультацию</div>
+              <div class="consult-form__text">Куратор подробно расскажет про нашу академию и порекомендует подходящий курс.</div>
+            </div>
+            <form class="consult-form__item">
+              <input class="consult-form__input" type="text" name="name" placeholder="Имя">
+              <input class="consult-form__input" type="text" name="phone" placeholder="Телефон">
+              <div class="consult-form__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="consult-form__input btn-primary" type="submit" value="Записаться на встречу">
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="home-story">
+        <div class="container">
+          <h2 class="h2-title">Истории успехов</h2>
+          <div class="home-story__slider slider-home-story owl-carousel owl-theme">
+            <div class="slider-home-story__item"><a class="slider-home-story__video" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                <div class="play"><svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.71387 3.35714L20.7139 13L5.71387 22.6429V3.35714Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a>
+              <div class="slider-home-story__content">
+                <div class="slider-home-story__title">Иван Иванов</div>
+                <div class="slider-home-story__subtitle">CEO сециалист</div>
+                <div class="slider-home-story__location">
+                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5 2C8.1 2 4.5 5.6 4.5 10C4.5 15.4 11.5 21.5 11.8 21.8C12 21.9 12.3 22 12.5 22C12.7 22 13 21.9 13.2 21.8C13.5 21.5 20.5 15.4 20.5 10C20.5 5.6 16.9 2 12.5 2ZM12.5 19.7C10.4 17.7 6.5 13.4 6.5 10C6.5 6.7 9.2 4 12.5 4C15.8 4 18.5 6.7 18.5 10C18.5 13.3 14.6 17.7 12.5 19.7ZM12.5 6C10.3 6 8.5 7.8 8.5 10C8.5 12.2 10.3 14 12.5 14C14.7 14 16.5 12.2 16.5 10C16.5 7.8 14.7 6 12.5 6ZM12.5 12C11.4 12 10.5 11.1 10.5 10C10.5 8.9 11.4 8 12.5 8C13.6 8 14.5 8.9 14.5 10C14.5 11.1 13.6 12 12.5 12Z" fill="#161616"/>
+</svg>
+                  <p>Воркута</p>
+                </div>
+                <div class="slider-home-story__wrap">
+                  <div class="slider-home-story__text text">Я очень доволен курсом «Криптотрейдинг» на платформе Soulmate. Курс предоставляет полное и понятное руководство по торговле криптовалютами. Преподаватель был очень компетентным и умело объяснял сложные понятия. Я получил много ценных знаний и навыков, которые помогли мне начать зарабатывать на торговле криптовалютами. Я настоятельно рекомендую этот курс всем, кто интересуется криптовалютами и хочет овладеть навыками торговли.</div>
+                  <div class="slider-home-story__more more-text">Развернуть</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-home-story__item"><a class="slider-home-story__video" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                <div class="play"><svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.71387 3.35714L20.7139 13L5.71387 22.6429V3.35714Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div></a>
+              <div class="slider-home-story__content">
+                <div class="slider-home-story__title">Иван Иванов</div>
+                <div class="slider-home-story__subtitle">CEO сециалист</div>
+                <div class="slider-home-story__location">
+                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5 2C8.1 2 4.5 5.6 4.5 10C4.5 15.4 11.5 21.5 11.8 21.8C12 21.9 12.3 22 12.5 22C12.7 22 13 21.9 13.2 21.8C13.5 21.5 20.5 15.4 20.5 10C20.5 5.6 16.9 2 12.5 2ZM12.5 19.7C10.4 17.7 6.5 13.4 6.5 10C6.5 6.7 9.2 4 12.5 4C15.8 4 18.5 6.7 18.5 10C18.5 13.3 14.6 17.7 12.5 19.7ZM12.5 6C10.3 6 8.5 7.8 8.5 10C8.5 12.2 10.3 14 12.5 14C14.7 14 16.5 12.2 16.5 10C16.5 7.8 14.7 6 12.5 6ZM12.5 12C11.4 12 10.5 11.1 10.5 10C10.5 8.9 11.4 8 12.5 8C13.6 8 14.5 8.9 14.5 10C14.5 11.1 13.6 12 12.5 12Z" fill="#161616"/>
+</svg>
+                  <p>Воркута</p>
+                </div>
+                <div class="slider-home-story__wrap">
+                  <div class="slider-home-story__text text">Я очень доволен курсом «Криптотрейдинг» на платформе Soulmate. Курс предоставляет полное и понятное руководство по торговле криптовалютами. Преподаватель был очень компетентным и умело объяснял сложные понятия. Я получил много ценных знаний и навыков, которые помогли мне начать зарабатывать на торговле криптовалютами. Я настоятельно рекомендую этот курс всем, кто интересуется криптовалютами и хочет овладеть навыками торговли.</div>
+                  <div class="slider-home-story__more more-text">Развернуть</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="answers">
+        <div class="container">
+          <h2 class="h2-title">Вопросы и ответы</h2>
+          <div class="program">
+            <div class="program__item item-program">
+              <div class="item-program__title">Какая квалификация у преподавателей?</div>
+              <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+              </div>
+              <div class="item-program__body body-item-program">
+                <div class="body-item-program__text">1. Уникальные знания: Криптовалюты и блокчейн — это сфера, которая с каждым днём становится все более актуальной и важной. Иметь глубокие знания в этой области может открыть перед вами множество возможностей — от работы в новых технологических стартапах до инвестирования и торговли на криптобиржах. <br>2. Инвестиционные возможности: Современная экономика переходит к цифровым активам, и криптовалюты играют важную роль в этом процессе. Заработать на инвестировании в криптовалюты может быть очень прибыльно, но только если вы грамотно ориентируетесь в рынке. Курсы SoulMate помогут вам освоить не только основы, но и продвинутые стратегии инвестирования в криптовалюты. <br> 3. Карьерный рост: Криптовалюты и блокчейн — это область, которая активно развивается и ищет новых профессионалов. Имея знания и опыт работы с криптовалютами, вы становитесь ценным кандидатом для многих компаний и стартапов. Обучение в крипто-академии SoulMate поможет вам обрести необходимую экспертизу для успешного карьерного роста в этой области. <br> 4. Широкие возможности сетевого взаимодействия: Вместе с обучением в SoulMate вы встретите единомышленников и профессионалов в сфере криптовалют и блокчейна. Такое профессиональное сообщество может быть великой поддержкой и источником вдохновения для вашего личного и профессионального роста. <br> 5. Так что, если вы хотите добиться успеха в сфере криптовалют и блокчейна, рекомендую вам взять курс в крипто-академии SoulMate. Получите навыки и знания, которые станут вашим конкурентным преимуществом в современном цифровом мире. Не упускайте возможности — начните своё образование прямо сейчас!</div>
+              </div>
+            </div>
+            <div class="program__item item-program">
+              <div class="item-program__title">Что мне нужно для обучения?</div>
+              <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+              </div>
+              <div class="item-program__body body-item-program">
+                <div class="body-item-program__text">1. Уникальные знания: Криптовалюты и блокчейн — это сфера, которая с каждым днём становится все более актуальной и важной. Иметь глубокие знания в этой области может открыть перед вами множество возможностей — от работы в новых технологических стартапах до инвестирования и торговли на криптобиржах. <br>2. Инвестиционные возможности: Современная экономика переходит к цифровым активам, и криптовалюты играют важную роль в этом процессе. Заработать на инвестировании в криптовалюты может быть очень прибыльно, но только если вы грамотно ориентируетесь в рынке. Курсы SoulMate помогут вам освоить не только основы, но и продвинутые стратегии инвестирования в криптовалюты. <br> 3. Карьерный рост: Криптовалюты и блокчейн — это область, которая активно развивается и ищет новых профессионалов. Имея знания и опыт работы с криптовалютами, вы становитесь ценным кандидатом для многих компаний и стартапов. Обучение в крипто-академии SoulMate поможет вам обрести необходимую экспертизу для успешного карьерного роста в этой области. <br> 4. Широкие возможности сетевого взаимодействия: Вместе с обучением в SoulMate вы встретите единомышленников и профессионалов в сфере криптовалют и блокчейна. Такое профессиональное сообщество может быть великой поддержкой и источником вдохновения для вашего личного и профессионального роста. <br> 5. Так что, если вы хотите добиться успеха в сфере криптовалют и блокчейна, рекомендую вам взять курс в крипто-академии SoulMate. Получите навыки и знания, которые станут вашим конкурентным преимуществом в современном цифровом мире. Не упускайте возможности — начните своё образование прямо сейчас!</div>
+              </div>
+            </div>
+            <div class="program__item item-program">
+              <div class="item-program__title">Я получу сертификат?</div>
+              <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+              </div>
+              <div class="item-program__body body-item-program">
+                <div class="body-item-program__text">1. Уникальные знания: Криптовалюты и блокчейн — это сфера, которая с каждым днём становится все более актуальной и важной. Иметь глубокие знания в этой области может открыть перед вами множество возможностей — от работы в новых технологических стартапах до инвестирования и торговли на криптобиржах. <br>2. Инвестиционные возможности: Современная экономика переходит к цифровым активам, и криптовалюты играют важную роль в этом процессе. Заработать на инвестировании в криптовалюты может быть очень прибыльно, но только если вы грамотно ориентируетесь в рынке. Курсы SoulMate помогут вам освоить не только основы, но и продвинутые стратегии инвестирования в криптовалюты. <br> 3. Карьерный рост: Криптовалюты и блокчейн — это область, которая активно развивается и ищет новых профессионалов. Имея знания и опыт работы с криптовалютами, вы становитесь ценным кандидатом для многих компаний и стартапов. Обучение в крипто-академии SoulMate поможет вам обрести необходимую экспертизу для успешного карьерного роста в этой области. <br> 4. Широкие возможности сетевого взаимодействия: Вместе с обучением в SoulMate вы встретите единомышленников и профессионалов в сфере криптовалют и блокчейна. Такое профессиональное сообщество может быть великой поддержкой и источником вдохновения для вашего личного и профессионального роста. <br> 5. Так что, если вы хотите добиться успеха в сфере криптовалют и блокчейна, рекомендую вам взять курс в крипто-академии SoulMate. Получите навыки и знания, которые станут вашим конкурентным преимуществом в современном цифровом мире. Не упускайте возможности — начните своё образование прямо сейчас!</div>
+              </div>
+            </div>
+            <div class="program__item item-program">
+              <div class="item-program__title">Я могу получить социальный налоговый вычет за обучение?</div>
+              <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+              </div>
+              <div class="item-program__body body-item-program">
+                <div class="body-item-program__text">1. Уникальные знания: Криптовалюты и блокчейн — это сфера, которая с каждым днём становится все более актуальной и важной. Иметь глубокие знания в этой области может открыть перед вами множество возможностей — от работы в новых технологических стартапах до инвестирования и торговли на криптобиржах. <br>2. Инвестиционные возможности: Современная экономика переходит к цифровым активам, и криптовалюты играют важную роль в этом процессе. Заработать на инвестировании в криптовалюты может быть очень прибыльно, но только если вы грамотно ориентируетесь в рынке. Курсы SoulMate помогут вам освоить не только основы, но и продвинутые стратегии инвестирования в криптовалюты. <br> 3. Карьерный рост: Криптовалюты и блокчейн — это область, которая активно развивается и ищет новых профессионалов. Имея знания и опыт работы с криптовалютами, вы становитесь ценным кандидатом для многих компаний и стартапов. Обучение в крипто-академии SoulMate поможет вам обрести необходимую экспертизу для успешного карьерного роста в этой области. <br> 4. Широкие возможности сетевого взаимодействия: Вместе с обучением в SoulMate вы встретите единомышленников и профессионалов в сфере криптовалют и блокчейна. Такое профессиональное сообщество может быть великой поддержкой и источником вдохновения для вашего личного и профессионального роста. <br> 5. Так что, если вы хотите добиться успеха в сфере криптовалют и блокчейна, рекомендую вам взять курс в крипто-академии SoulMate. Получите навыки и знания, которые станут вашим конкурентным преимуществом в современном цифровом мире. Не упускайте возможности — начните своё образование прямо сейчас!</div>
+              </div>
+            </div>
+            <div class="program__item item-program">
+              <div class="item-program__title">Что такое SoulMate и почему стоит выбрать вас, а не другую платформу?</div>
+              <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+              </div>
+              <div class="item-program__body body-item-program">
+                <div class="body-item-program__text">1. Уникальные знания: Криптовалюты и блокчейн — это сфера, которая с каждым днём становится все более актуальной и важной. Иметь глубокие знания в этой области может открыть перед вами множество возможностей — от работы в новых технологических стартапах до инвестирования и торговли на криптобиржах. <br>2. Инвестиционные возможности: Современная экономика переходит к цифровым активам, и криптовалюты играют важную роль в этом процессе. Заработать на инвестировании в криптовалюты может быть очень прибыльно, но только если вы грамотно ориентируетесь в рынке. Курсы SoulMate помогут вам освоить не только основы, но и продвинутые стратегии инвестирования в криптовалюты. <br> 3. Карьерный рост: Криптовалюты и блокчейн — это область, которая активно развивается и ищет новых профессионалов. Имея знания и опыт работы с криптовалютами, вы становитесь ценным кандидатом для многих компаний и стартапов. Обучение в крипто-академии SoulMate поможет вам обрести необходимую экспертизу для успешного карьерного роста в этой области. <br> 4. Широкие возможности сетевого взаимодействия: Вместе с обучением в SoulMate вы встретите единомышленников и профессионалов в сфере криптовалют и блокчейна. Такое профессиональное сообщество может быть великой поддержкой и источником вдохновения для вашего личного и профессионального роста. <br> 5. Так что, если вы хотите добиться успеха в сфере криптовалют и блокчейна, рекомендую вам взять курс в крипто-академии SoulMate. Получите навыки и знания, которые станут вашим конкурентным преимуществом в современном цифровом мире. Не упускайте возможности — начните своё образование прямо сейчас!</div>
+              </div>
+            </div>
+            <div class="program__item item-program">
+              <div class="item-program__title">Когда можно начать?</div>
+              <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+              </div>
+              <div class="item-program__body body-item-program">
+                <div class="body-item-program__text">1. Уникальные знания: Криптовалюты и блокчейн — это сфера, которая с каждым днём становится все более актуальной и важной. Иметь глубокие знания в этой области может открыть перед вами множество возможностей — от работы в новых технологических стартапах до инвестирования и торговли на криптобиржах. <br>2. Инвестиционные возможности: Современная экономика переходит к цифровым активам, и криптовалюты играют важную роль в этом процессе. Заработать на инвестировании в криптовалюты может быть очень прибыльно, но только если вы грамотно ориентируетесь в рынке. Курсы SoulMate помогут вам освоить не только основы, но и продвинутые стратегии инвестирования в криптовалюты. <br> 3. Карьерный рост: Криптовалюты и блокчейн — это область, которая активно развивается и ищет новых профессионалов. Имея знания и опыт работы с криптовалютами, вы становитесь ценным кандидатом для многих компаний и стартапов. Обучение в крипто-академии SoulMate поможет вам обрести необходимую экспертизу для успешного карьерного роста в этой области. <br> 4. Широкие возможности сетевого взаимодействия: Вместе с обучением в SoulMate вы встретите единомышленников и профессионалов в сфере криптовалют и блокчейна. Такое профессиональное сообщество может быть великой поддержкой и источником вдохновения для вашего личного и профессионального роста. <br> 5. Так что, если вы хотите добиться успеха в сфере криптовалют и блокчейна, рекомендую вам взять курс в крипто-академии SoulMate. Получите навыки и знания, которые станут вашим конкурентным преимуществом в современном цифровом мире. Не упускайте возможности — начните своё образование прямо сейчас!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="consult-form"> 
+            <div class="consult-form__content"> 
+              <h2 class="h2-title">Остались вопросы? <br>Ответим на все!</h2>
+              <div class="consult-form__subtitle">Запишитесь на бесплатную консультацию</div>
+              <div class="consult-form__text">Куратор подробно расскажет про нашу академию и порекомендует подходящий курс.</div>
+            </div>
+            <form class="consult-form__item">
+              <input class="consult-form__input" type="text" name="name" placeholder="Имя">
+              <input class="consult-form__input" type="text" name="phone" placeholder="Телефон">
+              <div class="consult-form__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="consult-form__input btn-primary" type="submit" value="Записаться на встречу">
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="cookie">
+        <div class="container">
+          <div class="wrapper"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M35 19.9065C35.0145 21.894 34.6323 23.8643 33.8757 25.7022C33.119 27.54 32.0033 29.2084 30.5937 30.6096C24.8281 36.3752 15.3906 36.4377 9.54683 30.7502C7.40291 28.664 5.93174 25.9844 5.32235 23.0556C4.71296 20.1269 4.99319 17.0829 6.12703 14.3146C7.26087 11.5463 9.19653 9.18034 11.6853 7.52058C14.1741 5.86082 17.1023 4.98312 20.0937 5.00025C20.2809 5.00301 20.4651 5.04725 20.6331 5.12979C20.8011 5.21233 20.9487 5.33111 21.0653 5.47757C21.1819 5.62403 21.2645 5.79453 21.3072 5.97678C21.35 6.15902 21.3518 6.34848 21.3125 6.5315C21.1497 7.25743 21.1509 8.01054 21.3161 8.73593C21.4813 9.46133 21.8063 10.1407 22.2674 10.7246C22.7285 11.3084 23.314 11.782 23.9814 12.1108C24.6487 12.4396 25.3811 12.6154 26.125 12.6252C26.4565 12.6252 26.7744 12.7569 27.0088 12.9914C27.2433 13.2258 27.375 13.5437 27.375 13.8752C27.3848 14.6191 27.5606 15.3515 27.8894 16.0188C28.2182 16.6862 28.6918 17.2717 29.2756 17.7328C29.8595 18.1939 30.5389 18.5189 31.2643 18.6841C31.9897 18.8493 32.7428 18.8506 33.4687 18.6877C33.6517 18.6484 33.8412 18.6502 34.0234 18.693C34.2057 18.7357 34.3762 18.8183 34.5226 18.9349C34.6691 19.0515 34.7879 19.1991 34.8704 19.3671C34.953 19.5351 34.9972 19.7193 35 19.9065V19.9065Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.375 28.75C25.4105 28.75 26.25 27.9105 26.25 26.875C26.25 25.8395 25.4105 25 24.375 25C23.3395 25 22.5 25.8395 22.5 26.875C22.5 27.9105 23.3395 28.75 24.375 28.75Z" fill="#161616"/>
+<path d="M14.375 27.5C15.4105 27.5 16.25 26.6605 16.25 25.625C16.25 24.5895 15.4105 23.75 14.375 23.75C13.3395 23.75 12.5 24.5895 12.5 25.625C12.5 26.6605 13.3395 27.5 14.375 27.5Z" fill="#161616"/>
+<path d="M13.125 18.75C14.1605 18.75 15 17.9105 15 16.875C15 15.8395 14.1605 15 13.125 15C12.0895 15 11.25 15.8395 11.25 16.875C11.25 17.9105 12.0895 18.75 13.125 18.75Z" fill="#161616"/>
+<path d="M21.25 21.25C22.2855 21.25 23.125 20.4105 23.125 19.375C23.125 18.3395 22.2855 17.5 21.25 17.5C20.2145 17.5 19.375 18.3395 19.375 19.375C19.375 20.4105 20.2145 21.25 21.25 21.25Z" fill="#161616"/>
+</svg>
+            <p>Мы используем куки, чтобы пользоваться сайтом было удобнее</p>
+            <button class="cookie__btn btn-tp">Отлично</button>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer"> 
@@ -78,7 +522,21 @@
         </div>
       </div>
     </footer>
-    <!--include ../modules/mobile.pug-->
+    <!--div(style='padding: 1000px 0 0 0;')-->
+    <div class="mobile" data-scroll-lock-scrollable>
+      <div class="mobile__close"><span></span><span></span><span></span></div><a class="mobile__logo" href="/index.html"><img src="../build/images/logo-white.svg"></a>
+      <div class="mobile__nav nav-mobile">
+        <nav class="nav-mobile__menu menu-nav-mobile">
+          <ul class="menu-nav-mobile__list">
+            <li class="menu-nav-mobile__item">
+              <div class="menu-nav-mobile__link" href="">Войти</div>
+            </li>
+            <li class="menu-nav-mobile__item"><a class="menu-nav-mobile__link" href="">Каталог курсов</a></li>
+            <li class="menu-nav-mobile__item"><a class="menu-nav-mobile__link" href="">Истории успехов</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <!--objects--><!-- Yandex maps -->
     <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")-->
     <script src="../build/js/app.min.js"></script>

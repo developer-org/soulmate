@@ -25,13 +25,14 @@
                 <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Каталог курсов</a></li>
               </ul>
             </nav>
+          </div>
+          <div class="header__nav nav-header">
             <div class="nav-header__auth auth-nav-header">
-              <div class="auth-nav-header__wrap"> 
+              <div class="auth-nav-header__user">
                 <div class="auth-nav-header__name">Татьяна</div>
-                <div class="auth-nav-header__status">Ученик</div>
-              </div>
-              <div class="auth-nav-header__user"><img src="../build/images/user.svg">
-                <div class="auth-nav-header__count">2</div>
+                <div class="auth-nav-header__user-inner"><img src="../build/images/user.svg">
+                  <div class="auth-nav-header__count">2</div>
+                </div>
               </div>
               <div class="auth-nav-header__dropdown">
                 <ul class="auth-nav-header__list">
@@ -72,59 +73,72 @@
       <section class="user-info">
         <div class="container">
           <div class="user-info__wrapper">
-            <div class="user-info__avatar"> <img src="../build/images/user.svg"></div>
-            <div class="user-info__content">
-              <div class="user-info__head"> 
-                <p>Татьяна Иванова</p><a href="">Редактировать</a>
+            <div class="row"> 
+              <div class="col-lg-6 col-md-5">
+                <div class="user-info__main">
+                  <div class="user-info__avatar"> <img src="../build/images/user.svg"></div>
+                  <div class="user-info__param">
+                    <div class="user-info__id">ID:123568952</div>
+                    <div class="user-info__bonuses">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M14.4099 12.1373C16.1819 13.7547 16.747 15.7199 16.1052 18.0329C15.1547 21.4534 11.2643 22.912 8.03502 21.9666C3.21755 20.5558 1.62938 14.8941 4.26649 10.8771C5.75125 8.61515 8.48808 7.61949 9.68352 5.05257C10.0586 4.24755 10.3721 3.41762 10.6241 2.5628C10.6364 2.52116 10.6602 2.48728 10.6955 2.46115C11.0796 2.17825 11.923 2.10722 12.1076 2.69751C12.6087 4.30674 13.1603 5.72247 14.1489 6.75854C15.055 7.70644 16.2578 8.64087 17.0322 9.33894C20.0153 12.0296 20.9682 16.3723 18.8789 19.8957C18.4616 20.5998 16.9793 19.6017 17.3548 19.0506C18.8395 16.8682 18.3471 13.7919 16.93 11.7418C15.2877 9.36465 12.4364 8.34327 11.529 5.36976C11.5159 5.32812 11.49 5.29832 11.4514 5.28036C11.3025 5.21178 11.1892 5.29628 11.1473 5.44569C10.3016 8.4339 7.05257 9.60959 5.55673 12.0308C3.54627 15.286 5.10367 19.7426 9.00393 20.59C10.8445 20.9905 12.85 20.3378 13.9704 18.8302C15.401 16.905 14.8642 13.6951 12.477 12.7742C11.9025 12.5521 11.3644 12.4953 10.863 12.6039C8.79463 13.0546 8.05595 15.722 10.2659 16.6258C10.9688 16.9136 11.4207 16.7299 11.3431 17.7978C11.3049 18.3244 11.0181 18.4211 10.5429 18.3464C8.62104 18.0427 7.35912 16.8266 7.34558 14.8671C7.31726 11.1625 11.8737 9.82268 14.4099 12.1373Z" fill="white"/>
+</svg>
+                      <p>Ваши банусы: 54 бонуса</p>
+                    </div>
+                  </div>
+                  <div class="user-info__head"> 
+                    <p>Татьяна Иванова</p><a href="">Редактировать</a>
+                  </div>
+                </div>
               </div>
-              <div class="user-info__id"> <span>ID</span>
-                <p>123568952</p>
-              </div>
-              <ul class="user-info__data">
-                <li><span>
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M3 11L22 2L13 21L11 13L3 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <div class="col-lg-6 col-md-7">
+                <div class="user-info__content">
+                  <div class="user-info__content-title">Информация</div>
+                  <ul class="user-info__data">
+                    <li><span>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M20.7101 3.90341C20.7101 3.90341 22.6526 3.14591 22.4901 4.98541C22.4366 5.74291 21.9511 8.39441 21.5731 11.2619L20.2781 19.7569C20.2781 19.7569 20.1701 21.0014 19.1986 21.2179C18.2276 21.4339 16.7706 20.4604 16.5006 20.2439C16.2846 20.0814 12.4536 17.6464 11.1046 16.4564C10.7266 16.1314 10.2946 15.4824 11.1586 14.7249L16.8246 9.31391C17.4721 8.66391 18.1196 7.14891 15.4216 8.98891L7.86665 14.1289C7.86665 14.1289 7.00315 14.6704 5.38465 14.1834L1.87665 13.1009C1.87665 13.1009 0.581647 12.2894 2.79415 11.4779C8.19065 8.93491 14.8281 6.33791 20.7096 3.90291L20.7101 3.90341Z" fill="white"/>
 </svg></span>
-                  <p> <a href="">t.me/ivanov_vv</a></p>
-                </li>
-                <li><span>
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.2">
-<path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <p> <a href="">t.me/ivanov_vv</a></p>
+                    </li>
+                    <li><span>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M4 19.7489C4 19.0859 4.26339 18.45 4.73223 17.9811C5.20107 17.5123 5.83696 17.2489 6.5 17.2489H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 2.2489H20V22.2489H6.5C5.83696 22.2489 5.20107 21.9855 4.73223 21.5167C4.26339 21.0478 4 20.4119 4 19.7489V4.7489C4 4.08586 4.26339 3.44998 4.73223 2.98113C5.20107 2.51229 5.83696 2.2489 6.5 2.2489V2.2489Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                      <p>Пройденные курсы: DeFi, Криптотрейдинг</p>
+                    </li>
+                    <li><span>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M12 2.2489L15.09 8.5089L22 9.5189L17 14.3889L18.18 21.2689L12 18.0189L5.82 21.2689L7 14.3889L2 9.5189L8.91 8.5089L12 2.2489Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+                      <p>Вас пригласил: Котиков Кирилл, <a href=''>t.me/dlinnii_vv</a></p>
+                    </li>
+                    <div class="user-info__curator curator-user-info">
+                      <div class="curator-user-info__title">Ваш куратор: </div>
+                      <div class="curator-user-info__wrap"> 
+                        <div class="curator-user-info__image"> <img src="../build/images/curator.png"></div>
+                        <div class="curator-user-info__content"> 
+                          <div class="curator-user-info__name">Оченьдлиннаяфамилия</div>
+                          <ul> 
+                            <li> <a href="">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path opacity="0.4" d="M13.8068 2.43418C13.8068 2.43418 15.1018 1.92918 14.9934 3.15552C14.9578 3.66052 14.6341 5.42818 14.3821 7.33985L13.5188 13.0032C13.5188 13.0032 13.4468 13.8328 12.7991 13.9772C12.1518 14.1212 11.1804 13.4722 11.0004 13.3278C10.8564 13.2195 8.30243 11.5962 7.4031 10.8028C7.1511 10.5862 6.8631 10.1535 7.4391 9.64852L11.2164 6.04118C11.6481 5.60785 12.0798 4.59785 10.2811 5.82452L5.24443 9.25118C5.24443 9.25118 4.66876 9.61218 3.58976 9.28752L1.2511 8.56585C1.2511 8.56585 0.387765 8.02485 1.86276 7.48385C5.46043 5.78852 9.88543 4.05718 13.8064 2.43385L13.8068 2.43418Z" fill="#161616"/>
+</svg>t.me/dlinnii_vv</a></li>
+                            <li> <a href="mailto:game@gmai.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<g opacity="0.4">
+<path d="M2.66683 2.66443H13.3335C14.0668 2.66443 14.6668 3.26443 14.6668 3.99776V11.9978C14.6668 12.7311 14.0668 13.3311 13.3335 13.3311H2.66683C1.9335 13.3311 1.3335 12.7311 1.3335 11.9978V3.99776C1.3335 3.26443 1.9335 2.66443 2.66683 2.66443Z" fill="black"/>
+<path d="M14.6668 3.9978L8.00016 8.66447L1.3335 3.9978" stroke="#F7F7FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-</svg></span>
-                  <p>Мои курсы: DeFi (45%), Криптотрейдинг(0%), Presale(0%), GameFi. Metaverse(12%)</p>
-                </li>
-                <li><span>
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.2" d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></span>
-                  <p>Пройденные курсы: DeFi, Криптотрейдинг</p>
-                </li>
-                <li><span>
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M14.4099 11.8884C16.1819 13.5058 16.747 15.471 16.1052 17.784C15.1547 21.2045 11.2643 22.6631 8.03502 21.7177C3.21755 20.3069 1.62938 14.6452 4.26649 10.6282C5.75125 8.36625 8.48808 7.37059 9.68352 4.80367C10.0586 3.99865 10.3721 3.16872 10.6241 2.3139C10.6364 2.27226 10.6602 2.23838 10.6955 2.21225C11.0796 1.92935 11.923 1.85832 12.1076 2.44861C12.6087 4.05784 13.1603 5.47356 14.1489 6.50964C15.055 7.45754 16.2578 8.39197 17.0322 9.09004C20.0153 11.7807 20.9682 16.1234 18.8789 19.6467C18.4616 20.3509 16.9793 19.3528 17.3548 18.8017C18.8395 16.6193 18.3471 13.543 16.93 11.4929C15.2877 9.11575 12.4364 8.09437 11.529 5.12086C11.5159 5.07922 11.49 5.04942 11.4514 5.03146C11.3025 4.96287 11.1892 5.04738 11.1473 5.19679C10.3016 8.185 7.05257 9.36069 5.55673 11.7819C3.54627 15.0371 5.10367 19.4937 9.00393 20.3411C10.8445 20.7416 12.85 20.0889 13.9704 18.5813C15.401 16.6561 14.8642 13.4462 12.477 12.5253C11.9025 12.3032 11.3644 12.2464 10.863 12.355C8.79463 12.8057 8.05595 15.4731 10.2659 16.3769C10.9688 16.6647 11.4207 16.481 11.3431 17.5489C11.3049 18.0755 11.0181 18.1722 10.5429 18.0975C8.62104 17.7938 7.35912 16.5777 7.34558 14.6182C7.31726 10.9136 11.8737 9.57378 14.4099 11.8884Z" fill="white"/>
-</svg></span>
-                  <p>Ваши банусы: 54 бонуса</p>
-                </li>
-                <li><span>
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.2" d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.2" d="M9 9H9.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.2" d="M15 9H15.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></span>
-                  <p>Ваш куратор: Оченьдлиннаяфамилия Иван, <a href=''>t.me/dlinnii_vv</a>, <a href='mailto:game@gmai.com'>game@gmai.com</a></p>
-                </li>
-                <li><span>
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.2" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></span>
-                  <p>Вас пригласил: Котиков Кирилл, <a href=''>t.me/dlinnii_vv</a></p>
-                </li>
-              </ul>
+</svg> game@gmai.com</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -282,23 +296,23 @@
       </section>
       <section>
         <div class="container">
-          <div class="subscription">
+          <div class="subscription" style="background-image: url(../build/images/result-education-gradient.png);">
             <div class="row"> 
-              <div class="col-xl-5 col-lg-7">
+              <div class="col-xl-4 col-lg-6">
                 <h2 class="h2-title">Подписка</h2>
                 <div class="subscription__wrap">
-                  <div class="subscription__item"> 
-                    <p>Подписка SoulTeam</p>
-                    <div class="subscription__status active">Активна</div>
-                  </div>
-                  <div class="subscription__item"> 
-                    <p>Подписка закончится 24.01.2024</p>
-                  </div>
+                  <p>Подписка даст вам доступ к материалам от преподавателей Soulmate, на примере которых вы узнаете, как можно заработать.</p>
                 </div>
               </div>
-              <div class="col-xl-7 col-lg-5">
-                <div class="subscription__text">Подписка даст вам доступ к материалам от преподавателей Soulmate, на примере которых вы узнаете, как можно заработать.</div>
-              </div><a class="subscription__link btn-white" href="">Продлить за 2 500 ₽/мес</a>
+              <div class="col-xl-6 offset-xl-2 col-lg-6">
+                <div class="subscription__content content-subscription">
+                  <div class="content-subscription__head"> 
+                    <p>Подписка SoulTeam</p>
+                    <label>Активна</label>
+                  </div>
+                  <div class="content-subscription__end">Подписка закончится 24.01.2024</div><a class="subscription__link btn-primary" href="">Продлить за 2 500 ₽/мес</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

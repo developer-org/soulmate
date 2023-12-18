@@ -289,7 +289,7 @@
     border-radius: 40px;
     padding: 32px 25% 32px 32px;
     margin-top: 32px;
-    background: url(../images/result-education-gradient.png), url(../images/result-education-image.png);
+    background: url(../images/result-education-gradient.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -332,24 +332,36 @@
     border-radius: 40px;
     padding: 24px 32px;
     margin-top: 32px;
-    background: @white;
+    background: url(../images/courses-gradient-main.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0px 4px 16px 0px #1111110A;
     display: flex;
     align-items: center;
+    overflow: hidden;
     @media screen and (max-width: 991px){ 
         flex-direction: column;
     }
     .h2-title{
         margin-bottom: 32px;
+        color: @white;
     }
     &__image{
         width: 300px;
         min-width: 300px;
         height: 234px;
         margin-right: 30px;
+        margin-top: -24px;
         @media screen and (max-width: 991px){ 
             width: 260px;
             min-width: 260px;
+            display: none;
+        }
+        img{
+            transform: scale(1.22) translateX(20px);
+            @media screen and (max-width: 1200px){
+                transform: scale(1.55) translateX(20px);
+            }
         }
     }
     &__link{
@@ -366,7 +378,7 @@
             padding: 0 10px!important;
         }
         &:hover{
-            border: 2px solid @action-outline !important;
+            //border: 2px solid @action-outline !important;
         }
     }
 }
@@ -378,7 +390,7 @@
     background: @white;
     box-shadow: 0px 4px 16px 0px #1111110A;
     @media screen and (max-width: 1369px){
-        padding: 24px 0 24px 32px;
+        //padding: 24px 0 24px 32px;
     }
     .h2-title{
         margin-bottom: 24px;
@@ -389,6 +401,18 @@
     }
 }
 .teachers-slider{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    @media screen and (max-width: 1369px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 991px){ 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 767px){ 
+        grid-template-columns: inherit;
+    }
     .owl-stage{
         display: flex;
         padding-left: 1px;
@@ -439,11 +463,11 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: 16px;
+        padding: 8px;
         border-radius: 16px;
         border: 1px solid @action-outline;
         @media screen and (max-width: 1369px){
-            width: 311px;
+            //width: 311px;
         }
         @media screen and (max-width: 375.9px){ 
             width: 282px;
@@ -464,6 +488,7 @@
         line-height: 28px;
         color: @text-main;
         margin-bottom: 8px;
+        padding: 0 8px;
     }
     &__text{
         font-size: 18px;
@@ -471,6 +496,7 @@
         line-height: 25px;
         color: @text-secondary;
         margin-bottom: 8px;
+        padding: 0 8px;
     }
     &__exp{
         font-size: 18px;
@@ -478,6 +504,7 @@
         line-height: 25px;
         color: @text-tertiary;
         margin-top: auto;
+        padding: 0 8px;
     }
 }
 
@@ -773,7 +800,11 @@
     &__wrap{
         display: flex;
         align-items: center;
-        gap: 75px;
+        gap: 40px;
+        @media screen and (max-width: 1369px){
+            flex-wrap: wrap;
+            gap: 20px;
+        }
         @media screen and (max-width: 1200px){
             flex-direction: column;
             align-items: flex-start;
@@ -784,8 +815,11 @@
     &__item{
         display: flex;
         flex-direction: column;
-        gap: 29px;
+        gap: 30px;
         margin-bottom: 25px;
+        @media screen and (max-width: 1369px){
+            gap: 20px;
+        }
         @media screen and (max-width: 1200px){
             margin-bottom: 0px;
         }
@@ -798,16 +832,22 @@
     }
     &__price{
         font-family: "Actay", sans-serif;
-        font-size: 32px;
+        font-size: 48px;
         font-weight: 700;
-        line-height: 40px;
-        color: @text-main;
+        line-height: normal;
+        color: @action-primary;
+        @media screen and (max-width: 767px){ 
+            font-size: 38px;
+        }
     }
     &__link.btn-primary{
         width: 415px;
+        @media screen and (max-width: 1200px){
+            margin-left: 15px !important;
+            margin-right: 15px !important;
+        }
         @media screen and (max-width: 767px){ 
             width: 100%;
-            margin-top: 26px;
         }
         &:hover{
             background-color: transparent !important;
@@ -817,14 +857,17 @@
     &__list{
         display: flex;
         flex-direction: column;
-        gap: 19px;
-        @media screen and (max-width: 1369px){
-            padding-left: 50px !important;
-        }
+        gap: 32px;
+        padding: 32px !important;
+        border-radius: 11px;
+        border: 1px solid rgba(69, 22, 122, 0.20);
+        background: @white;
         @media screen and (max-width: 1200px){
-            padding-left: 0px !important;
-            height: 100%;
-            justify-content: center;
+            margin-bottom: 30px !important;
+        }
+        @media screen and (max-width: 767px){ 
+            gap: 24px;
+            padding: 24px !important;
         }
         li{
             position: relative;
@@ -856,7 +899,7 @@
         margin-left: -32px;
         width: calc(~'100% + 64px');
         color: @white;
-        background: @text-main;
+        background: @action-primary;
         border-radius: 0 0 40px 40px;
         @media screen and (max-width: 1200px){
             padding: 8px 65px;

@@ -16,30 +16,45 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo.svg"></a>
+        <div class="header__wrapper"><a class="header__logo" href="../../index.html"><img src="../build/images/logo-black.svg"></a>
           <div class="header__nav nav-header">
             <nav class="nav-header__menu menu-nav-header">
               <ul class="menu-nav-header__list">
                 <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Истории успехов</a></li>
-                <li class="menu-nav-header__item"><a class="menu-nav-header__link active" href="">Каталог курсов</a></li>
+                <li class="menu-nav-header__item"><a class="menu-nav-header__link" href="">Каталог курсов</a></li>
               </ul>
             </nav>
-            <div class="nav-header__auth auth-nav-header"><a class="auth-nav-header__link" href="">Войти</a></div>
+          </div>
+          <div class="header__nav nav-header">
+            <div class="nav-header__auth auth-nav-header"><a class="auth-nav-header__link lang" href="">EN</a><a class="auth-nav-header__link" href="">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+<path d="M20 21.5V19.5C20 18.4391 19.5786 17.4217 18.8284 16.6716C18.0783 15.9214 17.0609 15.5 16 15.5H8C6.93913 15.5 5.92172 15.9214 5.17157 16.6716C4.42143 17.4217 4 18.4391 4 19.5V21.5" stroke="#45167A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 11.5C14.2091 11.5 16 9.70914 16 7.5C16 5.29086 14.2091 3.5 12 3.5C9.79086 3.5 8 5.29086 8 7.5C8 9.70914 9.79086 11.5 12 11.5Z" stroke="#45167A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Войти</a></div>
           </div>
           <div class="menu"><span></span><span></span><span></span></div>
         </div>
       </div>
     </header>
     <main>
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">Каталог курсов</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">Академия</a></li>
+          </ul>
+        </div>
+      </section>
       <section class="courses-single">
         <div class="container">
           <div class="courses-single__main main-courses-single">
-            <div class="main-courses-single__image"><img src="../build/images/courses-image1.png"></div>
+            <div class="main-courses-single__image"><img src="../build/images/courses-image3.png"></div>
             <div class="main-courses-single__content">
               <h1 class="h1-title">Академия</h1>
               <div class="main-courses-single__text">Вы сможете узнать все тонкости работы на крипто-рынке,получить работающие стратегии и увереннозарабатывать на инвестициях</div>
               <div class="main-courses-single__price">55 000 ₽</div>
-              <div class="main-courses-single__action"> <a class="main-courses-single__link btn-primary" href="">Узнать больше</a><a class="main-courses-single__link btn-white" href="">Подробнее</a></div>
+              <div class="main-courses-single__action"> <a class="main-courses-single__link btn-primary" href="">Узнать больше</a><a class="main-courses-single__link btn-white" href="">Купить</a></div>
             </div>
             <div class="main-courses-single__param param-main-courses">
               <div class="param-main-courses__item"> 
@@ -58,50 +73,116 @@
           </div>
         </div>
       </section>
-      <section class="courses-single">
+      <section class="courses-single faculties">
         <div class="container">
-          <div class="courses-single__additional additional-courses-single">
-            <div class="row"> 
-              <div class="col-md-6">
-                <div class="additional-courses-single__item">
-                  <div class="additional-courses-single__top">
-                    <div class="additional-courses-single__title">Presale</div>
-                    <div class="additional-courses-single__text">Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительные интервалы.</div>
-                  </div><a class="additional-courses-single__link btn-white" href="">Подробнее<span>
-                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#45167A"/>
-</svg></span></a>
-                  <div class="additional-courses-single__image"> <img src="../build/images/courses-add-image1.png"></div>
+          <div class="row">
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">DeFi</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">DeFi</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="additional-courses-single__item">
-                  <div class="additional-courses-single__top">
-                    <div class="additional-courses-single__title">DeFi</div>
-                    <div class="additional-courses-single__text">Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительные интервалы.</div>
-                  </div><a class="additional-courses-single__link btn-white" href="">Подробнее<span>
-                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#45167A"/>
-</svg></span></a>
-                  <div class="additional-courses-single__image"> <img src="../build/images/courses-add-image2.png"></div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">Trading</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner active">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">Trading</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="additional-courses-single__item coming-soon"> 
-                  <div class="additional-courses-single__title">Скоро</div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">Presale</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">Presale</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="additional-courses-single__item">
-                  <div class="additional-courses-single__top">
-                    <div class="additional-courses-single__title">Криптотрейдинг</div>
-                    <div class="additional-courses-single__text">Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительные интервалы.</div>
-                  </div><a class="additional-courses-single__link btn-white" href="">Подробнее<span>
-                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z" fill="#45167A"/>
-</svg></span></a>
-                  <div class="additional-courses-single__image"> <img src="../build/images/courses-add-image3.png"></div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">NFT</div>
                 </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">NFT</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Факультет</div>
+                  <div class="item-faculties__title">Nodes</div>
+                </div>
+                <div class="badge">4 недели</div>
+                <div class="item-faculties__plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5 9.375C23.5 8.82272 23.0523 8.375 22.5 8.375C21.9477 8.375 21.5 8.82272 21.5 9.375V21.5H9.375C8.82272 21.5 8.375 21.9477 8.375 22.5C8.375 23.0523 8.82272 23.5 9.375 23.5H21.5V35.625C21.5 36.1773 21.9477 36.625 22.5 36.625C23.0523 36.625 23.5 36.1773 23.5 35.625V23.5H35.625C36.1773 23.5 36.625 23.0523 36.625 22.5C36.625 21.9477 36.1773 21.5 35.625 21.5H23.5V9.375Z" fill="#5747A0"/>
+</svg>
+                </div>
+                <div class="item-faculties__inner">
+                  <div class="item-faculties__head">
+                    <div class="item-faculties__title">Nodes</div>
+                    <p>Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</p>
+                  </div><a class="item-faculties__link btn-white" href="">Купить</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <div class="faculties__item item-faculties ambassador">
+                <div class="item-faculties__head">
+                  <div class="item-faculties__subtitle">Клуб</div>
+                  <div class="item-faculties__title">Ambassador Club</div>
+                </div>
+                <div class="item-faculties__image"><img src="../build/images/ambassador-image.png"></div><a class="item-faculties__link btn-white" href="">Билет в новую жизнь</a>
               </div>
             </div>
           </div>
@@ -116,7 +197,7 @@
                 <div class="useful__item">  
                   <div class="useful__image"> <img src="../build/images/useful-icon1.svg"></div>
                   <div class="useful__content"> 
-                    <div class="useful__title">Начинающим трейдерам</div>
+                    <div class="useful__title">Начинающим <br>трейдерам</div>
                     <div class="useful__text">Научитесь анализировать финансовую информацию и торговать на основе данных, а не интуиции. Разработаете собственную торговую стратегию и сможете контролировать риски.</div>
                   </div>
                 </div>
@@ -154,7 +235,7 @@
       <section>
         <div class="container">
           <div class="consultation">
-            <div class="consultation__image"> <img src="../build/images/consult.png"></div>
+            <div class="consultation__image"> <img src="../build/images/consult2.png"></div>
             <div class="consultation__content">
               <h2 class="h2-title">Хотите узнать о курсе больше — <br>получите персональную консультацию</h2><a class="consultation__link btn-primary" href="">Получить консультацию</a>
             </div>
@@ -165,7 +246,7 @@
         <div class="container">
           <div class="teachers">
             <h2 class="h2-title">Преподаватели — практикующие эксперты</h2>
-            <div class="teachers-slider owl-carousel owl-theme">
+            <div class="teachers-slider">
               <div class="teachers-slider__item"> 
                 <div class="teachers-slider__image"> <img src="../build/images/person1.png"></div>
                 <div class="teachers-slider__title">Костюков Антон</div>
@@ -262,7 +343,7 @@
 </svg>
               </div>
               <div class="item-program__body body-item-program">
-                <div class="body-item-program__text">Научитесь анализировать взаимосвязи в данных методами статистики. Узнаете, что такое статистическая значимость, гипотезы и доверительнеы интервалы.</div>
+                <div class="body-item-program__text">1) GameFi - это новая тенденция в криптоиндустрии, объединяющая миры игр и финансов. <br>2) GameFi предлагает пользователям возможность зарабатывать и инвестировать в игровые активы, такие как виртуальные предметы, NFT-токены и игровые валюты. <br>3) Основная идея GameFi заключается в том, чтобы игроки могли преобразовывать свои игровые достижения и вложения в реальные финансовые возможности. <br>4) Metaverse представляет собой виртуальный мир, где пользователи могут взаимодействовать, создавать и торговать цифровыми активами. <br>5) В Metaverse игроки могут создавать своих уникальных персонажей, строить виртуальные объекты и проводить социальные интеракции с другими игроками. <br>6) GameFi в Metaverse предлагает игрокам ещё больше возможностей заработка и инвестирования, благодаря цифровым активам и экономическим системам внутри виртуального мира. <br>7) Создание и развитие Metaverse проходит на блокчейн-технологии, что обеспечивает прозрачность, безопасность и подлинность цифровых активов. <br>8) GameFi в Metaverse активно привлекает внимание инвесторов, так как предлагает новые возможности для создания и торговли виртуальными активами. <br>9) Пользователи Metaverse и GameFi могут быть компенсированы как за успешную игровую активность, так и за вклад в развитие виртуального мира через механизмы стейкинга и дефи. <br>10) GameFi и Metaverse - это сферы, меняющие будущее игр и развлечений, где игроки могут стать не только потребителями контента, но и активными участниками экономики виртуального мира.</div>
               </div>
             </div>
           </div>
@@ -314,13 +395,17 @@
       </section>
       <section>
         <div class="container">
-          <div class="request-form"> 
-            <form class="request-form__item">
+          <div class="consult-form"> 
+            <div class="consult-form__content"> 
               <h2 class="h2-title">Оставьте заявку</h2>
-              <input class="request-form__input" type="text" name="name" placeholder="Имя">
-              <input class="request-form__input" type="text" name="phone" placeholder="Телефон">
-              <div class="request-form__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
-              <input class="request-form__input btn-white" type="submit" value="Хочу учиться">
+              <div class="consult-form__subtitle">Текст описание для формы</div>
+              <div class="consult-form__text">Куратор подробно расскажет про нашу академию и порекомендует подходящий курс.</div>
+            </div>
+            <form class="consult-form__item">
+              <input class="consult-form__input" type="text" name="name" placeholder="Имя">
+              <input class="consult-form__input" type="text" name="phone" placeholder="Телефон">
+              <div class="consult-form__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <input class="consult-form__input btn-primary" type="submit" value="Записаться на встречу">
             </form>
           </div>
         </div>
@@ -330,7 +415,7 @@
           <div class="participation">
             <h2 class="h2-title">Варианты участия</h2>
             <div class="row"> 
-              <div class="col-md-6">
+              <div class="col-xl-6">
                 <div class="participation__wrap">
                   <div class="participation__item"> 
                     <div class="participation__title">Частями без переплат</div>
@@ -342,9 +427,11 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6"> 
+              <div class="col-xl-6"> 
                 <ul class="participation__list">
                   <li>Вернём деньги, если обучение не подойдёт</li>
+                  <li>Возможность получить налоговый вычет — 13%</li>
+                  <li>Возможность получить налоговый вычет — 13%</li>
                   <li>Возможность получить налоговый вычет — 13%</li>
                 </ul>
               </div><a class="participation__link btn-primary" href="">Купить</a>

@@ -112,7 +112,6 @@
             }
         }
     }
-
 }
 .btn-tp{
     position: relative;
@@ -275,8 +274,16 @@ input[type=radio]{
         background: @white;
         border-radius: 50%;
     }
-    &:checked::after{
+    &:checked::after, &.correctly::after, &.incorrectly::after{
         display: block;
+    }
+    &.correctly{
+        background: #018006;
+        border-color: #018006;
+    }
+    &.incorrectly{
+        background: #F5002C;
+        border-color: #F5002C;
     }
 }
 input[type=checkbox]{
@@ -310,8 +317,16 @@ input[type=checkbox]{
         background-repeat: no-repeat;
         background-position: center;
     }
-    &:checked::after{
+    &:checked::after, &.correctly::after, &.incorrectly::after{
         display: block;
+    }
+    &.correctly{
+        background: #018006;
+        border-color: #018006;
+    }
+    &.incorrectly{
+        background: #F5002C;
+        border-color: #F5002C;
     }
 }
 
@@ -455,6 +470,7 @@ input[type=checkbox]{
     border: 2px solid @background-tertiary;
     border-radius: 40px;
     margin-top: 30px;
+    box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.08);
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
     background-color: @action-primary;
@@ -505,3 +521,168 @@ input[type=checkbox]{
         }
     }
 }
+
+
+
+// .cascade-carousel{
+//     &__item{
+//         width: 500px;
+//         height: 285px;
+//         border-radius: 12.926px;
+//         div{
+
+//         }
+//     }
+// }
+
+
+// #showcase {
+//     // width:700px;
+//     // height:700px;
+//     // height: 100%;
+//     //transform: rotate(-90deg);
+//   }
+//   .cloud9-item {
+//     div{
+//         //transform: rotate(90deg);
+//         //width: 500px;
+//         //height: 285px;
+//         border-radius: 12.926px;
+//         text-align: center;
+//     }
+//   }
+//   .next,.prev {
+//       display:block;
+//       font-weight:bold;
+//       text-decoration:none;
+//       font-size:40px;
+//   }
+//   .next {
+//       margin-top:70px;
+//   }
+
+
+
+
+
+
+
+
+// .slider-block-item img {
+//     width: 100%;
+//     height: 100%;
+//     /*background-image: url(../images/courses-catalog-image2.png);*/
+
+// }
+// .slider-block {
+//     width: 100%;
+// }
+// .slider-block .slick-arrow {
+//     position: absolute;
+//     right: 0;
+//     left: 100%;
+// }
+// .slider-block .slick-prev {
+//     top: 45%;
+// }
+// .slider-block .slick-next {
+//     top: 55%;
+// }
+// .slider-block .slick-arrow:before {
+//     content: "";
+// }
+// .slider-block {
+//     position: relative;
+// }
+// .slider-content {
+//     height: 285px;
+//     width: 500px;
+// }
+
+// .slide-3 {
+//     opacity: 1;
+//     left: 0;
+//     top: 0;
+// }
+// .slider-img {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     z-index: 0;
+// }
+// .slider-icon {
+//     z-index: 1;
+//     position: relative;
+// }
+// .slider-content {
+//     border: 2px solid red; 
+//     position: absolute;
+//     height: 285px;
+//     border-radius: 12.93px;
+//     transition: 1s;
+//     top: 0;
+// }
+// .slider-content img {
+//     border-radius: 12.93px;
+// }
+
+// .slick-vertical .slider-block-item.slick-slide {
+//     height: 285px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+// }
+// .slick-vertical .slider-block-item.slick-slide .slider-content {
+//     transition: 1s;
+// }
+// .slick-vertical .slick-slide {
+//     position: relative;
+// }
+
+// .slick-vertical .slick-slide.slick-active.slide-1 {
+
+// }
+// .slick-vertical .slick-slide.slick-active.slide-2 {
+
+   
+// }
+// .slick-vertical .slick-slide.slick-active.slide-3 {
+
+// }
+// .slick-vertical .slick-slide.slick-active.slide-4 {
+
+// }
+// .slick-vertical .slick-slide.slick-active.slide-5 {
+
+// }
+// // .slick-vertical .slick-slide.slide-1 .slider-content {
+// //     top: 464px;
+// //     z-index: 1;
+// //     width: 372px;
+// // }
+// // .slick-vertical .slick-slide.slide-2 .slider-content {
+// //     top: 225px;
+// //     z-index: 2;
+// //     width: 436px;
+// // }
+// // .slick-vertical .slick-slide.slide-4 .slider-content {
+// //     top: auto;
+// //     bottom: 225px;
+// //     z-index: 2;
+// //     width: 436px;
+// // }
+// // .slick-vertical .slick-slide.slide-5 .slider-content {
+// //     top: auto;
+// //     bottom: 464px;
+// //     z-index: 1;
+// //     width: 372px;
+// // }
+// .slick-center .slider-content{
+//     z-index: 10;
+// }
+// .slider-block.slick-slider .slick-list {
+//     //transform: translate3d(0, -200px, 0);
+// }

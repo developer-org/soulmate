@@ -720,6 +720,90 @@
         color: @text-main;
     }
 }
+.result-lesson{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px 16px;
+    &__link{
+        width: 328px;
+        margin: 0 auto;
+        @media screen and (max-width: 767px){ 
+            width: 100%;
+            font-size: 18px !important;
+        }
+    }
+    &__status{
+        color: #FCFCFC;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center; 
+    }
+    p{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        opacity: .5;
+    }
+    &__count{
+        font-size: 140px;
+        font-weight: 600;
+        line-height: 116px;
+        @media screen and (max-width: 767px){ 
+            font-size: 95px;
+        }
+    }
+    &__answer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 8px 24px;
+        border-radius: 96px;
+    }
+    &.dark{
+        background-image: url(../images/lesson-result-bg1.png);
+        .result-lesson__status{
+            color: @background-primary;
+        }
+        p{
+            color: @white;
+        }
+        .result-lesson__count{
+            color: @background-primary;
+        }
+        .result-lesson__answer{
+            color: @white;
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+    &.light{
+        background-image: url(../images/lesson-result-bg2.png);
+        .result-lesson__status{
+            color: @action-primary;
+        }
+        p{
+            color: @action-primary;
+        }
+        .result-lesson__count{
+            color: @action-primary;
+        }
+        .result-lesson__answer{
+            color: @action-primary;
+            background: rgba(70, 25, 120, 0.15);
+        }
+    }
+}
 .task-form-lesson{
     display: flex;
     flex-direction: column;
@@ -870,6 +954,22 @@
         }
         @media screen and (max-width: 375.9px){ 
             font-size: 16px;
+        }
+    }
+    &__message{
+        padding: 16px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px; 
+        color: @text-main;
+        text-align: center;
+        margin-top: 4px;
+        &.error{
+            background: rgba(245, 0, 44, 0.10);
+        }
+        &.success{
+            background: rgba(70, 25, 120, 0.10);
         }
     }
 }

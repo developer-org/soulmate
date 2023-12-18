@@ -215,34 +215,20 @@
 
 .modal-thanks{
   .modal-content{
+    padding-top: 170px;
     &::before{
       content: '';
       position: absolute;
-      top: 0;
-      left: -130px;
-      width: 199px;
-      height: 231px;
-      background-image: url(../images/modal-vector.svg);
-      background-position: right;
+      top: 36px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100px;
+      height: 117px;
+      background-image: url(../images/modal-vector2.svg);
+      background-position: center;
       background-repeat: no-repeat;
-      @media screen and (max-width: 767px){ 
-        left: -140px;
-      }
-    }
-    &::after{
-      content: '';
-      position: absolute;
-      top: -95px;
-      right: -70px;
-      width: 199px;
-      height: 231px;
-      background-image: url(../images/modal-vector.svg);
-      background-position: right;
-      background-repeat: no-repeat;
-      transform: rotate(120deg);
-      @media screen and (max-width: 767px){ 
-        display: none;
-      }
+      background-size: contain;
     }
   }
   .modal__subtitle{
@@ -253,36 +239,20 @@
 
 .modal-error{
   .modal-content{
+    padding-top: 170px;
     &::before{
       content: '';
       position: absolute;
-      bottom: -40px;
-      left: -85px;
-      width: 231px;
-      height: 231px;
-      background-image: url(../images/modal-vector.svg);
-      background-position: right;
+      top: 36px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100px;
+      height: 117px;
+      background-image: url(../images/modal-vector2.svg);
+      background-position: center;
       background-repeat: no-repeat;
-      transform: rotate(50deg);
-      @media screen and (max-width: 767px){ 
-        bottom: 170px;
-        left: -170px;
-      }
-    }
-    &::after{
-      content: '';
-      position: absolute;
-      right: -90px;
-      bottom: -60px;
-      width: 199px;
-      height: 231px;
-      background-image: url(../images/modal-vector.svg);
-      background-position: right;
-      background-repeat: no-repeat;
-      transform: rotate(108deg);
-      @media screen and (max-width: 767px){ 
-        display: none;
-      }
+      background-size: contain;
     }
   }
   .modal__subtitle{

@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    //setSlider();
+
     $(" input[name=phone] ").inputmask("+7 (999) 999-99-99");
 
     $(document).on("click",".menu",function() {
@@ -37,8 +39,16 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.item-program .item-program__arrow', function () {
-        $(this).closest('.item-program').toggleClass('active')
-        $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
+        if($(this).parent().hasClass('active')){
+            $(this).closest('.item-program').toggleClass('active')
+            $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
+        }else{
+            $('.item-program.active .body-item-program').slideToggle(300)
+            $('.item-program.active').toggleClass('active')
+    
+            $(this).closest('.item-program').toggleClass('active')
+            $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
+        }
     });
 
     $('.more-text').on('click',function(){
@@ -73,6 +83,11 @@ $(document).ready(function () {
     });
 
     $('.js-select').select2();
+
+    if($('.js-select.form-select').length > 0){
+        $('.js-select.form-select').select2().data('select2').$dropdown.addClass('form-select-wrap');
+    }
+    
             
     $(window).on('resize', function() {
         $('.js-select').select2();
@@ -110,6 +125,111 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
 
+    $(document).on('click', '.cookie__btn', function () {
+        $('.cookie').fadeOut()
+    });
+
+    $(document).on('click', '.item-faculties .item-faculties__plus', function () {
+        $(this).closest('.item-faculties').find('.item-faculties__plus').toggleClass("active");
+    });
+    
+
+    // $('.cascade-carousel').owlCarousel({
+    //     items: 1,
+    //     loop: true,
+    //     nav: true,
+    //     dots: false,
+    //     animateOut: 'slideOutUp',
+    //     animateIn: 'slideInUp',
+    //     navText: [`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    //     <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7071 4.29289C11.0976 4.68342 11.0976 5.31658 10.7071 5.70711L5.41421 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H5.41421L10.7071 18.2929C11.0976 18.6834 11.0976 19.3166 10.7071 19.7071C10.3166 20.0976 9.68342 20.0976 9.29289 19.7071L2.29289 12.7071C1.90237 12.3166 1.90237 11.6834 2.29289 11.2929L9.29289 4.29289C9.68342 3.90237 10.3166 3.90237 10.7071 4.29289Z" fill="#161616"/>
+    //     </svg>`,`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    //     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2929 4.29289C13.6834 3.90237 14.3166 3.90237 14.7071 4.29289L21.7071 11.2929C22.0976 11.6834 22.0976 12.3166 21.7071 12.7071L14.7071 19.7071C14.3166 20.0976 13.6834 20.0976 13.2929 19.7071C12.9024 19.3166 12.9024 18.6834 13.2929 18.2929L18.5858 13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H18.5858L13.2929 5.70711C12.9024 5.31658 12.9024 4.68342 13.2929 4.29289Z" fill="#161616"/>
+    //     </svg>`],
+    // })
+
+    // $(".cascade-carousel").owlCarousel({
+    //     items: 1,
+    //     loop: false,
+        
+        
+    //     nav: true,
+    //     dots: false,
+    //     autoplayHoverPause: true,
+        // animateOut: 'slideOutUp',
+        // animateIn: 'slideInUp'
+    // });
+
+    // $('#showcase').slick({
+    //     dots: true,
+    //     centerMode: true,
+    //     infinite: true,
+    //     //centerPadding: '60px',
+
+        
+        
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
+
+
+    //     loop: true,
+    //     // vertical: true,
+    //     // verticalSwiping: true
+            
+    // });
+
+
+    //var showcase = $("#showcase");
+
+    // var showcase = $("#showcase")
+
+    // var carousel = showcase.Cloud9Carousel( {
+    //     yOrigin: 0,
+        
+
+    //     xRadius: 100,
+        
+    //     yRadius: 0,
+
+    //     frontItemClass: 'front-item',
+    //     //farScale: 0.1,
+    //     buttonLeft: $(".next"),
+    //     buttonRight: $(".prev"),
+    //     bringToFront: true,
+    //     onRendered: function( carousel ) {
+    //         console.log( carousel.nearestItem().element );
+            
+    //       },
+    //     onLoaded: function() {
+    //       showcase.css( 'visibility', 'visible' )
+    //       showcase.css( 'display', 'none' )
+    //       showcase.fadeIn( 1500 )
+    //     }
+        
+    //   } )
+    // var carousel = showcase.Cloud9Carousel({
+    //     yOrigin: 150,
+
+    //     xRadius: 0,
+
+    //     yRadius: 150,
+
+    //     farScale: 1,
+    //     buttonLeft: $(".next"),
+    //     buttonRight: $(".prev"),
+    //     bringToFront: true,
+    //     onRendered: function(carousel){
+    //         //$('h2').text(carousel.nearestItem().element.alt);
+    //         //$('#descr').text(carousel.nearestItem().element.title);
+    //     },
+    //     onLoaded: function() {
+    //         showcase.css( 'visibility', 'visible' )
+    //         showcase.css( 'display', 'none' )
+    //         showcase.fadeIn( 1500 )
+    //     }
+    // })
+
+
     $('select#module_select').on('change', function() {
         if ($(window).width() < 991) {
             $('.module__tab .tab-module.tab-pane').removeClass('active');
@@ -117,55 +237,52 @@ $(document).ready(function () {
         }
     });
 
-    $('.teachers-slider').owlCarousel({
-        items: 4,
+    $('.slider-home-story').owlCarousel({
+        items: 1,
         margin: 30,
         loop: false,
         nav: true,
-        dots: false,
-        navText: [`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.7071 4.29289C11.0976 4.68342 11.0976 5.31658 10.7071 5.70711L5.41421 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H5.41421L10.7071 18.2929C11.0976 18.6834 11.0976 19.3166 10.7071 19.7071C10.3166 20.0976 9.68342 20.0976 9.29289 19.7071L2.29289 12.7071C1.90237 12.3166 1.90237 11.6834 2.29289 11.2929L9.29289 4.29289C9.68342 3.90237 10.3166 3.90237 10.7071 4.29289Z" fill="#161616"/>
-        </svg>`,`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        dots: true,
+        navText: [`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7071 4.29289C11.0976 4.68342 11.0976 5.31658 10.7071 5.70711L5.41421 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H5.41421L10.7071 18.2929C11.0976 18.6834 11.0976 19.3166 10.7071 19.7071C10.3166 20.0976 9.68342 20.0976 9.29289 19.7071L2.29289 12.7071C1.90237 12.3166 1.90237 11.6834 2.29289 11.2929L9.29289 4.29289C9.68342 3.90237 10.3166 3.90237 10.7071 4.29289Z" fill="#161616"/>
+        </svg>`,`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2929 4.29289C13.6834 3.90237 14.3166 3.90237 14.7071 4.29289L21.7071 11.2929C22.0976 11.6834 22.0976 12.3166 21.7071 12.7071L14.7071 19.7071C14.3166 20.0976 13.6834 20.0976 13.2929 19.7071C12.9024 19.3166 12.9024 18.6834 13.2929 18.2929L18.5858 13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H18.5858L13.2929 5.70711C12.9024 5.31658 12.9024 4.68342 13.2929 4.29289Z" fill="#161616"/>
+        </svg>`],
+    })
+    
+
+    var slider_experts = $('.slider-experts')
+    slider_experts.owlCarousel({
+        items: 3,
+        loop: true,
+        nav: true,
+        dots: true,
+        center: true,
+        navText: [`<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <path d="M19.512 8.82165C18.8611 8.17078 17.8059 8.17078 17.155 8.82165L7.15499 18.8217C6.84242 19.1342 6.66683 19.5581 6.66683 20.0002C6.66683 20.4422 6.84242 20.8661 7.15499 21.1787L17.155 31.1787C17.8059 31.8295 18.8611 31.8295 19.512 31.1787C20.1629 30.5278 20.1629 29.4725 19.512 28.8217L12.3572 21.6668L31.6668 21.6668C32.5873 21.6668 33.3335 20.9206 33.3335 20.0002C33.3335 19.0797 32.5873 18.3335 31.6668 18.3335L12.3572 18.3335L19.512 11.1787C20.1629 10.5278 20.1629 9.47253 19.512 8.82165Z" fill="#161616"/>
+        </svg>`,`<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <path d="M20.488 8.82165C21.1389 8.17078 22.1941 8.17078 22.845 8.82165L32.845 18.8217C33.1576 19.1342 33.3332 19.5581 33.3332 20.0002C33.3332 20.4422 33.1576 20.8661 32.845 21.1787L22.845 31.1787C22.1941 31.8295 21.1389 31.8295 20.488 31.1787C19.8371 30.5278 19.8371 29.4725 20.488 28.8217L27.6428 21.6668L8.33317 21.6668C7.4127 21.6668 6.6665 20.9206 6.6665 20.0002C6.6665 19.0797 7.4127 18.3335 8.33317 18.3335L27.6428 18.3335L20.488 11.1787C19.8371 10.5278 19.8371 9.47253 20.488 8.82165Z" fill="#161616"/>
         </svg>`],
         responsive:{
             0:{
-                items: 2,
-                nav: false,
-                dots: true,
-                margin: 20,
-                autoWidth:true,
-            },
-            376:{
-                items: 2,
-                nav: false,
-                dots: true,
-                margin: 30,
-                autoWidth:true,
-            },
-            767:{
                 items: 3,
                 nav: true,
-                dots: false,
+                dots: true,
                 margin: 30,
-                autoWidth:true,
+                center: true,
             },
-            1024:{
-                items: 4,
-                nav: true,
-                dots: false,
-                margin: 30,
-                autoWidth:true,
-            },
-            1367:{
-                items: 4,
-                nav: true,
-                dots: false,
-                margin: 30,
-                autoWidth:false,
-            },
-
         }
     })
+
+    slider_experts.on("changed.owl.carousel", function(event) {
+        let page = event.page.index;
+        
+        $(".desc-experts")
+          .children(".desc-experts__item")
+          .removeClass("active")
+          .eq(page)
+          .addClass("active");
+      });
 
     $('.reviews-student-slider').owlCarousel({
         items: 4,
@@ -264,5 +381,90 @@ function getTimeRemaining(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
   }
   
+
+
+
+//   function setSlider()
+//   {
+//        let active_sliders = document.querySelectorAll(".slider-block-item");
+  
+//        active_sliders.forEach(function(slide, index) {
+  
+//             //removeClasses(slide);
+//             if (slide.classList.contains("slick-center") && !slide.classList.contains("slick-cloned")) {
+//                  slide.classList.add("slide-3");
+                 
+//                  if (index == 1) {
+  
+//                       removeClasses(active_sliders[index - 1]);
+//                       active_sliders[index - 1].classList.add("slide-2");
+//                  } else if (index == 0) {
+  
+//                  } else {
+//                       removeClasses(active_sliders[index - 2]);
+//                       removeClasses(active_sliders[index - 1]);
+//                       active_sliders[index - 2].classList.add("slide-1");
+//                       active_sliders[index - 1].classList.add("slide-2");
+//                  } 
+      
+//                  setTimeout(function(){
+//                       removeClasses(active_sliders[index + 1]);
+//                       active_sliders[index + 1].classList.add("slide-4");
+       
+//                       removeClasses(active_sliders[index + 2]);
+//                       active_sliders[index + 2].classList.add("slide-5");
+//                  }, 100)
+               
+//                  //return false;
+//             }
+           
+//        })
+//   }
+
+//   function removeClasses(item) 
+// {
+//      item.classList.remove("slide-1");
+//      item.classList.remove("slide-2");
+//      item.classList.remove("slide-3");
+//      item.classList.remove("slide-4");
+//      item.classList.remove("slide-5");
+// }
+
+// let slick_slider = $('.slider-block')
+
+// slick_slider.on('init', function(event, slick){
+//     setSlider();
+// });
+
+// slick_slider.slick({
+//      slidesToShow: 1, 
+//      slidesToScroll: 1, 
+//      vertical:true, 
+//      centerMode:true,
+//      dots: true,
+//      swipe: false,
+//      prevArrow: '<a class="slick-prev"><img src="../build/images/slider-arrow.png"></a>',
+//      nextArrow: '<a class="slick-next"><img src="../build/images/slider-arrow.png"></a>',
+// });
+
+
+
+// $('.slider-block').on('afterChange', function(event, slick, currentSlide, nextSlide){
+// });
+// $('.slider-block').on('swipe', function() {
+//      //console.log(this)
+// })
+
+// $('.slider-block').on('setPosition', function() {
+//     //  setSlider();
+    
+// })
+// $('.slider-block').on('beforeChange', function() {
+//     //  let active_sliders = document.querySelectorAll(".slider-block-item");
+
+//     //  active_sliders.forEach(function(slide, index) {
+//     //       removeClasses(slide)
+//     //  });
+// })
 
   
