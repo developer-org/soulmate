@@ -287,43 +287,69 @@
 
 .result-education{
     border-radius: 40px;
-    padding: 32px 25% 32px 32px;
+    padding: 32px 15% 16px 32px;
     margin-top: 32px;
     background: url(../images/result-education-gradient.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media screen and (max-width: 1369px){
+        padding: 32px 32px 16px 32px;
+    }
     @media screen and (max-width: 991px){ 
-        padding: 32px;
+        padding: 32px 32px 16px 32px;
     }
     .h2-title{
         margin-bottom: 24px;
     }
     &__list{
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         gap: 16px;
+        column-count: 2;
+        @media screen and (max-width: 1200px){
+            column-count: 1;
+        }
         li{
+            display: flex;
+            align-items: center;
             position: relative;
             font-size: 20px;
             font-weight: 400;
             line-height: 28px;
             color: @text-main;
-            padding-left: 32px;
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 3px;
-                width: 24px;
-                height: 24px;
-                background: url(../images/check.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                @media screen and (max-width: 767px){ 
-                    top: calc(~'50% - 12px');
+            margin-bottom: 16px;
+            @media screen and (max-width: 1369px){ 
+                
+            }
+            svg{
+                width: 56px;
+                min-width: 56px;
+                height: 56px;
+                margin-right: 16px;
+                @media screen and (max-width: 1369px){ 
+                    margin-bottom: auto;
                 }
             }
+            br{
+                @media screen and (max-width: 767px){ 
+                    display: none;
+                }
+            }
+            // &::before{
+            //     content: '';
+            //     position: absolute;
+            //     left: 0;
+            //     top: 3px;
+            //     width: 24px;
+            //     height: 24px;
+            //     background: url(../images/check.svg);
+            //     background-position: center;
+            //     background-repeat: no-repeat;
+            //     @media screen and (max-width: 767px){ 
+            //         top: calc(~'50% - 12px');
+            //     }
+            // }
         }
     }
 }
@@ -536,6 +562,7 @@
     padding: 24px 32px;
     border-radius: 40px;
     background: @background-tertiary;
+    cursor: pointer;
     @media screen and (max-width: 375.9px){ 
         padding: 24px;
     }

@@ -36,8 +36,21 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.item-program .item-program__arrow', function () {
-        if($(this).parent().hasClass('active')){
+    // $(document).on('click', '.item-program .item-program__arrow', function () {
+    //     if($(this).parent().hasClass('active')){
+    //         $(this).closest('.item-program').toggleClass('active')
+    //         $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
+    //     }else{
+    //         $('.item-program.active .body-item-program').slideToggle(300)
+    //         $('.item-program.active').toggleClass('active')
+    
+    //         $(this).closest('.item-program').toggleClass('active')
+    //         $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
+    //     }
+    // });
+
+    $(document).on('click', '.item-program', function () {
+        if($(this).hasClass('active')){
             $(this).closest('.item-program').toggleClass('active')
             $(this).closest('.item-program').find('.body-item-program').slideToggle(300)
         }else{
