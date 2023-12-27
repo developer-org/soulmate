@@ -89,8 +89,9 @@
             margin-top: 30px;
         }
         &:hover{
-            border: 2px solid @action-outline !important;
-            background: transparent !important;
+            color: @white !important;
+            //border: 2px solid @action-outline !important;
+            background: @badge-default !important;
             svg{
                 path{
                     fill: @action-primary;
@@ -129,6 +130,11 @@
     padding: 32px 0;
     @media screen and (max-width: 1200px){
         padding: 80px 0 32px 0;
+    }
+    .row{
+        & > div{
+            display: flex;
+        }
     }
     .h2-title{
         margin-bottom: 24px;
@@ -321,7 +327,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px; 
-        width: 55%;
+        width: 60%;
         @media screen and (max-width: 1200px){
             width: 70%;
         }
@@ -699,16 +705,21 @@
         background-size: cover;
         background-position: center;
         padding: 30px 0 0 0;
+        @media screen and (max-width: 1369px){
+            padding: 30px 0 10px 0;
+        }
         @media screen and (max-width: 767px){ 
             padding: 20px 0 4px 0;
-            margin:  0 30px;
         }
         p{
             font-family: "Actay", sans-serif;
-            font-size: 160px;
+            font-size: 120px;
             font-weight: 700;
             line-height: 1;
             color: @white;
+            @media screen and (max-width: 1369px){
+                font-size: 90px;
+            }
             @media screen and (max-width: 767px){ 
                 font-size: 64px;
             }
@@ -841,11 +852,11 @@
             }
         }
         p{
-            font-size: 64px;
+            font-size: 46px;
             font-weight: 700;
             line-height: normal;
             @media screen and (max-width: 767px){ 
-                font-size: 32px;
+                font-size: 26px;
             }
         }
         span{
@@ -1000,33 +1011,72 @@
 
 .faculties{
     padding: 45px 0 0px 0;
+    overflow: hidden;
     @media screen and (max-width: 991px){ 
         padding: 50px 0 ;
     }
     .h2-title{
         margin-bottom: 32px;
     }
+    .row{
+        .col-xl-12{
+            .item-faculties{
+                margin-bottom: 0;
+                .item-faculties__front{
+                    transform: perspective(600px) rotateX(0deg);
+                }
+                .item-faculties__back{
+                    transform: perspective(600px) rotateX(180deg);
+                }
+                @media screen and (max-width: 1200px){
+                    .item-faculties__front{
+                        transform: perspective(600px) rotateY(0deg);
+                    }
+                    .item-faculties__back{
+                        transform: perspective(600px) rotateY(180deg);
+                    }
+                }
+            }
+            .item-faculties.active{
+                .item-faculties__front{
+                    transform: perspective(600px) rotateX(-180deg);
+                }
+                .item-faculties__back{
+                    transform: perspective(600px) rotateX(0deg);
+                }
+                @media screen and (max-width: 1200px){
+                    .item-faculties__front{
+                        transform: perspective(600px) rotateY(-180deg);
+                    }
+                    .item-faculties__back{
+                        transform: perspective(600px) rotateY(0deg);
+                    }
+                }
+            }
+        }
+    }
 }
+
 .item-faculties{
     position: relative;
     border-radius: 40px;
-    padding: 48px 32px 62px 32px;
+    //padding: 48px 32px 62px 32px;
     margin-bottom: 26px;
-    background: url(../images/faculties-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // background: url(../images/faculties-bg.png);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 520px;
-    overflow: hidden;
+    //overflow: hidden;
     @media screen and (max-width: 1369px){
         height: 450px;
     }
     @media screen and (max-width: 767px){ 
-        height: 300px;
-        padding: 24px;
+        height: 350px;
+        // padding: 24px;
     }
     &__progress{
         position: absolute;
@@ -1094,7 +1144,7 @@
                 position: absolute;
                 left: 3px;
                 top: 3px;
-                background: url(../images/faculties-bg.png);
+                background: url(../images/faculties-bg.svg);
                 background-repeat: no-repeat;
                 background-position: top right;
                 border-radius: 50%;
@@ -1106,39 +1156,98 @@
         //     height: 0;
         // }
     }
-    &__head{
+    &__front, &__back{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: transform .6s linear;
+        border-radius: 40px;
+    }
+    &__front{
+        padding: 48px 32px 62px 32px;
+        height: 100%;
+        background: url(../images/faculties-bg.png);
+        background: url(../images/faculties-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         display: flex;
         flex-direction: column;
-        width: 70%;
-        @media screen and (max-width: 1369px){
-            width: 60%;
-        }
-        @media screen and (max-width: 991px){ 
-            width: 75%;
-        }
-        @media screen and (max-width: 767px){ 
-            width: 60%;
+        justify-content: space-between;
+        transform: perspective(600px) rotateY(0deg);
+        @media screen and (max-width: 767px){
+            padding: 24px;
         }
     }
+    &__back{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    &.active{
+        .item-faculties__front{
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .item-faculties__back{
+            transform: perspective(600px) rotateY(0deg);
+        }
+    }
+    &__image{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &__head{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        z-index: 1;
+        word-break: break-all;
+        // @media screen and (max-width: 1369px){
+        //     width: 60%;
+        // }
+        // @media screen and (max-width: 991px){ 
+        //     width: 75%;
+        // }
+        // @media screen and (max-width: 767px){ 
+        //     width: 60%;
+        // }
+    }
     &__subtitle{
+        position: relative;
         font-size: 22px;
         font-weight: 400;
         line-height: 24px; 
         margin-bottom: 10px;
         color: @white;
+        z-index: 1;
         @media screen and (max-width: 767px){ 
             font-size: 16px;
             margin-bottom: 16px;
         }
     }
     &__title{
+        position: relative;
         font-family: "Actay", sans-serif;
-        font-size: 38px;
+        font-size: 32px;
         font-weight: 700;
         line-height: normal;
         color: @white;
+        z-index: 1;
+        @media screen and (max-width: 1369px){
+            font-size: 28px;
+        }
         @media screen and (max-width: 767px){ 
             font-size: 28px;
+        }
+        @media screen and (max-width: 375.9px){ 
+            font-size: 24px;
+        }
+        br{
+            @media screen and (max-width: 991px){
+                display: none;
+            } 
         }
     }
     &__plus{
@@ -1153,6 +1262,7 @@
         background: @background-tertiary;
         border-radius: 50%;
         cursor: pointer;
+        z-index: 1;
         @media screen and (max-width: 767px){ 
             width: 56px;
             height: 56px;
@@ -1165,15 +1275,23 @@
                 height: 32px;
             }
         }
-        &.active{
+        &:hover{
             background-color: @action-primary;
-            background-image: url(../images/minus.svg);
-            background-position: center;
-            background-repeat: no-repeat;
             svg{
-                display: none;
+                path{
+                    fill: @white;
+                }
             }
         }
+        // &.active{
+        //     background-color: @action-primary;
+        //     background-image: url(../images/minus.svg);
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     svg{
+        //         display: none;
+        //     }
+        // }
     }
     .badge{
         position: relative;
@@ -1188,7 +1306,7 @@
         background: rgba(252, 252, 252, 0.15);
     }
     &__inner{
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: absolute;
@@ -1209,9 +1327,9 @@
         .item-faculties__head{
             width: 100%;
         }
-        &.active{
-            display: flex;
-        }
+        // &.active{
+        //     display: flex;
+        // }
         &::before{
             content: '';
             position: absolute;
@@ -1275,12 +1393,15 @@
             font-weight: 700;
             line-height: normal;
             @media screen and (max-width: 1369px){
-                font-size: 38px;
+                font-size: 28px;
                 line-height: 40px;
             }
             @media screen and (max-width: 767px){
-                font-size: 24px;
+                font-size: 28px;
                 line-height: 30px;
+            }
+            br{
+                display: block !important;
             }
         }
         .item-faculties__link.btn-white{

@@ -41,31 +41,36 @@
           <ul class="content-list">
             <li class="content-title">Список страниц</li>
             <li><a href="./assets/pages/home.html">Главная страница</a></li>
+            <li><a href="./assets/pages/spec-page.html">Сведения об образовательной организации</a></li>
             <li class="content-subtitle">Вход & Регистрация</li>
             <li><a href="./assets/pages/login.html">Вход</a></li>
             <li><a href="./assets/pages/registration.html">Регистрация</a></li>
+            <li><a href="./assets/pages/reset.html">Создание нового пароля</a></li>
             <li class="content-subtitle">Каталог курса & Страница курса</li>
             <li><a href="./assets/pages/courses-catalog.html">Каталог курсов</a></li>
-            <li><a href="./assets/pages/courses-single.html">Страница курса</a></li>
+            <li><a href="./assets/pages/courses-single-base.html">Страница курса - Базовый курс</a></li>
+            <li><a href="./assets/pages/courses-single.html">Страница курса - Академия</a></li>
             <li class="content-subtitle">Главная для пользователя & Мои достижения</li>
             <li><a href="./assets/pages/home-user-not-play.html">Главная для пользователя - в игру не играет</a></li>
             <li><a href="./assets/pages/home-user-not-dostup-course.html">Главная для пользователя - курс куплен, но недоступен</a></li>
             <li><a href="./assets/pages/home-user-not-course.html">Главная для пользователя - нет курсов</a></li>
             <li><a href="./assets/pages/achievements.html">Мои достижения</a></li>
             <li class="content-subtitle">Мои курсы</li>
-            <li><a href="./assets/pages/courses.html">Мои курсы</a></li>
-            <li><a href="./assets/pages/courses-base.html">Мои курсы - Базовый курс</a></li>
+            <li><a href="./assets/pages/courses.html">Мои курсы (Вариант страницы по старому дизайну)</a></li>
+            <li><a href="./assets/pages/courses-base.html">Мои курсы - Базовый курс (карусель)</a></li>
+            <li><a href="./assets/pages/courses-base-module.html">Мои курсы - Базовый курс (модули)</a></li>
             <li><a href="./assets/pages/courses-academy.html">Мои курсы - Акадения</a></li>
             <li><a href="./assets/pages/courses-module.html">Мои курсы - модули/вебинары/актуальные проекты/игра</a></li>
             <li><a href="./assets/pages/project.html">Страница проекта</a></li>
             <li><a href="./assets/pages/project-expert.html">Страница проекта для эксперта</a></li>
-            <li><a href="./assets/pages/courses-module-expert.html">Эксперт создание проекта</a></li>
+            <li><a href="./assets/pages/courses-module-expert.html">Эксперт создание Модулей Базового курса</a></li>
             <li><a href="./assets/pages/courses-lesson.html">Мои курсы - Модуль - Урок</a></li>
             <li><a href="./assets/pages/courses-lesson-test.html">Мои курсы - Модуль - Тест</a></li>
             <li><a href="./assets/pages/courses-lesson-test-answer.html">Мои курсы - Модуль - Тест с ответами</a></li>
             <li><a href="./assets/pages/courses-lesson-test-passed.html">Мои курсы - Модуль - Результат теста - пройден</a></li>
             <li><a href="./assets/pages/courses-lesson-test-failed.html">Мои курсы - Модуль - Результат теста - не пройден</a></li>
-            <li><a href="./assets/pages/courses-module-feeaback.html">Мои курсы - Модуль - Последний урок в модуле обратная связь</a></li>
+            <li><a href="./assets/pages/courses-module-feeaback.html">Мои курсы - Модуль - Последний урок в модуле - Обратная связь</a></li>
+            <li><a href="./assets/pages/courses-module-feeaback-success.html">Мои курсы - Модуль - Последний урок в модуле - Благодарим за обратную связь</a></li>
             <li class="content-subtitle">Истории успехов & Профиль</li>
             <li><a href="./assets/pages/story.html">Истории успехов</a></li>
             <li><a href="./assets/pages/profile.html">Профиль - нет сертификата</a></li>
@@ -81,6 +86,7 @@
             <li><a href="./assets/pages/agreement.html">Пользовательское соглашение</a></li>
             <li><a href="./assets/pages/undefined.html">Страница 404</a></li>
             <li><a href="./assets/pages/technical.html">Технические работы</a></li>
+            <li><a href="./assets/pages/technical-support.html">Технические работы (доступна только поддержка)</a></li>
             <li class="content-title">Попапы</li>
             <li><a href="#" data-toggle="modal" data-target=".modal-bag">Накопление портфеля</a></li>
             <li><a href="#" data-toggle="modal" data-target=".modal-thanks">Спасибо за заявку</a></li>
@@ -89,6 +95,7 @@
             <li><a href="#" data-toggle="modal" data-target=".modal-bonuses">Списать бонусы</a></li>
             <li><a href="#" data-toggle="modal" data-target=".modal-push">Push Играй и выигрывай!</a></li>
             <li><a href="#" data-toggle="modal" data-target=".modal-buy">Покупка спасибо</a></li>
+            <li><a href="#" data-toggle="modal" data-target=".modal-password">Забыли пароль</a></li>
             <li><a href="#" data-toggle="modal" data-target=".modal-instructions">Инструкция</a></li>
             <li><a href="#" data-toggle="modal" data-target=".modal-create-post">Создать пост</a></li>
             <li><a href="#" data-toggle="modal" data-target=".modal-create-project">Создать проект</a></li>
@@ -225,7 +232,7 @@
               <div class="modal__title">Заявка на обучение</div>
               <input class="modal__input" type="text" name="name" placeholder="Имя">
               <input class="modal__input" type="text" name="phone" placeholder="Телефон">
-              <div class="modal__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <div class="modal__personal">Нажимая на кнопку «Хочу учиться» я даю согласие на <a href=''>обработку персональных данных</a>, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
               <input class="modal__input btn-primary" type="submit" value="Хочу учиться">
             </form>
           </div>
@@ -246,7 +253,7 @@
               <input class="modal__input" type="text" name="name" placeholder="Имя">
               <input class="modal__input" type="text" name="phone" placeholder="Телефон">
               <input class="modal__input" type="text" name="bonus" placeholder="Укажите кол-во бонусов для списания">
-              <div class="modal__personal">Нажимая на кнопку «Создать аккаунт» я даю согласие на обработку персональных данных, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
+              <div class="modal__personal">Нажимая на кнопку «Списать» я даю согласие на <a href=''>обработку персональных данных</a>, а также ознакомлен/ознакомлена и согласен/согласна со следующими документами: <a href=''>условия использования сайта</a>, <a href=''>политика конфиденциальности</a></div>
               <input class="modal__input btn-primary" type="submit" value="Списать">
             </form>
           </div>
@@ -424,6 +431,24 @@
               <div class="modal__label">Ссыка на чат потока</div>
               <input class="modal__input" type="text" name="chat" placeholder="Укажите ссылку">
               <div class="modal__wrap"><a class="btn-primary" href="">Сохранить</a><a class="btn-white" href="">Отменить</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-password modal fade" tabindex="-1" role="dialog" data-keyboard="false" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button class="close-popup" type="button" data-dismiss="modal" aria-hidden="true"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6.5L6 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6.5L18 18.5" stroke="#6236FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="modal-body">
+            <div class="modal__title">Напомнить пароль</div>
+            <form class="modal__form">
+              <input class="modal__input" type="text" name="email" placeholder="Электронная почта*">
+              <input class="modal__input btn-primary" type="submit" value="Отправить">
             </form>
           </div>
         </div>

@@ -141,8 +141,24 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.item-faculties .item-faculties__plus', function () {
-        $(this).closest('.item-faculties').find('.item-faculties__plus').toggleClass("active");
+        // $(this).closest('.item-faculties').find('.item-faculties__plus').toggleClass("active");
+        $('.item-faculties.active').toggleClass("active");
+        $(this).closest('.item-faculties').toggleClass("active");
     });
+
+    $(document).on('click', '.feedback-form-lesson__rate button', function () {
+        $(this).closest('.feedback-form-lesson__rate').find('.rate-star').removeClass("active");
+        $(this).closest('.feedback-form-lesson__rate').find('button').removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(document).on('click', '.feedback-form-lesson__rate .rate-star', function () {
+        $(this).closest('.feedback-form-lesson__rate').find('button').removeClass("active");
+        $(this).closest('.feedback-form-lesson__rate').find('.rate-star').removeClass("active");
+        $(this).addClass("active");
+    });
+
+    
 
     $('select#module_select').on('change', function() {
         if ($(window).width() < 991) {
@@ -207,11 +223,12 @@ $(document).ready(function () {
             let base_slider_subtitle = slide_active.data('subtitle');
             let base_slider_title = slide_active.data('title');
             let base_slider_text = slide_active.data('text');
+            let base_slider_count = slide_active.data('count');
 
             $('.content-courses-main__subtitle').text(base_slider_subtitle);
             $('.content-courses-main__title').text(base_slider_title);
             $('.content-courses-main__text').text(base_slider_text);
-            
+            $('.passed-count').text(base_slider_count);
         });
 
     slider_base.slick({
@@ -226,15 +243,6 @@ $(document).ready(function () {
         //cssEase: 'linear',
         touchMove: false,
         swipe: false,
-        // responsive: [                        
-        //     {
-        //         breakpoint: 0,
-        //         settings: {
-        //             centerMode: false,
-        //             variableWidth: false,
-        //         }
-        //     },
-        // ]
       });
 
       $(".slider-prev").click(function () {
@@ -245,6 +253,10 @@ $(document).ready(function () {
             slider_base.slick("slickNext");
         });
       
+        $(".slider .item").on("click", function() {
+            const index = $(this).attr("data-slick-index");
+            $(".slider").slick("slickGoTo", index);
+          });
       
       var imgs = $('.slider img');
       imgs.each(function(){

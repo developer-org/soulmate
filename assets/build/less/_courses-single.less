@@ -287,7 +287,7 @@
 
 .result-education{
     border-radius: 40px;
-    padding: 32px 15% 16px 32px;
+    padding: 32px 32px 16px 32px;
     margin-top: 32px;
     background: url(../images/result-education-gradient.png);
     background-repeat: no-repeat;
@@ -307,9 +307,12 @@
         // flex-direction: column;
         gap: 16px;
         column-count: 2;
-        @media screen and (max-width: 1200px){
-            column-count: 1;
+        @media screen and (max-width: 1369px){ 
+            column-count: 1;  
         }
+        // @media screen and (max-width: 1200px){
+        //     column-count: 1;
+        // }
         li{
             display: flex;
             align-items: center;
@@ -319,14 +322,20 @@
             line-height: 28px;
             color: @text-main;
             margin-bottom: 16px;
-            @media screen and (max-width: 1369px){ 
-                
+            @media screen and (max-width: 375.9px){ 
+                word-break: break-all;
+            }
+            br{
+                @media screen and (max-width: 1369px){ 
+                    display: none;
+                }
             }
             svg{
                 width: 56px;
                 min-width: 56px;
                 height: 56px;
                 margin-right: 16px;
+                margin-bottom: auto;
                 @media screen and (max-width: 1369px){ 
                     margin-bottom: auto;
                 }
@@ -428,10 +437,13 @@
 }
 .teachers-slider{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     @media screen and (max-width: 1369px){
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 1200px){
+        grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 991px){ 
         grid-template-columns: repeat(2, 1fr);
@@ -618,6 +630,7 @@
     display: none;
     padding: 20px 0 0 0;
     background: @background-tertiary;
+    width: 100%;
     &__text{
         font-size: 18px;
         font-weight: 400;
@@ -818,67 +831,83 @@
 .participation{
     border-radius: 40px;
     margin-top: 32px;
-    background: @background-tertiary;
+    background: url(../images/participation-vector.svg), url(../images/participation-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 0px 4px 16px 0px #1111110A;
-    padding: 32px 32px 0 32px;
+    padding: 66px 32px 0 32px;
     .h2-title{
-        margin-bottom: 24px;
+        font-family: "Actay", sans-serif;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: @white;
+        @media screen and (max-width: 767px){ 
+            font-size: 42px;
+            text-align: center;
+        }
     }
     &__wrap{
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        @media screen and (max-width: 1369px){
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+        // display: flex;
+        // align-items: center;
+        // gap: 40px;
+        // @media screen and (max-width: 1369px){
+        //     flex-wrap: wrap;
+        //     gap: 20px;
+        // }
         @media screen and (max-width: 1200px){
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 30px;
-            margin-bottom: 25px;
+            // flex-direction: column;
+            // align-items: flex-start;
+            // gap: 30px;
+            margin-top: 50px;
         }
     }
     &__item{
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        margin-bottom: 25px;
-        @media screen and (max-width: 1369px){
-            gap: 20px;
+        @media screen and (max-width: 767px){ 
+            align-items: center;
         }
-        @media screen and (max-width: 1200px){
-            margin-bottom: 0px;
-        }
+        // @media screen and (max-width: 1369px){
+        //     gap: 20px;
+        // }
+        // @media screen and (max-width: 1200px){
+        //     margin-bottom: 0px;
+        // }
     }
     &__title{
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
-        color: @text-main;
+        color: @white;
+        margin-bottom: 16px;
     }
     &__price{
         font-family: "Actay", sans-serif;
-        font-size: 48px;
+        font-size: 87px;
+        font-style: normal;
         font-weight: 700;
         line-height: normal;
-        color: @action-primary;
+        color: @background-primary;
+        margin-bottom: 16px;
         @media screen and (max-width: 767px){ 
             font-size: 38px;
         }
     }
     &__link.btn-primary{
-        width: 415px;
-        @media screen and (max-width: 1200px){
-            margin-left: 15px !important;
-            margin-right: 15px !important;
-        }
+        width: 400px;
+        // @media screen and (max-width: 1200px){
+        //     margin-left: 15px !important;
+        //     margin-right: 15px !important;
+        // }
         @media screen and (max-width: 767px){ 
             width: 100%;
         }
         &:hover{
-            background-color: transparent !important;
-            border: 2px solid @action-outline !important;
+            background-color: @white !important;
+            //border: 2px solid @action-outline !important;
         }
     }
     &__list{
@@ -922,7 +951,7 @@
         line-height: 22px;
         text-align: center;
         padding: 8px;
-        margin-top: 30px;
+        margin-top: 75px;
         margin-left: -32px;
         width: calc(~'100% + 64px');
         color: @white;

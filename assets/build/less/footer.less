@@ -2,6 +2,7 @@
     padding: 24px 0;
     margin-top: 40px;
     background-image: url(../images/footer-gradient.png);
+    background-image: url(../images/bg-darkpurple.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -10,8 +11,13 @@
     }
     .row{
         & > .col-xl-4{
+            padding-right: 35px;
             padding-left: 35px;
+            @media screen and (max-width: 1200px){
+                padding-right: 15px;
+            }
             @media screen and (max-width: 991px){ 
+                
                 padding-left: 15px;
             }
         }
@@ -31,7 +37,27 @@
         @media screen and (max-width: 767px){ 
             width: 212px;
             height: 67px;
-            margin: 0 auto 64px auto;
+            margin: 0 auto 30px auto;
+        }
+    }
+    &__adress{
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        padding-top: 20px;
+        gap: 10px;
+        @media screen and (max-width: 991px){ 
+            padding-top: 0px;
+            padding-bottom: 30px;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #fff;
+            @media screen and (max-width: 767px){ 
+                text-align: center;
+            }
         }
     }
     &__action{
@@ -56,6 +82,22 @@
         line-height: 28px;
         color: @white;
         margin-bottom: 10px;
+        &:hover{
+            color: @white;
+            text-decoration: underline !important;
+        }
+    }
+    &__mail{
+        width: max-content;
+        font-family: "Actay", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        color: @white;
+        margin-bottom: 10px;
+        @media screen and (max-width: 1369px){
+            font-size: 18px;
+        }
         &:hover{
             color: @white;
             text-decoration: underline !important;
@@ -158,12 +200,15 @@
     &__menu{
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 5px;
         @media screen and (max-width: 767px){ 
             align-items: center;
         }
     }
     &__item{
+        @media screen and (max-width: 767px){ 
+            text-align: center;
+        }
         &:first-child{
             font-family: "Actay", sans-serif;
             font-size: 16px;
@@ -177,12 +222,12 @@
         }
     }
     &__link{
-        display: block;
+        //display: block;
         font-size: 14px;
         font-weight: 400;
         line-height: 17px;
         color: @white;
-        width: max-content;
+        // width: max-content;
         &:hover{
             color: @white;
             text-decoration: underline !important;

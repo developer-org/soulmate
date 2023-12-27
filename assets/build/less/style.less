@@ -599,6 +599,7 @@ input[type=checkbox]{
   }
   
   .item{
+    outline: none !important;
     .slider-icon{
         display: flex;
         align-items: center;
@@ -625,19 +626,38 @@ input[type=checkbox]{
             display: none;
         }
         svg{
-            width: 100%;
-            height: 100%;
+            // width: 100%;
+            // height: 100%;
+            width: 65%;
+            height: 65%;
         }
         &.check{
             border: none;
             box-shadow: none;
             background-color: @badge-default;
-            background-image: url(../images/check-circle.svg);
+            background-image: url(../images/check2.svg);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 80%;
+            background-size: 62%;
             svg{
                 display: none;
+            }
+        }
+        &.lock{
+            &::before{
+                content: '';
+                width: 25px;
+                min-width: 25px;
+                height: 25px;
+                min-height: 25px;
+                position: absolute;
+                bottom: -12px;
+                border-radius: 50%;
+                background-color: @badge-default;
+                background-image: url(../images/locked3.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 76%;
             }
         }
     }

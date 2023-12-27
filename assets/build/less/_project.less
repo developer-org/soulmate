@@ -149,3 +149,94 @@
         color: @text-additional;
     }
 }
+
+.spec{
+    padding: 24px 0 0 0;
+    .sidebar__title{
+        color: @black;
+        font-family: "Actay", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: none;
+        @media screen and (max-width: 1369px){
+            word-break: break-all;
+        }
+        @media screen and (max-width: 1200px){
+            word-break: normal;
+        }
+    }
+    &__wrap{
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 40px;
+        background: @background-primary;
+        box-shadow: 0px 4px 16px 0px rgba(17, 17, 17, 0.04);
+    }
+    &__image{
+        border-radius: 24px;
+        height: 460px;
+        width: 100%;
+        @media screen and (max-width: 1369px){
+            height: 316px;
+        }
+        @media screen and (max-width: 1200px){
+            //padding: 0;
+        }
+        img{
+            border-radius: 24px;
+        }
+    }
+    &__material{
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 1200px){
+            flex-wrap: wrap;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px; 
+            color: @text-main;
+            margin-right: 24px;
+            @media screen and (max-width: 1200px){
+                width: 100%;
+                margin-right: 0px;
+                margin-bottom: 24px;
+            }
+        }
+        a{
+            display: flex;
+            position: relative;
+            margin-right: 8px;
+            border-radius: 8px;
+            background: @background-tertiary;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px; 
+            color: @text-secondary;
+            padding: 8px 12px;
+            @media screen and (max-width: 767px){ 
+                width: 100%;
+                margin-bottom: 12px;
+                justify-content: center;
+            }
+            &:last-child{
+                @media screen and (max-width: 767px){
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        svg{
+            margin-right: 8px;
+        }
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px; 
+        color: @text-main;
+    }
+}

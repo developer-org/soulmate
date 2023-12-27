@@ -37,6 +37,20 @@
             color: @text-tertiary;
         }
     }
+    &__link{
+        font-family: "ProximaNova", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: @action-primary !important;
+        text-decoration: underline !important;
+        text-align: center;
+        width: max-content;
+        margin: 10px auto 0 auto;
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
     a.form__input{
         margin-top: 12px;
         margin-bottom: 0;
@@ -65,6 +79,14 @@
     }
     .btn-white{
         background: @white;
+    }
+    &__error{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgba(245,0,44,.5);
+        margin-bottom: 20px;
+        margin-top: -20px;
     }
 
 
@@ -111,6 +133,16 @@
         margin-bottom: 180px;
     }
 }
+.reset{
+    margin-top: -8px;
+    margin-bottom: 300px;
+    @media screen and (max-width: 1200px){
+        margin-bottom: 200px;
+    }
+    @media screen and (max-width: 767px){ 
+        margin-bottom: 180px;
+    }
+}
 .registration{
     margin-top: -8px;
 }
@@ -129,6 +161,7 @@
     z-index: 1;
 }
 .remind{
+    position: relative;
     display: block;
     font-family: "Lato", sans-serif;
     font-size: 12px;
@@ -137,7 +170,17 @@
     text-align: right;
     color: @text-tertiary;
     margin: -16px 0 24px 0;
+    z-index: 1;
     &:hover{
         color: @action-primary;
+    }
+}
+
+.dop-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 767px){ 
+        flex-direction: column;
     }
 }

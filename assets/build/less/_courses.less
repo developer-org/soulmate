@@ -1,4 +1,7 @@
 .courses-main{
+    .row{
+        width: 100%;
+    }
     .wrapper{
         position: relative;
         background-image: url(../images/courses-bg.svg);
@@ -65,7 +68,7 @@
         @media screen and (max-width: 767px){ 
             margin-right: 0px;
             margin-bottom: 0;
-            height: 500px;
+            height: 515px;
         }
     }
     &__wrap-content{
@@ -78,7 +81,7 @@
         }
         .slider-arrow{
             position: absolute;
-            right: -75px;
+            right: -85px;
             border: none;
             z-index: 300;
             outline: none;
@@ -149,7 +152,8 @@
         position: absolute;
         left: 0;
         top: calc(~'50% - 25px');
-        width: max-content;
+        // width: max-content;
+        width: 230px;
         height: max-content;
         padding: 16px 32px;
         border-radius: 16px;
@@ -159,7 +163,8 @@
             left: 565px;
         }
         @media screen and (max-width: 1200px){
-            top: 40px;
+            top: 60px;
+            padding: 10px 32px;
             left: inherit;
             right: 65px;
         }
@@ -167,7 +172,7 @@
             top: 50px;
         }
         @media screen and (max-width: 767px){ 
-            top: 250px;
+            top: 300px;
             left: 0;
             right: 0;
             margin: 0 auto;
@@ -179,19 +184,23 @@
             text-align: center;
         }
         span{
+            display: flex;
             font-family: "Actay", sans-serif;
             font-size: 24px;
             font-weight: 700;
             color: @background-primary;
             text-align: center;
+            .passed-count{
+                margin-right: 10px;
+            }
         }
     }   
     .content-courses-main{
         position: absolute;
         //top: 280px;
         top: 295px;
-        right: 135px;
-        width: 450px;
+        right: 145px;
+        width: 440px;
         height: max-content;
         z-index: 1;
         @media screen and (max-width: 1369px){
@@ -347,8 +356,14 @@
         line-height: 24px;
         color: @text-additional;
         width: max-content;
+        @media screen and (max-width: 1200px){
+            width: 200px;
+            text-align: right;
+        }
         @media screen and (max-width: 991px){ 
             margin-top: 16px;
+            width: max-content;
+            text-align: left;
         }
     }
 }

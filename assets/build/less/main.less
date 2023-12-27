@@ -211,7 +211,7 @@ h3, .h3-title{
   padding: 7px 15px 30px 15px;
   transform: translateX(-100%);
   transition: .6s;
-  z-index: 20;
+  z-index: 1000;
   overflow: auto;
   background: url(../images/gradient-mobile-menu.png);
   background-repeat: no-repeat;
@@ -553,6 +553,53 @@ h3, .h3-title{
       @media screen and (max-width: 767px){ 
         top: -165px;
         right: -80px;
+      }
+      @media screen and (max-width: 375.9px){ 
+        right: -115px;
+      }
+      @media screen and (max-width: 374.9px){ 
+        right: -160px;
+      }
+    }
+  }
+  &.technical.support{
+    .undefined__wrap{
+      padding: 180px 0 340px 120px;
+      @media screen and (max-width: 1369px){
+        padding: 180px 0 340px 95px;
+        background-position: 50% calc(~'100% - 48px');
+        background-size: 100%;
+      }
+      @media screen and (max-width: 1200px){
+        padding: 180px 0 340px 65px;
+        background-position: 50% calc(~'100% - 30px');
+      }
+      @media screen and (max-width: 991px){ 
+        padding: 65px 0 430px 65px;
+      }
+      @media screen and (max-width: 767px){ 
+        padding: 225px 38px 75px 38px;
+        background-position: 50% 100%;
+        background-size: 125%;
+      }
+    }
+    .undefined__image{
+      @media screen and (max-width: 1369px){
+          top: 10px;
+          background-size: 120%;
+      }
+      @media screen and (max-width: 1200px){
+        top: -90px;
+        background-size: 95%;
+      }
+      @media screen and (max-width: 991px){ 
+        top: 35px;
+        background-size: 110%;
+      }
+      @media screen and (max-width: 767px){ 
+        top: -165px;
+        right: -80px;
+        background-size: 70%;
       }
       @media screen and (max-width: 375.9px){ 
         right: -115px;
