@@ -141,24 +141,23 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.item-faculties .item-faculties__plus', function () {
-        // $(this).closest('.item-faculties').find('.item-faculties__plus').toggleClass("active");
-        $('.item-faculties.active').toggleClass("active");
+        //$('.item-faculties.active').toggleClass("active");
         $(this).closest('.item-faculties').toggleClass("active");
     });
+    $(document).on('click', '.item-faculties .item-faculties__inner-close', function () {
+        //$('.item-faculties.active').toggleClass("active");
+        $(this).closest('.item-faculties').toggleClass("active");
+    });
+
+    
 
     $(document).on('click', '.feedback-form-lesson__rate button', function () {
         $(this).closest('.feedback-form-lesson__rate').find('.rate-star').removeClass("active");
         $(this).closest('.feedback-form-lesson__rate').find('button').removeClass("active");
+        $(this).closest('.feedback-form-lesson__rate').find('.rate-star').addClass("active");
         $(this).addClass("active");
     });
 
-    $(document).on('click', '.feedback-form-lesson__rate .rate-star', function () {
-        $(this).closest('.feedback-form-lesson__rate').find('button').removeClass("active");
-        $(this).closest('.feedback-form-lesson__rate').find('.rate-star').removeClass("active");
-        $(this).addClass("active");
-    });
-
-    
 
     $('select#module_select').on('change', function() {
         if ($(window).width() < 991) {

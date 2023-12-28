@@ -348,6 +348,20 @@
                 .badge.success + .btn-tp{
                     margin-left: 0;
                 }
+                .edit{
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 32px; 
+                    color: @action-primary;
+                    margin-left: auto;
+                    @media screen and (max-width: 991px){ 
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 767px){ 
+                        margin: 0 auto;
+                    }
+                }
                 .btn-tp{
                     background: transparent;
                     padding: 6px 30px;
@@ -1188,6 +1202,7 @@
         margin-bottom: 16px;
         &.center{
             text-align: center;
+            margin-bottom: 0;
         }
     }
     &__rate{
@@ -1212,7 +1227,6 @@
             width: 24px;
             min-width: 24px;
             height: 24px; 
-            cursor: pointer;
             &.active{
                 path{
                     stroke: gold;
