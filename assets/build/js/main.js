@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    
+
     $(" input[name=phone] ").inputmask("+7 (999) 999-99-99");
 
     $(document).on("click",".menu",function() {
@@ -366,4 +368,12 @@ function getTimeRemaining(endtime) {
     updateClock();
     const timeinterval = setInterval(updateClock, 1000);
   }
-  
+
+
+  //new WOW().init();
+  wow = new WOW( 
+    { 
+        mobile: false,
+    } 
+  ) 
+  wow.init( );
