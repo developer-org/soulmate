@@ -70,54 +70,336 @@
       </div>
     </header>
     <main>
-      <section class="project">
-        <div class="container">
-          <div class="row"> 
-            <div class="col-xl-3 col-lg-4"> 
-              <div class="sidebar wow animate_animated animate__fadeIn" data-wow-duration="2s" data-wow-offset="30"> <a class="btn-tp" href=""> <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <section class="module wow animate_animated animate__fadeIn" data-wow-duration="2s" data-wow-offset="30">
+        <div class="container"> 
+          <div class="wrapper">
+            <div class="module__head"><a class="btn-tp" href=""> <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.7071 5.29289C12.0976 5.68342 12.0976 6.31658 11.7071 6.70711L7.41421 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H7.41421L11.7071 17.2929C12.0976 17.6834 12.0976 18.3166 11.7071 18.7071C11.3166 19.0976 10.6834 19.0976 10.2929 18.7071L4.29289 12.7071C4.10536 12.5196 4 12.2652 4 12C4 11.7348 4.10536 11.4804 4.29289 11.2929L10.2929 5.29289C10.6834 4.90237 11.3166 4.90237 11.7071 5.29289Z" fill="#45167A"/>
-</svg></span>Вернуться к курсу</a>
-                <div class="sidebar__title">Актуальные проекты</div>
-                <ul class="sidebar__list"> 
-                  <li class="sidebar__item"><a class="sidebar__link active" href="">Проект Karate Combat</a></li>
-                  <li class="sidebar__item"><a class="sidebar__link" href="">Проект Karate Combat1</a></li>
-                  <li class="sidebar__item"><a class="sidebar__link" href="">Проект Karate Combat2</a></li>
-                </ul>
-              </div>
+</svg></span>Вернуться к факультетам</a><a class="btn-primary" href="">Чат факультета</a></div>
+            <div class="module__name">Академия</div>
+            <div class="module__progress"><span style="width: 14%;"></span></div>
+            <div class="module__title-wrap">
+              <h2 class="h2-title">Trading</h2>
             </div>
-            <div class="col-xl-9 col-lg-8">
-              <div class="project__wrap"> 
-                <div class="project__head wow animate_animated animate__fadeIn" data-wow-duration="2s" data-wow-offset="30"> 
-                  <div class="project__param"> 
-                    <div class="h1-title">Проект Karate Combat</div><span>12.08.2023</span>
-                  </div>
-                  <div class="project__info"> 
-                    <p>ТГЕ было 50% (разблокировка токенов), поэтому все 50% сразу зафиксировал.<br> То есть, при продаже 50% вернул свои вложенные инвестиции 250 $.</p>
-                    <div class="project__team">Команда проекта: Иванов И., Васильев И.</div>
-                    <div class="project__actions"><a class="btn-white" href="">Чат проекта</a><a class="btn-white" href="">Создать пост</a></div>
+            <div class="module__nav-mobile"> 
+              <select class="js-select" id="module_select">
+                <option value="#tab-module1" data-toggle="tab">Модули</option>
+                <option value="#tab-module2" data-toggle="tab">Вебинары/эфиры</option>
+                <option value="#tab-module3" data-toggle="tab">Актуальные проекты</option>
+                <option value="#tab-module4" data-toggle="tab">Игра</option>
+              </select>
+            </div>
+            <div class="module__nav">
+              <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-module1">Модули</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-module2">Вебинары/эфиры</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-module3">Актуальные проекты</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-module4">Игра</a></li>
+              </ul>
+            </div>
+            <div class="module__tab">
+              <div class="tab-content">
+                <div class="tab-pane tab-module active" id="tab-module1">
+                  <div class="program">
+                    <div class="program__main-title">Базовый уровень (3 модуля, 12 уроков)</div>
+                    <div class="program__item item-program">
+                      <div class="item-program__title"> <span>1</span>Модуль 1. Криптотрейдинг: понятия, анализ и стратегии для успешного инвестирования в криптовалюты.
+                        <div class="badge default">6 уроков</div>
+                      </div>
+                      <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                      </div>
+                      <div class="item-program__body body-item-program">
+                        <div class="body-item-program__line">
+                          <p>Урок 1. Что такое криптотрейдинг</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 2. Обзор терминала Tradingview</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 3. Технический анализ</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 4. Терминология трейдинга</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 5. Дополнительные инструменты технического анализа, фильтры и индикаторы</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 6. Риск и манименеджмент, отбор инструментов и формирование криптопортфеля</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__item item-program">
+                      <div class="item-program__title"> <span>2</span>Модуль 2. Обзор топовых бирж.
+                        <div class="badge default">2 урока</div>
+                      </div>
+                      <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                      </div>
+                      <div class="item-program__body body-item-program">
+                        <div class="body-item-program__line">
+                          <p>Урок 1. Выбор бирж и краткий обзор каждой из них</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 2. Классификация активов на крипторынке</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__item item-program">
+                      <div class="item-program__title"> <span>3</span>Модуль 3. Торговая стратегия.
+                        <div class="badge default">4 урока</div>
+                      </div>
+                      <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                      </div>
+                      <div class="item-program__body body-item-program">
+                        <div class="body-item-program__line">
+                          <p>Урок 1. Торговля по тренду</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 2. Как разработать свою торговую стратегию</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 3. Анализ монет при помощи индикатора OBV (объем)</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 4. Обзор платформы Capico</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__item item-program">
+                      <div class="item-program__title"> <span>4</span>Финальный тест Ступень 1</div>
+                      <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                      </div>
+                      <div class="item-program__body body-item-program">
+                        <div class="body-item-program__line">
+                          <p>Финальный тест</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__main-title">Продвинутый уровень ( 1 модуль, 7 уроков)</div>
+                    <div class="program__item item-program">
+                      <div class="item-program__title"> <span>1</span>Модуль Практическое применение различных стратегий при торговле
+                        <div class="badge default">7 уроков</div>
+                      </div>
+                      <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                      </div>
+                      <div class="item-program__body body-item-program">
+                        <div class="body-item-program__line">
+                          <p>Урок 1. Вводный урок</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 2. Индекс страха и жадности</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 3. Индикаторы PUMP and DUMP рынка</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 4. Стратегия торговли по Томасу Демарку</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 5. Стратегия свинг-трейда при помощи сетки Фибоначчи</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 6. Стратегия прайс-экшен</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Урок 7. Рыночный алгоритм и торговля по тренду</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                        <div class="body-item-program__line">
+                          <p>Шпаргалка для трейдера "Психологические ловушки трейдера"</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__item item-program">
+                      <div class="item-program__title"> <span>2</span>Финальное задание</div>
+                      <div class="item-program__arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="#161616"/>
+</svg>
+                      </div>
+                      <div class="item-program__body body-item-program">
+                        <div class="body-item-program__line">
+                          <p>Финальное задание</p><a class="btn-tp" href="">Перейти<span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+<path d="M12.7929 5.29289C13.1834 4.90237 13.8166 4.90237 14.2071 5.29289L20.2071 11.2929C20.3946 11.4804 20.5 11.7348 20.5 12C20.5 12.2652 20.3946 12.5196 20.2071 12.7071L14.2071 18.7071C13.8166 19.0976 13.1834 19.0976 12.7929 18.7071C12.4024 18.3166 12.4024 17.6834 12.7929 17.2929L17.0858 13L5.5 13C4.94772 13 4.5 12.5523 4.5 12C4.5 11.4477 4.94772 11 5.5 11L17.0858 11L12.7929 6.70711C12.4024 6.31658 12.4024 5.68342 12.7929 5.29289Z" fill="#45167A"/>
+</svg></span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="project__item item-project wow animate_animated animate__fadeIn" data-wow-duration="2s" data-wow-offset="30">
-                  <p>ТГЕ было 50% (разблокировка токенов), поэтому все 50% сразу зафиксировал. То есть, при продаже 50% вернул свои вложенные инвестиции 250 $ и ещё осталось 50%, а это уже чистая прибыль с проекта, их выдадут в течении месяца.</p>
-                  <div class="item-project__image"> <img src="../build/images/project-image1.png"></div>
-                  <div class="item-project__info"> 
-                    <div class="item-project__autor">Автор: Иванов И.</div>
-                    <div class="item-project__date">01.02.2023</div>
+                <div class="tab-pane tab-module fade" id="tab-module2"> 
+                  <div class="module__webinar webinar-module"><a class="webinar-module__video" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <div class="play"></div><img src="../build/images/webinar.png">
+                      <div class="webinar-module__progress"><span style="width:100%;"></span></div></a>
+                    <div class="webinar-module__content"> 
+                      <div class="webinar-module__title">Вебинар: «Стратегия и анализ»</div>
+                      <div class="webinar-module__time">1 ч 20 мин</div>
+                      <div class="webinar-module__date">Добавлен: 22.06.2022</div>
+                    </div>
+                    <div class="badge success">Просмотрен</div>
+                  </div>
+                  <div class="module__webinar webinar-module"><a class="webinar-module__video" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <div class="play"></div><img src="../build/images/webinar.png">
+                      <div class="webinar-module__progress"><span style="width:70%;"></span></div></a>
+                    <div class="webinar-module__content"> 
+                      <div class="webinar-module__title">Запись эфира: «Децентрализованные Финансы»</div>
+                      <div class="webinar-module__time">1 ч 20 мин</div>
+                      <div class="webinar-module__date">Добавлен: 22.06.2022</div>
+                    </div>
+                  </div>
+                  <div class="module__webinar webinar-module"><a class="webinar-module__video" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <div class="play"></div><img src="../build/images/webinar.png">
+                      <div class="webinar-module__progress"><span style="width:0%;"></span></div></a>
+                    <div class="webinar-module__content"> 
+                      <div class="webinar-module__title">Вебинар: «Стратегия и анализ»</div>
+                      <div class="webinar-module__time">1 ч 20 мин</div>
+                      <div class="webinar-module__date">Добавлен: 22.06.2022</div>
+                    </div>
                   </div>
                 </div>
-                <div class="project__item item-project wow animate_animated animate__fadeIn" data-wow-duration="2s" data-wow-offset="30">
-                  <p>ТГЕ было 50% (разблокировка токенов), поэтому все 50% сразу зафиксировал. То есть, при продаже 50% вернул свои вложенные инвестиции 250 $ и ещё осталось 50%, а это уже чистая прибыль с проекта, их выдадут в течении месяца.</p>
-                  <div class="item-project__video"><iframe src="https://www.youtube.com/embed/_sI_Ps7JSEk?si=69syVUSubzX5D67h" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                  <div class="item-project__info"> 
-                    <div class="item-project__autor">Автор: Иванов И.</div>
-                    <div class="item-project__date">01.02.2023</div>
+                <div class="tab-pane tab-module fade" id="tab-module3">
+                  <div class="module__project project-module">
+                    <div class="project-module__item"><a class="project-module__image" href=""><img src="../build/images/project.png"></a><a class="project-module__title" href="">Проект Karate Combat</a></div>
+                    <div class="project-module__item"><a class="project-module__image" href=""><img src="../build/images/project.png"></a><a class="project-module__title" href="">Проект Karate Combat</a></div>
+                    <div class="project-module__item"><a class="project-module__image" href=""><img src="../build/images/project.png"></a><a class="project-module__title" href="">Проект Karate Combat</a></div>
+                    <div class="project-module__item"><a class="project-module__image" href=""><img src="../build/images/project.png"></a><a class="project-module__title" href="">Проект Karate Combat</a></div>
                   </div>
                 </div>
-                <div class="project__item item-project wow animate_animated animate__fadeIn" data-wow-duration="2s" data-wow-offset="30">
-                  <p>ТГЕ было 50% (разблокировка токенов), поэтому все 50% сразу зафиксировал. То есть, при продаже 50% вернул свои вложенные инвестиции 250 $ и ещё осталось 50%, а это уже чистая прибыль с проекта, их выдадут в течении месяца.<br> А также стремящиеся вытеснить традиционное производство, нанотехнологии обнародованы. Для современного мира высокое качество позиционных исследований создаёт предпосылки для стандартных подходов.</p>
-                  <div class="item-project__info"> 
-                    <div class="item-project__autor">Автор: Иванов И.</div>
-                    <div class="item-project__date">01.02.2023</div>
+                <div class="tab-pane tab-module fade" id="tab-module4">
+                  <div class="module__game game-module">
+                    <div class="game-module__info"> 
+                      <div class="game-module__title">Игра</div>
+                      <p>Все участники нашего курса вступают в игру. Вам выдаются баллы за определённую активность в процессе обучения. Играйте <br>в индивидуальном зачёте или вступайте в команду. Первые места в индивидуальном и командном зачётах поощряются призами, подарками, бонусами!</p>
+                    </div>
+                    <div class="game-module__nav">
+                      <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-game1">Индивидуальный зачёт</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-game2">Командный зачёт</a></li>
+                      </ul>
+                    </div>
+                    <div class="game-module__body body-game-module">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tab-game1">
+                          <div class="body-game-module__item">
+                            <p>Ваш номер в рейтинге пользователей</p><span>54</span>
+                          </div>
+                          <div class="body-game-module__item">
+                            <p>Количество жизней в игрепользователей</p><span>3</span>
+                          </div>
+                          <div class="body-game-module__item">
+                            <p>Заработанные очки</p><span>34</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-game2">
+                          <div class="body-game-module__wrap">
+                            <div class="body-game-module__items">
+                              <div class="body-game-module__item">
+                                <p>Ваш номер в рейтинге команд</p><span>54</span>
+                              </div>
+                              <div class="body-game-module__item">
+                                <p>Количество жизней в игре</p><span>3</span>
+                              </div>
+                              <div class="body-game-module__item">
+                                <p>Заработанные очки</p><span>34</span>
+                              </div>
+                              <div class="body-game-module__item">
+                                <p>Ваш капитан</p><span class="cap">Василькин Дмитрий</span>
+                              </div>
+                            </div>
+                            <div class="body-game-module__info info-game-module">
+                              <div class="info-game-module__title">Участники команды</div>
+                              <div class="info-game-module__item"> 
+                                <p>Василькин Дмитрий</p><span>54</span>
+                              </div>
+                              <div class="info-game-module__item"> 
+                                <p>Иванова Татьяна</p><span>43</span>
+                              </div>
+                              <div class="info-game-module__item"> 
+                                <p>Журкин Антон</p><span>34</span>
+                              </div>
+                              <div class="info-game-module__item"> 
+                                <p>Картошкин Максим</p><span>23</span>
+                              </div>
+                              <div class="info-game-module__item"> 
+                                <p>Журавлёва Мария</p><span>12</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -160,6 +160,13 @@ $(document).ready(function () {
         $(this).addClass("active");
     });
 
+    $(document).on("click",".achievements__item", function() {
+        $('.modal-bag .modal__title').text($(this).find('.achievements__title').text())
+        $('.modal-bag .modal__subtitle').text($(this).data('description'))
+    });
+
+    
+
 
     $('select#module_select').on('change', function() {
         if ($(window).width() < 991) {
