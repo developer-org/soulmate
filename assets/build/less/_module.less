@@ -85,8 +85,9 @@
                 width: 100%;
             }
             &:hover{
-                background: transparent !important;
-                border: 2px solid @action-outline !important;
+                background: @badge-default !important;
+                //border: 2px solid transparent !important;
+                color: @white !important;
             }
         }
     }
@@ -234,6 +235,7 @@
         margin: 0;
         padding: 16px 32px;
         &:hover{
+            text-decoration: underline !important;
             svg{
                 path{
                     stroke: @white;
@@ -373,6 +375,9 @@
                     line-height: 32px; 
                     color: @action-primary;
                     margin-left: auto;
+                    &:hover{
+                        text-decoration: underline !important;
+                    }
                     @media screen and (max-width: 991px){ 
                         font-size: 16px;
                     }
@@ -1164,8 +1169,9 @@
         margin: 0 auto;
         border: 2px solid @action-primary !important;
         &:hover{
-            border: 2px solid @action-outline !important;
-            background: transparent !important;
+            border: 2px solid transparent !important;
+            background: @badge-default !important;
+            color: @white !important;
         }
         @media screen and (max-width: 1200px){
             width: 100% !important;
@@ -1207,6 +1213,16 @@
     }
     @media screen and (max-width: 767px){ 
         padding: 24px;
+    }
+    &.colored{
+        background: url(../images/participation-vector.svg),url(../images/participation-bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        .h3-title, p{
+            color: @white;
+        }
     }
     .h3-title{
         text-align: center;
@@ -1325,7 +1341,9 @@
         height: 40px;
         width: 100%;
         &:hover{
-            border: 2px solid @action-outline !important;
+            border: 2px solid transparent !important;
+            background: @badge-default !important;
+            color: @white !important;
         }
     }
 }

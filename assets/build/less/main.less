@@ -477,7 +477,9 @@ h3, .h3-title{
   .btn-primary{
     border: 2px solid @action-primary !important;
     &:hover{
-      border-color: @action-primary !important;
+      border-color: transparent !important;
+      background: @badge-default !important;
+      color: @white !important;
     }
   }
   &__title{
@@ -539,6 +541,8 @@ h3, .h3-title{
       background-size: 125%;
       background-repeat: no-repeat;
       background-position: right;
+      // animation: moving 3s infinite linear;
+      // transform-origin: -80px -80px;
       @media screen and (max-width: 1369px){
         top: -65px;
         background-size: 100%;
@@ -610,6 +614,10 @@ h3, .h3-title{
     }
   }
 }
+
+// @keyframes moving {
+//   100% {transform: rotate(-360deg);}
+// }
 
 .form-file{
     position: relative;

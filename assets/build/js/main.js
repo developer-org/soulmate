@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    
+    counters()
 
     $(" input[name=phone] ").inputmask("+7 (999) 999-99-99");
 
@@ -237,6 +237,8 @@ $(document).ready(function () {
             $('.content-courses-main__title').text(base_slider_title);
             $('.content-courses-main__text').text(base_slider_text);
             $('.passed-count').text(base_slider_count);
+            
+            
         });
 
     slider_base.slick({
@@ -376,6 +378,45 @@ function getTimeRemaining(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
   }
 
+  function counters() {
+    var position = 1;
+    $(window).scroll(function() {
+
+        if($('.count-element__wrapper').length > 0){
+            cPos = $('.count-element__wrapper').offset().top
+            topWindow = $(window).scrollTop()
+
+            if (cPos < topWindow + 700) {
+                if (position < 2){
+                    const time = 1000;
+
+                    [...elem] = document.querySelectorAll('.count-element');
+
+                    [...elem].forEach(el => {
+
+                        const max = parseInt((el.innerHTML).replace(/ /g,''))
+                        let t = Math.round(time / max)
+                        let n = 0
+                        let interval = setInterval(() => {
+                            max > 500 ? n = n + parseInt(Math.floor(max / 200)) : n = n + 1
+                            if (n <= max) {
+                                el.innerHTML = n
+                            }else{
+                                clearInterval(interval)
+                            }
+                        
+                        }, t);
+                        
+                    })
+                    position = position + 2
+                }
+                
+            }
+        }
+        
+    });
+    
+}
 
   //new WOW().init();
   wow = new WOW( 

@@ -388,7 +388,9 @@
         height: 48px;
         border: 2px solid @action-primary !important;
         &:hover{
-            border-color: @action-outline !important;
+            border-color: transparent !important;
+            background: @badge-default !important;
+            color: @white !important;
         }
     }
 }
@@ -638,8 +640,9 @@
             font-size: 18px !important;
         }
         &:hover{
-            border: 2px solid @action-outline !important;
-            background: transparent !important;
+            border: 2px solid transparent !important;
+            background: @badge-default !important;
+            color: @white !important;
         }
     }
 

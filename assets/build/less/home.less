@@ -154,11 +154,12 @@
             width: 100%;
         }
         &:hover{
-            border: 2px solid @action-outline !important;
-            background: transparent !important;
+            color: @white !important;
+            border: 2px solid transparent !important;
+            background: @badge-default !important;
             svg{
                 path{
-                    fill: @action-primary;
+                    fill: @white;
                 }
             }
         }
@@ -942,11 +943,12 @@
             font-size: 18px;
         }
         &:hover{
-            border: 2px solid @action-outline !important;
-            background: transparent !important;
+            color: @white !important;
+            border: 2px solid transparent !important;
+            background: @badge-default !important;
             svg{
                 path{
-                    fill: @action-primary;
+                    fill: @white;
                 }
             }
         }
@@ -1037,19 +1039,39 @@
                     }
                 }
             }
-            .item-faculties.active{
-                .item-faculties__front{
-                    transform: perspective(600px) rotateX(-180deg);
-                }
-                .item-faculties__back{
-                    transform: perspective(600px) rotateX(0deg);
-                }
-                @media screen and (max-width: 1200px){
+            @media screen and (min-width: 991px){
+                .item-faculties:hover{
                     .item-faculties__front{
-                        transform: perspective(600px) rotateY(-180deg);
+                        transform: perspective(600px) rotateX(-180deg);
                     }
                     .item-faculties__back{
-                        transform: perspective(600px) rotateY(0deg);
+                        transform: perspective(600px) rotateX(0deg);
+                    }
+                    @media screen and (max-width: 1200px){
+                        .item-faculties__front{
+                            transform: perspective(600px) rotateY(-180deg);
+                        }
+                        .item-faculties__back{
+                            transform: perspective(600px) rotateY(0deg);
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 991px){
+                .item-faculties.active{
+                    .item-faculties__front{
+                        transform: perspective(600px) rotateX(-180deg);
+                    }
+                    .item-faculties__back{
+                        transform: perspective(600px) rotateX(0deg);
+                    }
+                    @media screen and (max-width: 1200px){
+                        .item-faculties__front{
+                            transform: perspective(600px) rotateY(-180deg);
+                        }
+                        .item-faculties__back{
+                            transform: perspective(600px) rotateY(0deg);
+                        }
                     }
                 }
             }
@@ -1184,12 +1206,24 @@
     &__back{
         transform: perspective(600px) rotateY(180deg);
     }
-    &.active{
-        .item-faculties__front{
-            transform: perspective(600px) rotateY(-180deg);
+    &:hover{
+        @media screen and (min-width: 991px){
+            .item-faculties__front{
+                transform: perspective(600px) rotateY(-180deg);
+            }
+            .item-faculties__back{
+                transform: perspective(600px) rotateY(0deg);
+            }
         }
-        .item-faculties__back{
-            transform: perspective(600px) rotateY(0deg);
+    }
+    &.active{
+        @media screen and (max-width: 991px){
+            .item-faculties__front{
+                transform: perspective(600px) rotateY(-180deg);
+            }
+            .item-faculties__back{
+                transform: perspective(600px) rotateY(0deg);
+            }
         }
     }
     &__image{
@@ -1251,18 +1285,21 @@
         }
     }
     &__plus{
+        display: none;
         position: absolute;
         right: 32px;
         bottom: 32px;
         width: 80px;
         height: 80px;
-        display: flex;
         align-items: center;
         justify-content: center;
         background: @background-tertiary;
         border-radius: 50%;
         cursor: pointer;
         z-index: 1;
+        @media screen and (max-width: 991px){ 
+            display: flex;
+        }
         @media screen and (max-width: 767px){ 
             width: 56px;
             height: 56px;
@@ -1356,6 +1393,9 @@
         .item-faculties__link.btn-white{
             width: 286px;
             margin: 0 auto;
+            &:hover{
+                background: @badge-default;
+            }
             @media screen and (max-width: 1369px){
                 width: 100%;
             }
@@ -1368,7 +1408,7 @@
     }
     &__inner-close{
         position: absolute;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         top: 25px;
@@ -1381,6 +1421,9 @@
         background-size: cover;
         cursor: pointer;
         z-index: 5;
+        @media screen and (max-width: 991px){ 
+            display: flex;
+        }
     }
     &__image{
         position: absolute;
