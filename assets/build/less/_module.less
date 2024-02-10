@@ -277,6 +277,12 @@
         }
         .item-program__title{
             width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (max-width: 1200px){
+                position: relative;
+                padding-left: 30px;
+            }
             @media screen and (max-width: 991px){
                 width: 95%;
             }
@@ -284,10 +290,26 @@
                 width: 90%;
                 flex-direction: row;
                 flex-wrap: wrap;
+                gap: 10px;
+                word-break: break-word;
             }
             span{
                 color: @badge-default;
                 margin: 0 20px 0 0;
+                @media screen and (max-width: 1200px){
+                    margin: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            span + div{
+                width: 90%;
+            }
+            .badge{
+                @media screen and (max-width: 767px){
+                    margin-top: 0px;
+                }
             }
         }
         .body-item-program__text{
