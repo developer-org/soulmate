@@ -268,7 +268,7 @@ $(document).ready(function () {
             $(".slider").slick("slickGoTo", index);
           });
       
-      var imgs = $('.slider img');
+      var imgs = $('.slider img.slider-desktop');
       imgs.each(function(){
         var item = $(this).closest('.item');
         item.css({
