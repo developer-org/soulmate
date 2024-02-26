@@ -240,13 +240,13 @@
 
 .useful{
     border-radius: 40px;
-    padding: 32px;
+    padding: 32px 32px 0px 32px;
     background: @white;
     box-shadow: 0px 4px 16px 0px #1111110A;
     .row{
         & > div{
             @media screen and (max-width: 1200px){
-                margin-bottom: 48px;
+                //margin-bottom: 48px;
             }
         }
         & > div:last-child{
@@ -260,6 +260,7 @@
     }
     &__item{
         display: flex;
+        margin-bottom: 32px;
         @media screen and (max-width: 375.9px){ 
             flex-direction: column;
         }
@@ -516,7 +517,10 @@
         width: 100%;
         border-radius: 8px;
         margin-bottom: 8px;
+        overflow: hidden;
         img{
+            height: auto;
+            min-height: 100%;
             border-radius: 8px;
             @media screen and (max-width: 767px){ 
                 object-position: top;
@@ -913,6 +917,18 @@
             //border: 2px solid @action-outline !important;
         }
     }
+    &__links{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @media screen and (max-width: 767px){ 
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    }
+    &__link.btn-primary + &__link.btn-primary{
+        //margin-top: 20px;
+    }
     &__list{
         display: flex;
         flex-direction: column;
@@ -968,6 +984,7 @@
         }
         a{
             color: @white;
+            white-space: nowrap;
             &:hover{
                 text-decoration: underline !important;
             }
