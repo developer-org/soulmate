@@ -285,15 +285,23 @@
         color: @text-secondary;
     }
 }
-
+.result-education_select-wrap .select2-dropdown--below{
+    margin-top: 10px !important;
+}
 .result-education{
     border-radius: 40px;
-    padding: 32px 32px 16px 32px;
+    padding: 32px 32px 32px 32px;
     margin-top: 32px;
     background: url(../images/result-education-gradient.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    // background: url(../images/participation-vector.svg),url(../images/participation-bg.png);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // box-shadow: 0 4px 16px 0 #1111110A;
     @media screen and (max-width: 1369px){
         padding: 32px 32px 16px 32px;
     }
@@ -301,7 +309,70 @@
         padding: 32px 32px 16px 32px;
     }
     .h2-title{
-        margin-bottom: 24px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            color: @action-primary;
+        }
+    }
+    &__nav-mobile{
+        display: none;
+        margin-bottom: 30px;
+        @media screen and (max-width: 767px){ 
+            display: block;
+        }
+        .select2-container--default{
+            width: 100% !important;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            height: 60px;
+        }
+        .select2-container--default .select2-selection--single{
+            background: none;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered{
+            color: #ffffff;
+            background: #45167a;
+            border: none;
+        }
+        .select2-selection__arrow{
+            top: 20px !important;
+            b{
+                filter: invert(1);
+            }
+        }
+    }
+    &__nav{
+        margin-bottom: 30px;
+        @media screen and (max-width: 767px){ 
+            display: none;
+        }
+    }
+    .nav-tabs{
+        border: none;
+        display: flex;
+        gap: 20px;
+    }
+    .nav-tabs .nav-item{
+        margin: 0;
+    }
+    .nav-tabs .nav-link{
+        border: none;
+        border: 1px solid #45167a;
+        padding: 12px 40px;
+        border-radius: 24px;
+        color: #45167a;
+        background: transparent;
+        font-weight: 600;
+        @media screen and (max-width: 991px){ 
+            padding: 12px 25px;
+        }
+    }
+    .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover{
+        color: #ffffff;
+        background: #45167a;
     }
     &__list{
         // display: flex;

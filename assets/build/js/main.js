@@ -100,6 +100,10 @@ $(document).ready(function () {
     if($('.js-select.form-select').length > 0){
         $('.js-select.form-select').select2().data('select2').$dropdown.addClass('form-select-wrap');
     }
+    if($('.js-select#result-education_select').length > 0){
+        $('.js-select#result-education_select').select2().data('select2').$dropdown.addClass('result-education_select-wrap');
+    }
+    
     
             
     $(window).on('resize', function() {
@@ -171,6 +175,13 @@ $(document).ready(function () {
     $('select#module_select').on('change', function() {
         if ($(window).width() < 991) {
             $('.module__tab .tab-module.tab-pane').removeClass('active');
+            $(this.value).tab().addClass('show active');
+        }
+    });
+
+    $('select#result-education_select').on('change', function() {
+        if ($(window).width() < 767) {
+            $('.result-education__tab .tab-result.tab-pane').removeClass('active');
             $(this.value).tab().addClass('show active');
         }
     });

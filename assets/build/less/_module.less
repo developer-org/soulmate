@@ -292,6 +292,7 @@
             width: 90%;
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
             @media screen and (max-width: 1200px){
                 position: relative;
                 //padding-left: 30px;
@@ -305,6 +306,12 @@
                 flex-wrap: wrap;
                 gap: 10px;
                 word-break: break-word;
+            }
+            .sub{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #8e8e8e;
             }
             span{
                 color: @badge-default;
@@ -323,6 +330,11 @@
                 @media screen and (max-width: 767px){
                     margin-top: 0px;
                 }
+            }
+        }
+        .item-program.active .item-program__title{
+            br{
+                display: none;
             }
         }
         .body-item-program__text{
@@ -354,12 +366,32 @@
                 &:last-child{
                     margin-bottom: 0;
                 }
-                p{
+                .body-item-program__line-inner{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 40px;
+                    @media screen and (max-width: 767px){
+                        margin-right: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .line-inner-desc{
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: #8e8e8e;
+                    }
+                }
+                p, a{
                     font-size: 18px;
                     font-weight: 400;
                     line-height: 24px;
                     color: @text-main;
                     margin-right: 40px;
+                    &:hover{
+                        color: @action-primary;
+                        text-decoration: underline !important;
+                    }
                     @media screen and (max-width: 767px){
                         margin-right: 0;
                         width: 100%;
@@ -434,6 +466,8 @@
                     }
                     &:hover{
                         background: @action-primary;
+                        color: @white;
+                        text-decoration: none !important;
                     }
                     span{
                         @media screen and (max-width: 1200px){
