@@ -523,6 +523,21 @@
     @media screen and (max-width: 767px){ 
         grid-template-columns: inherit;
     }
+    &.base-teachers{
+        grid-template-columns: repeat(3, 1fr);
+        @media screen and (max-width: 1200px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 767px){ 
+            grid-template-columns: inherit;
+        }
+        .teachers-slider__image{
+            height: 400px;
+            @media screen and (max-width: 1200px){
+                height: 275px;
+            }
+        }
+    }
     .owl-stage{
         display: flex;
         padding-left: 1px;
@@ -792,7 +807,8 @@
     &__image{
         display: block;
         position: relative;
-        height: 325px;
+        // height: 325px;
+        height: 360px;
         width: 100%;
         border-radius: 8px;
         margin-bottom: 8px;
@@ -819,7 +835,7 @@
         font-weight: 500;
         line-height: 21px;
         color: @text-main;
-        margin-bottom: 8px;
+        //margin-bottom: 8px;
     }
     &__text{
         height: 85px;
