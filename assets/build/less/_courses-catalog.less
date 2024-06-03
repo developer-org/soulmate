@@ -26,20 +26,71 @@
     }
     &__image{
         position: relative;
-        height: 320px;
+        //height: 320px;
+        height: 100%;
         width: 100%;
         border-radius: 24px;
         margin-bottom: 16px;
+        &.inner{
+            height: 320px;
+            .info-courses-catalog{
+                padding: 35px 30px 20px 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @media screen and (max-width: 991px){ 
+                    padding: 30px 20px;
+                }
+                .info-courses-catalog__badge{
+                    background: #8A8CFE;
+                }
+                .info-courses-catalog__title{
+                    color: #5600BA;
+                    text-transform: uppercase;
+                    font-size: 55px;
+                    margin: 0;
+                    @media screen and (max-width: 1369px){
+                        font-size: 42px;
+                    }
+                    @media screen and (max-width: 991px){ 
+                        font-size: 36px;
+                    }
+                }
+                &.ad{
+                    .info-courses-catalog__badge{
+                        background: #3E0086;
+                    }
+                    .info-courses-catalog__title{
+                        text-transform: uppercase;
+                        color: #ffffff;
+                        font-size: 55px;
+                        margin: 0;
+                        @media screen and (max-width: 1369px){
+                            font-size: 42px;
+                        }
+                        @media screen and (max-width: 991px){ 
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+        }
         .badge{
             position: absolute;
             left: 24px;
             bottom: 24px;
         }
         img{
+            position: absolute;
+            top: 0;
+            left: 0;
             border-radius: 24px;
             object-position: right;
             @media screen and (max-width: 1200px){
                 object-position: right;
+            }
+            @media screen and (max-width: 767px){ 
+                object-position: left;
             }
         }
     }
@@ -113,5 +164,222 @@
     }
     &__link{
         margin-top: auto;
+    }
+}
+
+.info-courses-catalog{
+    padding: 50px 40px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    @media screen and (max-width: 1369px){
+        padding: 40px 30px;
+    }
+    @media screen and (max-width: 991px){ 
+        padding: 40px 30px;
+    }
+    @media screen and (max-width: 767px){ 
+        padding: 30px 20px;
+    }
+    &__title{
+        font-family: "Actay", sans-serif;
+        color: #5600BA;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 30px;
+        @media screen and (max-width: 767px){ 
+            font-size: 40px;
+        }
+    }
+    p{
+        color: #5600BA;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    &__badge{
+        font-family: "Montserrat", sans-serif;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background: #8A8CFE;
+        border-radius: 46px;
+        padding: 2px 20px 0 20px;
+        width: fit-content;
+        height: 30px;
+        margin-bottom: 30px;
+    }
+    &__wrap{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+        padding-top: 15px;
+        max-width: 410px;
+        @media screen and (max-width: 1369px){
+            max-width: inherit;
+        }
+        @media screen and (max-width: 1200px){
+            max-width: 500px;
+        }
+    }
+    &__type{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat", sans-serif;
+        color: #5600BA;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+        padding: 0 17px;
+        height: 35px;
+        width: fit-content;
+        background: #ffffff;
+        border-radius: 46px;
+        @media screen and (max-width: 767px){ 
+            font-size: 12px;
+        }
+    }
+    &.ad{
+        .info-courses-catalog__title{
+            text-transform: uppercase;
+            color: #ffffff;
+            display: flex;
+            @media screen and (max-width: 1369px){
+                font-size: 45px;
+            }
+            @media screen and (max-width: 767px){ 
+                font-size: 36px;
+                flex-direction: column;
+            }
+            span{
+                position: relative;
+                display: block;
+                font-family: "Montserrat", sans-serif;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1;
+                margin-left: 23px;
+                padding-left: 23px;
+                @media screen and (max-width: 1200px){
+                    margin-top: -3px;
+                }
+                @media screen and (max-width: 767px){ 
+                    margin: 5px 0 0 0;
+                    padding: 0;
+                }
+                br{
+                    @media screen and (max-width: 767px){ 
+                        display: none;
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    top: 3px;
+                    width: 2px;
+                    height: 35px;
+                    background: #ffffff;
+                    @media screen and (max-width: 767px){ 
+                        display: none;
+                    }
+                }
+                i{
+                    font-style: normal;
+                    text-transform: uppercase;
+                    font-size: 26px;
+                    font-weight: 600;
+                    line-height: 1;
+                    @media screen and (max-width: 767px){ 
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 1;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        p{
+            color: #ffffff;
+        }
+        .info-courses-catalog__wrap{
+            max-width: 385px;
+            @media screen and (max-width: 1200px){
+                max-width: 500px;
+            }
+        }
+        .info-courses-catalog__line{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background: #ffffff;
+            width: fit-content;
+            border-radius: 53px;
+            @media screen and (max-width: 767px){ 
+                flex-wrap: wrap;
+                background: transparent;
+                gap: 13px 6px;
+            }
+            div{
+                position: relative;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Montserrat", sans-serif;
+                color: #5600BA;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 1;
+                padding: 0 20px;
+                @media screen and (max-width: 1369px){
+                    padding: 0 16px;
+                }
+                @media screen and (max-width: 767px){ 
+                    background: #ffffff;
+                    border-radius: 53px;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    right: 0px;
+                    top: 9pxpx;
+                    width: 2px;
+                    height: 18px;
+                    background: #D5D5D5;
+                    @media screen and (max-width: 767px){ 
+                        display: none;
+                    }
+                }
+                &:first-child{
+                    font-family: "Montserrat", sans-serif;
+                    color: #ffffff;
+                    font-size: 13px;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    padding: 0 20px;
+                    border-radius: 53px;
+                    background: #3E0086;
+                    @media screen and (max-width: 1369px){
+                        font-size: 11px;
+                    }
+                }
+                &:first-child::before, &:last-child::before{
+                    display: none;
+                }
+            }
+        }
     }
 }
