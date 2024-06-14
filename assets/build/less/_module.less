@@ -1416,3 +1416,80 @@
         }
     }
 }
+
+.schedule-module{
+    display: flex;
+    gap: 30px;
+    @media screen and (max-width: 1200px){
+        flex-wrap: wrap;
+    }
+    &__table{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2px;
+        background-color: rgba(69, 22, 122, .7) !important;
+        border: 2px solid rgba(69, 22, 122, .1);
+        -webkit-box-shadow: 0px 0px 30px 0px rgba(69,22,122,0.3);
+        -moz-box-shadow: 0px 0px 30px 0px rgba(69,22,122,0.3);
+        box-shadow: 0px 0px 30px 0px rgba(69,22,122,0.3);
+        &.inline{
+            display: flex;
+            flex-direction: column;
+            height: max-content;
+            width: 50%;
+            @media screen and (max-width: 1369px){
+                width: 70%;
+            }
+            @media screen and (max-width: 1200px){
+                width: 100%;
+            }
+            .table-row{
+                display: flex;
+                .table-cell{
+                    width: 100%;
+                    &:last-child{
+                        @media screen and (max-width: 767px){ 
+                            display: flex !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        @media screen and (max-width: 767px){ 
+            grid-template-columns: 1fr;
+        }
+        &:first-child{
+            @media screen and (max-width: 767px){ 
+                grid-template-columns: 1fr;
+            }
+            .table-cell {
+                font-weight: 600;
+                &:last-child{
+                    @media screen and (max-width: 767px){ 
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .table-cell{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        color: #161616;
+        text-align: left;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        @media screen and (max-width: 767px){ 
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
