@@ -1368,3 +1368,78 @@ input[type=checkbox]{
         }
     }
 }
+
+.education-license__docs{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-top: 32px;
+    @media screen and (max-width: 767px){ 
+        flex-wrap: wrap;
+    }
+    .education-license__docs-item{
+        min-height: 66px;
+        display: flex;
+        width: 50%;
+        @media screen and (max-width: 767px){ 
+            width: 100%;
+        }
+        span{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: #47177B;
+            margin-left: 24px;
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: 1369px){
+                hyphens: auto;
+            }
+        }
+        &:first-child{
+            img{
+                width: 80px;
+                min-width: 80px;
+                height: 60px;
+                left: -10px;
+                top: 10px;
+                object-fit: none;
+            }
+        }
+        &:last-child{
+            img{
+                width: 55px;
+                min-width: 55px;
+                height: 65px;
+                left: 8px;
+                top: 15px;
+                object-fit: none;
+            }
+            .education-license__docs-image{
+                overflow: hidden;
+            }
+        }
+    }
+    .education-license__docs-image{
+        position: relative;
+        width: 66px;
+        min-width: 66px;
+        height: 66px;
+        background: #47177b;
+        border-radius: 50%;
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 66px;
+        //     height: 66px;
+        //     background: #47177B;
+        //     border-radius: 50%;
+        // }
+        img{
+            position: absolute;   
+        }
+    }
+}
