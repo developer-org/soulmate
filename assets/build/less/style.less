@@ -1396,8 +1396,16 @@ input[type=checkbox]{
             @media screen and (max-width: 1369px){
                 hyphens: auto;
             }
+            @media screen and (max-width: 374.9px){
+                hyphens: none;
+            }
         }
         &:first-child{
+            br{
+                @media screen and (max-width: 374.9px){
+                    display: none;
+                }
+            }
             img{
                 width: 80px;
                 min-width: 80px;
@@ -1441,5 +1449,20 @@ input[type=checkbox]{
         img{
             position: absolute;   
         }
+    }
+}
+
+.courses-single.faculties.base .item-faculties .item-faculties__front .item-faculties__head.opening .item-faculties__title{
+    @media screen and (max-width: 374.9px){
+        padding: 36px 0 0 0px;
+        font-size: 36px;
+    }
+}
+.courses-single.faculties.base .item-faculties .item-faculties__front .item-faculties__head.opening+.badge {
+    @media screen and (max-width: 374.9px){
+        top: 82px !important;
+        right: 40px !important;
+        padding: 8px 10px !important;
+        min-width: 110px;
     }
 }
