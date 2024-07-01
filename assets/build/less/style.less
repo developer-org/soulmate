@@ -1396,7 +1396,7 @@ input[type=checkbox]{
             @media screen and (max-width: 1369px){
                 hyphens: auto;
             }
-            @media screen and (max-width: 374.9px){
+            @media screen and (max-width: 767px){
                 hyphens: none;
             }
         }
@@ -1459,10 +1459,16 @@ input[type=checkbox]{
     }
 }
 .courses-single.faculties.base .item-faculties .item-faculties__front .item-faculties__head.opening+.badge {
-    @media screen and (max-width: 374.9px){
-        top: 82px !important;
+    @media screen and (max-width: 767px){
         right: 40px !important;
+    }
+    @media screen and (max-width: 375.9px){
+        top: 82px !important;
+        right: 60px !important;
         padding: 8px 10px !important;
         min-width: 110px;
+    }
+    @media screen and (max-width: 374.9px){
+        right: 40px !important;
     }
 }
