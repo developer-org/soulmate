@@ -1589,3 +1589,42 @@ input[type=checkbox]{
         }
     }
 }
+
+.partners{
+    padding: 0px 0 100px 0;
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+        @media screen and (max-width: 767px){ 
+            margin-bottom: 40px;
+        }
+    }
+    &__wrap{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        @media screen and (max-width: 767px){ 
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+    &__image{
+        width: 20%;
+        @media screen and (max-width: 767px){ 
+            width: 50%;
+        }
+    }
+}
+
+.requirements-link{
+    text-decoration: underline !important;
+    margin-top: 20px;
+    color: #47177b;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: normal;
+    @media screen and (max-width: 767px){ 
+        font-size: 16px;
+    }
+}
