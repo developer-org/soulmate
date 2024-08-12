@@ -123,39 +123,59 @@
         text-align: center;
     }
     &__count{
-        @property --progress-value {
-            syntax: '<integer>';
-            inherits: false;
-            initial-value: 0;
-        }
+        // @property --progress-value {
+        //     syntax: '<integer>';
+        // }
         // @keyframes html-progress {
+        //     from { --progress-value: 0; }
         //     to { --progress-value: 69; }
         // }
         .progress-bar{
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: row;
+            background: transparent;
             width: 80px;
             height: 80px;
             border-radius: 50%;
             margin: 0 auto;
-            background: 
-                radial-gradient(closest-side, #f7f7fc 82%, transparent 85% 100%),
-                conic-gradient(#45167A calc(var(--progress-value) * 1%), #D6D8E7 0);
-            animation: html-progress 2s 1 forwards;
+
+            color: var(--text-main, #161616);
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 26px;
+            color: @text-main;
+
+            span{
+                display: none;
+            }
+            // background: 
+            //     -o-radial-gradient(closest-side, #f7f7fc 82%, transparent 85% 100%),
+            //     conic-gradient(#45167A calc(var(--progress-value) * 1%), #D6D8E7 0);
+            // background: 
+            //     radial-gradient(closest-side, #f7f7fc 82%, transparent 85% 100%),
+            //     conic-gradient(#45167A calc(var(--progress-value) * 1%), #D6D8E7 0);
+            // -webkit-animation: html-progress 2s 1 forwards;
+            // animation: html-progress 2s 1 forwards;
 
             &::before {
-                counter-reset: percentage var(--progress-value);
-                content: counter(percentage) '%';
-                animation: html-progress 2s 1 forwards;
+                // counter-reset: percentage var(--progress-value);
+                // content: counter(percentage) '%';
+                // -webkit-animation: html-progress 2s 1 forwards;
+                // animation: html-progress 2s 1 forwards;
 
-                color: var(--text-main, #161616);
-                text-align: center;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 26px;
-                color: @text-main;
+                // color: var(--text-main, #161616);
+                // text-align: center;
+                // font-size: 20px;
+                // font-weight: 600;
+                // line-height: 26px;
+                // color: @text-main;
             }
+            
+
         }
         // progress{
         //     visibility: hidden;

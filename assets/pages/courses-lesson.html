@@ -121,12 +121,13 @@
                   <div class="progress-sidebar__inner"> 
                     <div class="progress-sidebar__title">Ваш прогресс</div>
                     <div class="progress-sidebar__count">
-                      <style type="text/css">
-                        @keyframes html-progress {
-                            to { --progress-value: 69; }
-                        }
-                      </style>
-                      <div class="progress-bar"></div>
+                      <!--style(type='text/css').
+                      @keyframes html-progress {
+                          from { --progress-value: 0; }
+                          to { --progress-value: 69; }
+                      }
+                      -->
+                      <div class="progress-bar" id="progressBar"> <span>69</span></div>
                     </div><a class="btn-primary" href="">Чат потока</a><a class="btn-tp" href="">Информационный канал</a>
                   </div>
                 </div>

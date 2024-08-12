@@ -358,6 +358,39 @@ $(document).ready(function () {
         initializeClock('timer', deadline);
     }
 
+    let barText =  $('#progressBar').text();
+    var bar = new ProgressBar.Circle(progressBar, {
+        color: '#45167a',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 8,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+          autoStyleContainer: false
+        },
+        from: { color: '#45167a', width: 8, value: 0 },
+        to: { color: '#45167a', width: 8, value: barText},
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          circle.path.setAttribute('stroke-width', state.width);
+      
+          var value = Math.round(circle.value() * barText);
+          if (value === 0) {
+            circle.setText('');
+          } else {
+            circle.setText(value + '%');
+          }
+      
+        }
+      });
+      bar.text.style.fontFamily = '"Montserrat", sans-serif';
+      bar.text.style.fontSize = '20px';
+      bar.text.style.color = '#161616';
+      
+      bar.animate(1.0);  // Number from 0.0 to 1.0
+
 });
 
 function getTimeRemaining(endtime) {
