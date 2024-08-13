@@ -359,6 +359,7 @@ $(document).ready(function () {
     }
 
     let barText =  $('#progressBar').text();
+    console.log(barText);
     var bar = new ProgressBar.Circle(progressBar, {
         color: '#45167a',
         // This has to be the same size as the maximum width to
@@ -366,17 +367,18 @@ $(document).ready(function () {
         strokeWidth: 8,
         easing: 'easeInOut',
         duration: 1400,
+        trailColor: '#D6D8E7',
         text: {
           autoStyleContainer: false
         },
-        from: { color: '#45167a', width: 8, value: 0 },
-        to: { color: '#45167a', width: 8, value: barText},
+        from: { color: '#45167a', width: 8},
+        to: { color: '#45167a', width: 8},
         // Set default step function for all animate calls
         step: function(state, circle) {
           circle.path.setAttribute('stroke', state.color);
           circle.path.setAttribute('stroke-width', state.width);
       
-          var value = Math.round(circle.value() * barText);
+          var value = Math.round(circle.value() * 100);
           if (value === 0) {
             circle.setText('');
           } else {
@@ -388,8 +390,7 @@ $(document).ready(function () {
       bar.text.style.fontFamily = '"Montserrat", sans-serif';
       bar.text.style.fontSize = '20px';
       bar.text.style.color = '#161616';
-      
-      bar.animate(1.0);  // Number from 0.0 to 1.0
+      bar.animate(barText / 100);  // Number from 0.0 to 1.0
 
 });
 
