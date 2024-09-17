@@ -1617,6 +1617,98 @@ input[type=checkbox]{
     }
 }
 
+.about-article{
+    padding: 0px 0 100px 0;
+    @media screen and (max-width: 1200px){ 
+        padding: 50px 0 50px 0;
+    }
+    h2{
+        margin-bottom: 40px;
+        @media screen and (max-width: 767px){ 
+            margin-bottom: 32px;
+        }
+    }
+    &__wrap{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        @media screen and (max-width: 1200px){ 
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 767px){ 
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &__item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: -0.44px 0.62px 4.37px 0px #00000003;
+
+        box-shadow: -1.92px 2.73px 9.04px 0px #00000005;
+
+        box-shadow: -4.72px 6.7px 18.04px 0px #00000006;
+
+        box-shadow: -9.09px 12.91px 35.36px 0px #00000008;
+
+        box-shadow: -15.3px 21.73px 65.01px 0px #0000000A;
+
+        box-shadow: -23.61px 33.52px 111px 0px #0000000D;
+        padding: 50px;
+        background: #ffffff;
+        border-radius: 40px;
+        @media screen and (max-width: 991px){ 
+            padding: 30px;
+            border-radius: 20px;
+        }
+        p{
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: @black;
+        }
+    }
+    &__desc{
+        margin-bottom: 75px;
+        @media screen and (max-width: 767px){ 
+            margin-bottom: 50px;
+        }
+    }
+    &__title{
+        font-family: "Actay", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        color: @black;
+        margin-bottom: 30px;
+        @media screen and (max-width: 767px){ 
+            margin-bottom: 20px;
+        }
+        br{
+            @media screen and (max-width: 767px){ 
+                display: none;
+            }
+        }
+    }
+    &__image{
+        width: 90px;
+    }
+    &__arrow{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        width: 63px;
+        height: 63px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000000;
+        border-radius: 50%;
+    }
+}
+
 .requirements-link{
     text-decoration: underline !important;
     margin-top: 20px;

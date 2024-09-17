@@ -164,8 +164,14 @@
     }
     &.base{
         background-image: url(../images/main-courses-image1.png);
+        background-position: left top;
+        padding: 95px 80px 50px 80px;
+        @media screen and (max-width: 1369px){
+            padding: 95px 80px 60px 80px;
+        }
         @media screen and (max-width: 1200px){
             background-image: url(../images/main-courses-image11.png);
+            padding: 80px 50px 50px 50px;
         }
         @media screen and (max-width: 767px){ 
             padding: 40px 20px 40px 20px;
@@ -183,12 +189,55 @@
         .info-courses-catalog p{
             color: #5600BA;
         }
+        .info-courses-catalog__price{
+            align-items: flex-start;
+            @media screen and (max-width: 1200px){
+                flex-direction: column;
+            }
+            .price-btns{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-top: 3px;
+                div{
+                    display: flex;
+                    gap: 20px;
+                    @media screen and (max-width: 767px){ 
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
         .info-courses-catalog__price p{
             color: #5600BA;
         }
         .info-courses-catalog__price a{
             background: #5600BA;
             color: #ffffff;
+            margin-top: 0px;
+            @media screen and (max-width: 1369px){
+                font-size: 24px;
+            }
+            @media screen and (max-width: 991px){
+                font-size: 22px;
+            }
+            @media screen and (max-width: 767px){ 
+                font-size: 19px;
+                width: fit-content;
+            }
+            @media screen and (max-width: 420px){ 
+                font-size: 16px;
+            }
+            &.tp{
+                background: transparent;
+                border: 1px solid #5600BA;
+                color: #5600BA;
+                width: fit-content;
+                &:hover{
+                    background: #5600BA;
+                    color: #ffffff;
+                }
+            }
         }
         .info-courses-catalog.ad .info-courses-catalog__wrap{
             max-width: 660px;
@@ -1262,7 +1311,7 @@
         }
     }
     &__link.btn-primary{
-        width: 400px;
+        width: calc(~'50% - 15px');
         // @media screen and (max-width: 1200px){
         //     margin-left: 15px !important;
         //     margin-right: 15px !important;
@@ -1270,14 +1319,37 @@
         @media screen and (max-width: 767px){ 
             width: 100%;
         }
+        @media screen and (max-width: 420px){ 
+            padding: 10px 10px;
+            font-size: 16px;
+        }
         &:hover{
             background-color: @white !important;
             //border: 2px solid @action-outline !important;
         }
     }
+    &__link.btn-tp{
+        width: 100%;
+        background-color: #45167a;
+        color: #ffffff;
+        border: none;
+        height: 54px;
+        @media screen and (max-width: 767px){ 
+            padding: 10px 20px;
+        }
+        @media screen and (max-width: 420px){ 
+            padding: 10px 10px;
+            font-size: 16px;
+        }
+        &:hover{
+            background: #ffffff;
+            color: #45167a;
+        }
+    }
     &__links{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 30px;
         @media screen and (max-width: 767px){ 
             flex-wrap: wrap;
