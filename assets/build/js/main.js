@@ -382,39 +382,85 @@ $(document).ready(function () {
         initializeClock('timer', deadline);
     }
 
-    let barText =  $('#progressBar').text();
-    console.log(barText);
-    var bar = new ProgressBar.Circle(progressBar, {
-        color: '#45167a',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 8,
-        easing: 'easeInOut',
-        duration: 1400,
-        trailColor: '#D6D8E7',
-        text: {
-          autoStyleContainer: false
-        },
-        from: { color: '#45167a', width: 8},
-        to: { color: '#45167a', width: 8},
-        // Set default step function for all animate calls
-        step: function(state, circle) {
-          circle.path.setAttribute('stroke', state.color);
-          circle.path.setAttribute('stroke-width', state.width);
-      
-          var value = Math.round(circle.value() * 100);
-          if (value === 0) {
-            circle.setText('');
-          } else {
-            circle.setText(value + '%');
-          }
-      
+
+    if($('#progressBar').length > 0){
+        let barText =  $('#progressBar').text();
+        console.log(barText);
+        var bar = new ProgressBar.Circle(progressBar, {
+            color: '#45167a',
+            // This has to be the same size as the maximum width to
+            // prevent clipping
+            strokeWidth: 8,
+            easing: 'easeInOut',
+            duration: 1400,
+            trailColor: '#D6D8E7',
+            text: {
+            autoStyleContainer: false
+            },
+            from: { color: '#45167a', width: 8},
+            to: { color: '#45167a', width: 8},
+            // Set default step function for all animate calls
+            step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+        
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + '%');
+            }
+        
+            }
+        });
+        bar.text.style.fontFamily = '"Montserrat", sans-serif';
+        bar.text.style.fontSize = '20px';
+        bar.text.style.color = '#161616';
+        bar.animate(barText / 100);  // Number from 0.0 to 1.0
+
+      }
+
+
+
+    $(document).on('click', '.lk-page .item-content', function () {
+        if($(this).hasClass('active')){
+            $(this).closest('.item-content').toggleClass('active')
+            $(this).closest('.item-content').find('.body-item-content').slideToggle(300)
+        }else{
+            $('.item-content.active .body-item-content').slideToggle(300)
+            $('.item-content.active').toggleClass('active')
+    
+            $(this).closest('.item-content').toggleClass('active')
+            $(this).closest('.item-content').find('.body-item-content').slideToggle(300)
         }
-      });
-      bar.text.style.fontFamily = '"Montserrat", sans-serif';
-      bar.text.style.fontSize = '20px';
-      bar.text.style.color = '#161616';
-      bar.animate(barText / 100);  // Number from 0.0 to 1.0
+    });
+
+    $(document).on('click', '.lk-page .panel__title', function () {
+        if($(this).hasClass('active')){
+            $(this).closest('.panel').find('.panel__title').toggleClass('active')
+            $(this).closest('.panel').find('.body-panel').slideToggle(300)
+        }else{
+            $('.panel__title.active').closest('.panel').find('.body-panel').slideToggle(300)
+            $('.panel__title.active').toggleClass('active')
+    
+            $(this).closest('.panel').find('.panel__title').toggleClass('active')
+            $(this).closest('.panel').find('.body-panel').slideToggle(300)
+        }
+    });
+
+    $(document).on('click', '.lk-page .competition__arrow', function () {
+        if($(this).closest('.competition__wrap').hasClass('active')){
+            $(this).closest('.competition__wrap').toggleClass('active')
+            $(this).closest('.competition__wrap').find('.competition__coins').slideToggle(300)
+        }else{
+            // $('.panel__title.active').closest('.panel').find('.body-panel').slideToggle(300)
+            // $('.panel__title.active').toggleClass('active')
+    
+            $(this).closest('.competition__wrap').toggleClass('active')
+            $(this).closest('.competition__wrap').find('.competition__coins').slideToggle(300)
+        }
+    });
+
 
 });
 
